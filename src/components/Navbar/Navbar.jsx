@@ -2,20 +2,26 @@ import { useState, useEffect } from "react";
 
 import { Link } from "react-router-dom";
 
+import { isActive } from "../../utils";
+
 import "./Navbar.scss";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
 
-  const isActive = () => {
-    window.scrollY > 0 ? setActive(true) : setActive(false);
-  };
-
   useEffect(() => {
-    window.addEventListener("scroll", isActive);
+    window.addEventListener("scroll", () => {
+      isActive(setActive);
+    });
 
     return () => window.removeEventListener("scroll", isActive);
-  });
+  }, []);
+
+  const currentUser = {
+    id: 1,
+    name: "John Doe",
+    isSeller: true
+  };
 
   return (
     <nav className={active ? "navbar active" : "navbar"}>
@@ -37,13 +43,46 @@ const Navbar = () => {
           <li className="link">Explore</li>
           <li className="link">English</li>
           <li className="link">Sign in</li>
-          <li className="link">Become a Seller</li>
-          <li className="btn-wrapper">
-            <button type="button" className="btn">
-              Join
-            </button>
-          </li>
+          {!currentUser?.isSeller && <li className="link">Become a Seller</li>}
+
+          {currentUser && (
+            <li className="btn-wrapper">
+              <button type="button" className="btn">
+                Join
+              </button>
+            </li>
+          )}
         </ul>
+
+        {currentUser && (
+          <div className="user">
+            <figure>
+              <div className="image-wrapper">
+                <img
+                  src="https://faces3.b-cdn.net/Colombia.png"
+                  width={40}
+                  height={40}
+                  alt="Profile picture"
+                />
+              </div>
+
+              <figcaption>{currentUser?.name}</figcaption>
+            </figure>
+
+            <div className="options">
+              {currentUser?.isSeller && (
+                <>
+                  <p>Gigs</p>
+                  <p>Add New Gig</p>
+                </>
+              )}
+
+              <p>Orders</p>
+              <p>Messages</p>
+              <p>Logout</p>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Menu */}

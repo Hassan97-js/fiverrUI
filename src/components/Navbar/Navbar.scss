@@ -60,6 +60,28 @@
   }
 }
 
+// .options {
+//   position: absolute;
+//   top: 50px;
+//   right: 0;
+//   padding: 1.25rem;
+//   background-color: #fff;
+//   border: 1px solid #d3d3d3;
+// }
+
+.navbar .user {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  cursor: pointer;
+
+  img {
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
 // MENU
 .menu {
   display: flex;
