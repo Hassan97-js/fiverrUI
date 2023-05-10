@@ -1,17 +1,21 @@
 html {
+  font-size: 100%;
   -webkit-text-size-adjust: 100%;
   overflow-x: hidden;
 }
 
 body {
-  position: relative;
   font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-synthesis: none;
   color: #161616;
   background-color: #fff7ed;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.6;
+}
+
+#root {
+  min-height: 100vh;
 }
 
 h1 {
@@ -42,11 +46,23 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: none;
-  font-family: inherit;
-  border: none;
-  user-select: none;
-  outline: none;
-  cursor: pointer;
+  padding: 0.5rem 1rem;
+
+  border-radius: 0.3125rem;
+  border: 1px solid transparent;
+  background-color: transparent;
   letter-spacing: 0.5px;
+
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 500;
+  line-height: inherit;
+  text-transform: none;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+
+  touch-action: manipulation;
+  cursor: pointer;
 }
