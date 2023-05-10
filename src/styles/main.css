@@ -1,0 +1,52 @@
+html {
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+  color: #161616;
+  background-color: #fff7ed;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+h1 {
+  letter-spacing: -1px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+a:link,
+a:visited {
+  color: currentColor;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  color: currentColor;
+}
+
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  font-family: inherit;
+  border: none;
+  user-select: none;
+  outline: none;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
