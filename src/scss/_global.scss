@@ -6,17 +6,23 @@ html {
 
 body {
   position: relative;
+
   font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-synthesis: none;
-  color: #161616;
-  background-color: #fff7ed;
   font-size: 1rem;
   font-weight: 400;
+  font-synthesis: none;
+  color: #161616;
   line-height: 1.6;
 }
 
 #root {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
+}
+
+#root > *:nth-child(2) {
+  flex: 1;
 }
 
 h1 {
@@ -30,6 +36,10 @@ h4,
 h5 {
   font-weight: 700;
   line-height: 1.1;
+}
+
+p {
+  margin-bottom: 0;
 }
 
 a:link,
@@ -66,4 +76,10 @@ button {
 
   touch-action: manipulation;
   cursor: pointer;
+}
+
+.link:link,
+.link:visited {
+  color: inherit;
+  text-decoration: none;
 }

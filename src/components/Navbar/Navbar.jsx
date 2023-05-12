@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
-import { Link } from "react-router-dom";
+import { Container, Row, Col } from "react-bootstrap";
 
 import { isActive } from "../../utils";
 
@@ -8,14 +9,18 @@ import "./Navbar.scss";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const { pathname } = useLocation();
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      isActive(setActive);
-    });
+    window.addEventListener("scroll", () => isActive(setActive));
 
     return () => window.removeEventListener("scroll", isActive);
   }, []);
+
+  /* Handlers */
+  const handleOpenMenu = () => setIsOpen((isOpen) => !isOpen);
 
   const currentUser = {
     id: 1,
@@ -23,76 +28,193 @@ const Navbar = () => {
     isSeller: true
   };
 
+  const navbarClassName = `${
+    active || pathname !== "/" ? "navbar active" : "navbar"
+  } sticky-top`;
+
   return (
-    <nav className={active ? "navbar active" : "navbar"}>
-      <div className="nav-flex container">
+    <nav className={`${navbarClassName} p-0`}>
+      <div className="nav-flex container p-3">
         <div className="logo">
-          <Link
-            to="/"
-            className="logo-link"
-            rel="noopener noreferrer"
-            aria-label="Logo"
-            title="Logo">
+          <Link to="." className="link" aria-label="Logo" title="Logo">
             Logo
           </Link>
+
           <span className="dot">.</span>
         </div>
 
         <ul className="links" role="list">
-          <li className="link">Fiverr Business</li>
-          <li className="link">Explore</li>
-          <li className="link">English</li>
-          <li className="link">Sign in</li>
-          {!currentUser?.isSeller && <li className="link">Become a Seller</li>}
+          <li>
+            <Link to="." className="link" aria-label="Fiverr Business" title="Home">
+              Fiverr Business
+            </Link>
+          </li>
+
+          <li>
+            <Link to="." className="link" aria-label="Explore" title="Explore">
+              Explore
+            </Link>
+          </li>
+
+          <li>
+            <Link to="." className="link" aria-label="English" title="English">
+              English
+            </Link>
+          </li>
+
+          <li className="link">
+            <Link to="login" className="link" aria-label="Login" title="Login">
+              Login
+            </Link>
+          </li>
+
+          {!currentUser?.isSeller && (
+            <li>
+              <Link
+                to="."
+                className="link"
+                aria-label="Become a Seller"
+                title="Become a Seller">
+                Become a Seller
+              </Link>
+            </li>
+          )}
 
           {currentUser && (
             <li className="btn-wrapper">
-              <button type="button" className="btn">
+              <button type="button" className="btn btn--join">
                 Join
               </button>
             </li>
           )}
         </ul>
 
-        {currentUser && (
-          <div className="user">
-            <figure>
-              <div className="image-wrapper">
-                <img
-                  src="https://faces3.b-cdn.net/Colombia.png"
-                  width={40}
-                  height={40}
-                  alt="Profile picture"
-                />
-              </div>
+        <div className="position-relative">
+          <figure className="user-info" onClick={handleOpenMenu}>
+            <div className="image-wrapper">
+              <img
+                src="https://faces3.b-cdn.net/Colombia.png"
+                width={40}
+                height={40}
+                alt="Profile picture"
+              />
+            </div>
 
-              <figcaption>{currentUser?.name}</figcaption>
-            </figure>
+            <figcaption>{currentUser?.name}</figcaption>
+          </figure>
 
-            <div className="options">
+          {currentUser && (
+            <div className={`${isOpen ? "user-menu open" : "user-menu"}`}>
               {currentUser?.isSeller && (
                 <>
-                  <p>Gigs</p>
-                  <p>Add New Gig</p>
+                  <Link className="link" to="mygigs" aria-label="Gigs" title="Gigs">
+                    Gigs
+                  </Link>
+                  <Link
+                    className="link"
+                    to="add"
+                    aria-label="Add New Gig"
+                    title="Add New Gig">
+                    Add New Gig
+                  </Link>
                 </>
               )}
 
-              <p>Orders</p>
-              <p>Messages</p>
-              <p>Logout</p>
+              <Link className="link" to="orders" aria-label="Orders" title="Orders">
+                Orders
+              </Link>
+
+              <Link
+                className="link"
+                to="."
+                aria-label="Add New Gig"
+                title="Messages">
+                Messages
+              </Link>
+
+              <Link className="link" to="." aria-label="Logout" title="Logout">
+                Logout
+              </Link>
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
 
       {/* Menu */}
-      {active && (
+      {(active || pathname !== "/") && (
         <>
           <div className="menu-separator" />
 
-          <div className="menu container">
-            <span>test</span>
-            <span>test</span>
+          <div className="menu p-3">
+            <Container>
+              <Row className="mb-2">
+                <Col>
+                  <Row>
+                    <Col className="text-center">
+                      <Link className="link" to=".">
+                        Graphics & Design
+                      </Link>
+                    </Col>
+
+                    <Col className="text-center">
+                      <Link className="link" to=".">
+                        Video & Animation
+                      </Link>
+                    </Col>
+
+                    <Col className="text-center">
+                      <Link className="link" to=".">
+                        Writing & Translation
+                      </Link>
+                    </Col>
+                  </Row>
+                </Col>
+              </Row>
+
+              <Row className="mb-2">
+                <Col>
+                  <Row>
+                    <Col className="text-center">
+                      <Link className="link" to=".">
+                        AI Services
+                      </Link>
+                    </Col>
+
+                    <Col className="text-center">
+                      <Link className="link" to=".">
+                        Digital Marketing
+                      </Link>
+                    </Col>
+
+                    <Col className="text-center">
+                      <Link className="link" to=".">
+                        Music & Audio
+                      </Link>
+                    </Col>
+                  </Row>
+                </Col>
+              </Row>
+
+              <Row>
+                <Col className="text-center">
+                  <Link className="link" to=".">
+                    Programming & Tech
+                  </Link>
+                </Col>
+
+                <Col className="text-center">
+                  <Link className="link" to=".">
+                    Business
+                  </Link>
+                </Col>
+
+                <Col className="text-center">
+                  <Link className="link" to=".">
+                    Business
+                  </Link>
+                </Col>
+              </Row>
+            </Container>
           </div>
         </>
       )}
@@ -101,3 +223,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+/*
+ */
