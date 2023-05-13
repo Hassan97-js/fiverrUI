@@ -1,7 +1,13 @@
+import { Featured } from "../../components";
+
 import "./Home.scss";
 
 const Home = () => {
-  return <h1 className="home">Home</h1>;
+  return (
+    <>
+      <Featured />
+    </>
+  );
 };
 
 export default Home;

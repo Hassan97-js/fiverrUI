@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import { Root, Home, Login, Error } from "./routes";
+import { Root, Home, Login, Error, MyGigs } from "./routes";
 
 import "./scss/main.scss";
 
@@ -18,8 +18,12 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: "/login",
+        path: "login",
         element: <Login />
+      },
+      {
+        path: "mygigs",
+        element: <MyGigs />
       }
     ]
   }

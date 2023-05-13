@@ -34,7 +34,7 @@ const Navbar = () => {
 
   return (
     <nav className={`${navbarClassName} p-0`}>
-      <div className="nav-flex container p-3">
+      <div className="flex-nav app-container p-3">
         <div className="logo">
           <Link to="." className="link" aria-label="Logo" title="Logo">
             Logo
