@@ -16,10 +16,7 @@ const Error = () => {
   };
 
   return (
-    <div
-      className="d-flex flex-column  justify-content-center align-items-center"
-      id="error-page"
-      style={{ minHeight: "100vh" }}>
+    <div className="flex-center flex-column min-vh-screen" id="error-page">
       <h1 style={h1Styles}>Oops!</h1>
       <p style={pStyles}>Sorry, an unexpected error has occurred.</p>
       <p style={pStyles} className="text-muted">

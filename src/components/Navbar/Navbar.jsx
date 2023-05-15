@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-import { Container, Row, Col } from "react-bootstrap";
-
 import { isActive } from "../../utils";
 
 import "./Navbar.scss";
@@ -30,11 +28,11 @@ const Navbar = () => {
 
   const navbarClassName = `${
     active || pathname !== "/" ? "navbar active" : "navbar"
-  } sticky-top`;
+  }`;
 
   return (
-    <nav className={`${navbarClassName} p-0`}>
-      <div className="flex-nav app-container p-3">
+    <nav className={navbarClassName}>
+      <div className="flex-nav container py-6">
         <div className="logo">
           <Link to="." className="link" aria-label="Logo" title="Logo">
             Logo
@@ -89,7 +87,7 @@ const Navbar = () => {
           )}
         </ul>
 
-        <div className="position-relative">
+        <div className="relative">
           <figure className="user-info" onClick={handleOpenMenu}>
             <div className="image-wrapper">
               <img
@@ -145,76 +143,42 @@ const Navbar = () => {
         <>
           <div className="menu-separator" />
 
-          <div className="menu p-3">
-            <Container>
-              <Row className="mb-2">
-                <Col>
-                  <Row>
-                    <Col className="text-center">
-                      <Link className="link" to=".">
-                        Graphics & Design
-                      </Link>
-                    </Col>
+          <div className="menu container-fluid grid-menu py-6">
+            <Link className="link" to=".">
+              Graphics & Design
+            </Link>
 
-                    <Col className="text-center">
-                      <Link className="link" to=".">
-                        Video & Animation
-                      </Link>
-                    </Col>
+            <Link className="link" to=".">
+              Video & Animation
+            </Link>
 
-                    <Col className="text-center">
-                      <Link className="link" to=".">
-                        Writing & Translation
-                      </Link>
-                    </Col>
-                  </Row>
-                </Col>
-              </Row>
+            <Link className="link" to=".">
+              Writing & Translation
+            </Link>
 
-              <Row className="mb-2">
-                <Col>
-                  <Row>
-                    <Col className="text-center">
-                      <Link className="link" to=".">
-                        AI Services
-                      </Link>
-                    </Col>
+            <Link className="link" to=".">
+              AI Services
+            </Link>
 
-                    <Col className="text-center">
-                      <Link className="link" to=".">
-                        Digital Marketing
-                      </Link>
-                    </Col>
+            <Link className="link" to=".">
+              Digital Marketing
+            </Link>
 
-                    <Col className="text-center">
-                      <Link className="link" to=".">
-                        Music & Audio
-                      </Link>
-                    </Col>
-                  </Row>
-                </Col>
-              </Row>
+            <Link className="link" to=".">
+              Music & Audio
+            </Link>
 
-              <Row>
-                <Col className="text-center">
-                  <Link className="link" to=".">
-                    Programming & Tech
-                  </Link>
-                </Col>
+            <Link className="link" to=".">
+              Programming & Tech
+            </Link>
 
-                <Col className="text-center">
-                  <Link className="link" to=".">
-                    Business
-                  </Link>
-                </Col>
+            <Link className="link" to=".">
+              Business
+            </Link>
 
-                <Col className="text-center">
-                  <Link className="link" to=".">
-                    Business
-                  </Link>
-                </Col>
-              </Row>
-            </Container>
+            <Link className="link" to=".">
+              Lifestyle
+            </Link>
           </div>
         </>
       )}
@@ -223,5 +187,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-/*
- */

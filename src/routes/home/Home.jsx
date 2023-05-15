@@ -1,4 +1,4 @@
-import { Featured } from "../../components";
+import { Featured, TrustedBy, Slider } from "../../components";
 
 import "./Home.scss";
 
@@ -6,6 +6,8 @@ const Home = () => {
   return (
     <>
       <Featured />
+      <TrustedBy />
+      <Slider />
     </>
   );
 };

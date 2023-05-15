@@ -3,14 +3,10 @@ import "./Footer.scss";
 const Footer = () => {
   return (
     <footer className="footer p-4">
-      <div className="app-container">
-        <div className="row">
-          <div className="col-12 col-md-6">
-            <p>Item</p>
-          </div>
-          <div className="col-12 col-md-6">
-            <p>Item</p>
-          </div>
+      <div className="container">
+        <div className="flex">
+          <p>Item</p>
+          <p>Item</p>
         </div>
       </div>
     </footer>

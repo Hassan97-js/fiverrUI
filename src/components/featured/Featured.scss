@@ -10,26 +10,18 @@
   height: 1.25rem;
 }
 
-.search-input input,
-.search-input button {
-  border: 0;
-  outline: none;
-}
-
-button.btn--featured {
+.btn--featured {
   width: 7.5rem;
   background-color: #1dbf73;
   color: #fff;
   border-radius: 0;
 }
 
-button.btn--popular {
+.btn--popular {
   font-size: 0.875rem;
   border-color: #fff;
 }
 
 h1 i.hl {
-  font-family: Helvetica;
-  font-weight: 300;
   color: #1dbf73;
 }
