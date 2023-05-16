@@ -8,14 +8,16 @@ import "./Featured.scss";
 const Featured = () => {
   return (
     <section className="featured">
-      <div className="container flex items-center">
+      <div className="container flex items-center gap-6">
         <div className="left flex flex-column gap-6">
           <h1>
             Find the perfect <i className="hl">freelance</i> services for your
             business
           </h1>
 
-          <div className="flex justify-between bg-white radius-base overflow-hidden" role="Search">
+          <div
+            className="flex justify-between bg-white radius-base overflow-hidden"
+            role="Search">
             <div role="Search Input" className="flex items-center flex-size-1 gap-2">
               <img
                 className="search-icon m-3"

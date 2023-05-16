@@ -33,9 +33,9 @@ const Navbar = () => {
   return (
     <nav className={navbarClassName}>
       <div className="flex-nav container py-6">
-        <div className="logo">
+        <div className="logo fw-700">
           <Link to="." className="link" aria-label="Logo" title="Logo">
-            Logo
+            fiverr
           </Link>
 
           <span className="dot">.</span>

@@ -10,7 +10,7 @@ import "./TrustedBy.scss";
 
 const TrustedBy = () => {
   return (
-    <section className="trusted-by flex flex-column items-center py-6">
+    <section className="trusted-by flex flex-column items-center py-12">
       <strong>Trusted by:</strong>
       <div className="container flex justify-center items-center gap-6 py-2">
         <RiFacebookCircleFill size="2em" aria-label="A facebook logo" />
