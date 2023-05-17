@@ -1,3 +1,4 @@
 import { isActive } from "./ui-utils";
+import { formatCurrency } from "./numbers.js";
 
-export { isActive };
+export { isActive, formatCurrency };

@@ -6,8 +6,8 @@ import {
 } from "../../components";
 
 import {
-  GigCategoryCard,
-  GigProjectCard,
+  SliderGigCategoryCard,
+  SliderGigProjectCard,
   Features,
   FiverrBusiness
 } from "../../components";
@@ -22,11 +22,11 @@ import "./Home.scss";
 
 const Home = () => {
   const GigCategoriesCards = gigCategories.map((category) => {
-    return <GigCategoryCard key={category.id} item={category} />;
+    return <SliderGigCategoryCard key={category.id} item={category} />;
   });
 
   const GigProjectsCards = gigProjects.map((project) => {
-    return <GigProjectCard key={project.id} project={project} />;
+    return <SliderGigProjectCard key={project.id} project={project} />;
   });
 
   return (

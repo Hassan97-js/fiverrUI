@@ -7,7 +7,7 @@ import Home from "./home/Home";
 import Login from "./login/Login";
 import Message from "./message/Message";
 import Messages from "./messages/Messages";
-import MyGigs from "./myGigs/MyGigs";
+import MyGigs from "./my-gigs/MyGigs";
 import Orders from "./orders/Orders";
 import Register from "./register/Register";
 

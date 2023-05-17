@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
-import "./GigProjectCard.scss";
 
-const GigProjectCard = ({ project }) => {
+import "./SliderGigProjectCard.scss";
+
+const SliderGigProjectCard = ({ project }) => {
   const { imgURL, category, client } = project;
+  
   return (
-    <Link to="/" className="project-card flex flex-column gap-4">
+    <Link to="/" className="slider-project-card flex flex-column gap-4">
       <div className="project-img flex-size-2">
         <img className="radius-base" src={imgURL} alt={`${category} gig image`} />
       </div>
@@ -29,4 +31,4 @@ const GigProjectCard = ({ project }) => {
   );
 };
 
-export default GigProjectCard;
+export default SliderGigProjectCard;

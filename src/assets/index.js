@@ -3,6 +3,8 @@ import fiverBusinessImage from "./image/pexels-fauxels-3183152.jpg";
 
 import heroSearchIcon from "./image/search.png";
 import featuresCheckIcon from "./image/check.png";
+import gigsRouteStarIcon from "./image/star.png";
+import gigsRouteHeartIcon from "./image/heart.png";
 
 import featuresVideo from "./video/freelancer-large.mp4";
 
@@ -18,7 +20,9 @@ const assetsData = {
   },
   icons: {
     heroSearchIcon,
-    featuresCheckIcon
+    featuresCheckIcon,
+    gigsRouteStarIcon,
+    gigsRouteHeartIcon
   },
   svgs: {
     footerLogoSVG

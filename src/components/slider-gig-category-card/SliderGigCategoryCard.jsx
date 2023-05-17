@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
-import "./GigCategoryCard.scss";
+import "./SliderGigCategoryCard.scss";
 
-const GigCategoryCard = ({ item }) => {
+const SliderGigCategoryCard = ({ item }) => {
   return (
     <Link
       style={{
@@ -11,9 +11,8 @@ const GigCategoryCard = ({ item }) => {
         backgroundSize: "cover",
         backgroundPosition: "center"
       }}
-      className="category-card block relative text-white text-white"
+      className="slider-category-card block relative text-white text-white"
       to="/gigs?category=design">
-      {/* <img className="w-100 object-cover" src={item.imgURL} alt={item.description} /> */}
       <span className="category-card-description fw-300 absolute">
         {item.description}
       </span>
@@ -24,4 +23,4 @@ const GigCategoryCard = ({ item }) => {
   );
 };
 
-export default GigCategoryCard;
+export default SliderGigCategoryCard;
