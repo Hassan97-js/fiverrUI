@@ -1,24 +1,15 @@
 .fiverr-business {
-  background-color: #f1fdf7;
+  background-color: #0d084d;
+  color: #fff;
 
   p {
-    font-size: 1.125rem;
-    color: #444;
     line-height: 1.7;
     letter-spacing: 1px;
+    font-weight: 500;
   }
 
-  .title {
-    font-size: 1.125rem;
-    font-weight: 500;
-    color: #444;
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
-    margin-bottom: 0.8em;
-
-    img {
-      width: 1.5rem;
-    }
+  img.icon {
+    width: 1.25rem;
+    margin-top: 0.2em;
   }
 }

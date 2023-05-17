@@ -68,12 +68,14 @@ button {
   font-family: inherit;
   font-size: inherit;
   font-weight: 500;
+  color: #fff;
   line-height: inherit;
   text-transform: none;
   text-decoration: none;
   user-select: none;
   -webkit-user-select: none;
 
+  transition: all 200ms ease;
   touch-action: manipulation;
   cursor: pointer;
 }

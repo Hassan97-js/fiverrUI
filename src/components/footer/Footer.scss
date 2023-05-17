@@ -1,0 +1,21 @@
+.footer .footer--grid {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5em 2em;
+
+  h2 {
+    margin-bottom: 0.6em;
+  }
+
+  li {
+    max-width: 20ch;
+  }
+
+  hr {
+    background-color: #888;
+    color: #888;
+  }
+}
+
+.footer--bottom p {
+  margin-top: 0.625rem;
+}

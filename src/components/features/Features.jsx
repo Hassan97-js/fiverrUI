@@ -8,8 +8,17 @@ const { featuresCheckIcon } = assetsData.icons;
 const Features = () => {
   return (
     <section className="features py-24">
-      <div className="container flex flex-center gap-28">
-        <div className="left flex flex-column gap-10 flex-size-2">
+      <div className="container flex gap-28">
+        <div className="left flex-size-3">
+          <video
+            className="radius-base object-cover object-position-right w-100 h-100"
+            src={featuresVideo}
+            muted
+            autoPlay
+            loop></video>
+        </div>
+
+        <div className="right flex flex-column gap-10 flex-size-2">
           <h1 className="mb-4">
             A whole world of freelance talent at your fingertips
           </h1>
@@ -46,15 +55,6 @@ const Features = () => {
               project-based pricing.
             </p>
           </div>
-        </div>
-        <div className="right flex-size-3">
-          <video
-            src={featuresVideo}
-            muted
-            autoPlay
-            loop
-            width={"100%"}
-            height={"100%"}></video>
         </div>
       </div>
     </section>

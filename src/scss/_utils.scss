@@ -1,5 +1,4 @@
 /* LAYOUT */
-
 .container,
 .container-fluid {
   margin-right: auto !important;
@@ -27,6 +26,9 @@
 .w-100 {
   width: 100% !important;
 }
+.w-max-content {
+  width: max-content !important;
+}
 .h-100 {
   height: 100% !important;
 }
@@ -50,6 +52,9 @@
 .items-center {
   align-items: center !important;
 }
+.self-start {
+  align-self: flex-start;
+}
 .flex-center {
   display: flex !important;
   justify-content: center !important;
@@ -63,6 +68,14 @@
 }
 .flex-size-3 {
   flex: 3 !important;
+}
+
+.grid {
+  display: grid !important;
+}
+
+.grid-cols--5 {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .gap-3 {
@@ -88,13 +101,17 @@
 .p-0 {
   padding: 0 !important;
 }
-
 .p-3 {
   padding: 0.75rem !important;
 }
-
 .p-4 {
   padding: 1rem !important;
+}
+.p-6 {
+  padding: 1.5rem !important;
+}
+.p-8 {
+  padding: 2rem !important;
 }
 
 .px-3 {
@@ -127,8 +144,17 @@
   padding-bottom: 6rem !important;
 }
 
+.mt-1 {
+  margin-top: 0.125rem !important;
+}
+
 .m-3 {
   margin: 0.75rem !important;
+}
+
+.my-8 {
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
 }
 
 .mb-0 {
@@ -163,6 +189,10 @@
   font-size: 1.875rem !important;
 }
 
+.heading-xl {
+  font-size: 2.25rem !important;
+}
+
 .fw-300 {
   font-weight: 300 !important;
 }
@@ -184,6 +214,10 @@
 
 .object-cover {
   object-fit: cover !important;
+}
+
+.object-position-right {
+  object-position: right !important;
 }
 
 /* COLORS */

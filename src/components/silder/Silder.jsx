@@ -1,24 +1,32 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-import { uiData } from "../../data";
-
-const { responsive } = uiData;
-
 import "./Slider.scss";
 
-const Silder = ({ children }) => {
+const Slider = ({
+  children,
+  responsive,
+  draggable,
+  infinite,
+  autoPlay,
+  autoPlaySpeed,
+  keyBoardControl,
+  removeArrowOnDeviceType,
+  styles = {},
+  itemsClass = ""
+}) => {
   return (
-    <section className="slider py-24">
-      <div className="container">
+    <section className="slider container py-24">
+      <div style={styles}>
         <Carousel
-          draggable={false}
+          draggable={draggable}
           responsive={responsive}
-          infinite={true}
-          autoPlay={true}
-          autoPlaySpeed={3000}
-          keyBoardControl={true}
-          removeArrowOnDeviceType={["tablet", "mobile"]}>
+          infinite={infinite}
+          autoPlay={autoPlay}
+          autoPlaySpeed={autoPlaySpeed}
+          keyBoardControl={keyBoardControl}
+          removeArrowOnDeviceType={removeArrowOnDeviceType}
+          itemClass={itemsClass}>
           {children}
         </Carousel>
       </div>
@@ -26,4 +34,4 @@ const Silder = ({ children }) => {
   );
 };
 
-export default Silder;
+export default Slider;
