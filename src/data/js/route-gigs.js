@@ -3,7 +3,7 @@ export const routeGigs = [
     id: 1,
     imgURL:
       "https://images.pexels.com/photos/580151/pexels-photo-580151.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    description: "I will create ai art character from your images and prompts",
+    description: "I will create AI art character from your images and prompts",
     price: 59,
 
     client: {
@@ -17,7 +17,7 @@ export const routeGigs = [
     id: 2,
     imgURL:
       "https://images.pexels.com/photos/4145190/pexels-photo-4145190.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    description: "I will create ultra high quality character art with ai",
+    description: "I will create AI art character from your images and prompts",
     price: 79,
 
     client: {
@@ -31,8 +31,7 @@ export const routeGigs = [
     id: 3,
     imgURL:
       "https://images.pexels.com/photos/8797307/pexels-photo-8797307.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    description:
-      "I will creating unique ai generated artworks mid journey ai artist",
+    description: "I will create AI art character from your images and prompts",
     price: 112,
 
     client: {
@@ -46,7 +45,7 @@ export const routeGigs = [
     id: 4,
     imgURL:
       "https://images.pexels.com/photos/5708069/pexels-photo-5708069.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    description: "I will create custom ai generated artwork using your photos",
+    description: "I will create AI art character from your images and prompts",
     price: 99,
 
     client: {
@@ -60,7 +59,7 @@ export const routeGigs = [
     id: 5,
     imgURL:
       "https://images.pexels.com/photos/5699456/pexels-photo-5699456.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    description: "I will recreate your dreams in high quality pictures",
+    description: "I will create AI art character from your images and prompts",
     price: 59,
 
     client: {
@@ -74,8 +73,7 @@ export const routeGigs = [
     id: 6,
     imgURL:
       "https://images.pexels.com/photos/8100784/pexels-photo-8100784.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    description:
-      "I will create ai digital art illustration hyper realistic painting",
+    description: "I will create AI art character from your images and prompts",
     price: 79,
 
     client: {
@@ -89,7 +87,7 @@ export const routeGigs = [
     id: 7,
     imgURL:
       "https://images.pexels.com/photos/6039245/pexels-photo-6039245.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    description: "I will generate images with your prompts using ai dalle",
+    description: "I will create AI art character from your images and prompts",
     price: 89,
 
     client: {
@@ -103,7 +101,7 @@ export const routeGigs = [
     id: 8,
     imgURL:
       "https://images.pexels.com/photos/5490778/pexels-photo-5490778.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    description: "I will create custom art using midjourney generator",
+    description: "I will create AI art character from your images and prompts",
     price: 110,
 
     client: {

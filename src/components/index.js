@@ -1,4 +1,5 @@
 import Navbar from "./navbar/Navbar";
+import Breadcrumb from "./breadcrumb/Breadcrumb";
 import Footer from "./footer/Footer";
 import Featured from "./featured/Featured";
 import TrustedBy from "./trusted-by/TrustedBy";
@@ -22,5 +23,6 @@ export {
   RouteGigProjectCard,
   Features,
   FiverrBusiness,
-  Button
+  Button,
+  Breadcrumb
 };

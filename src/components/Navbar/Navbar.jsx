@@ -143,7 +143,7 @@ const Navbar = () => {
         <>
           <div className="menu-separator" />
 
-          <div className="menu container-fluid px-0 grid-menu pt-6">
+          <div className="menu container-fluid grid-menu p-6">
             <Link className="link" to=".">
               Graphics & Design
             </Link>

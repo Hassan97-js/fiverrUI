@@ -1,9 +1,18 @@
 import "./Button.scss";
 
-const Button = ({ children, onClick, className = "" }) => {
+const Button = ({
+  children,
+  sm = false,
+  onClick,
+  className = "",
+  ...otherProps
+}) => {
   return (
     <button
-      className={`btn--default ${className} radius-base px-3 py-2`}
+      {...otherProps}
+      className={`btn--default ${className} ${
+        sm ? "btn--sm" : ""
+      } radius-base px-3 py-2`}
       onClick={onClick}>
       {children}
     </button>

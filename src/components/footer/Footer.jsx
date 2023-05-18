@@ -16,7 +16,7 @@ const { footerLogoSVG } = assetsData.svgs;
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer p-6">
       <div className="container">
         <nav className="grid footer--grid">
           <ul role="list">
