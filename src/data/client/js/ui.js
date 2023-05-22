@@ -17,8 +17,8 @@ const responsive = {
   }
 };
 
-const uiData = {
+const uiConfig = {
   responsive
 };
 
-export default uiData;
+export default uiConfig;

@@ -1,22 +1,17 @@
 import {
   Featured,
   TrustedBy,
+  SliderGigCategoryCard,
+  SliderGigProjectCard,
+  Features,
+  FiverrBusiness,
   Slider as GigCategorySlider,
   Slider as GigProjectsSlider
 } from "../../components";
 
-import {
-  SliderGigCategoryCard,
-  SliderGigProjectCard,
-  Features,
-  FiverrBusiness
-} from "../../components";
+import { gigCategories, gigProjects, uiConfig } from "../../data";
 
-import { gigCategories, gigProjects } from "../../data";
-
-import { uiData } from "../../data";
-
-const { responsive } = uiData;
+const { responsive } = uiConfig;
 
 import "./Home.scss";
 
@@ -24,17 +19,13 @@ const Home = () => {
   const GigCategoriesCards = gigCategories.map((category) => {
     return <SliderGigCategoryCard key={category.id} item={category} />;
   });
-
   const GigProjectsCards = gigProjects.map((project) => {
     return <SliderGigProjectCard key={project.id} project={project} />;
   });
-
   return (
     <>
       <Featured />
-
       <TrustedBy />
-
       <GigCategorySlider
         draggable={true}
         responsive={responsive}
@@ -45,11 +36,8 @@ const Home = () => {
         removeArrowOnDeviceType={["tablet", "mobile"]}>
         {GigCategoriesCards}
       </GigCategorySlider>
-
       <Features />
-
       <FiverrBusiness />
-
       <GigProjectsSlider
         styles={{
           boxShadow: "0 2px 10px rgba(0, 0, 0, 0.15)",

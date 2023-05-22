@@ -1,3 +1,3 @@
 # Todos
 
-- Remove Bootstrap from project
+- Recap Project

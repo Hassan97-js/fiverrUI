@@ -1,7 +1,8 @@
-import gigCategories from "./js/gig-categories.js";
-import gigProjects from "./js/gig-projects.js";
-import routeGigs from "./js/route-gigs.js";
+import gigCategories from "./client/js/gig-categories.js";
+import gigProjects from "./client/js/gig-projects.js";
+import routeGigs from "./client/js/route-gigs.js";
 
-import uiData from "./js/ui.js";
+import uiConfig from "./client/js/ui.js";
+import routerConfig from "./client/router.jsx";
 
-export { uiData, gigCategories, gigProjects, routeGigs };
+export { uiConfig, gigCategories, gigProjects, routeGigs, routerConfig };
