@@ -1,5 +1,7 @@
-const Breadcrumb = () => {
-  return <div className="mb-4">FIVERR &gt; GRAPHICS & DESIGN &gt;</div>;
+import "./Breadcrumb.scss";
+
+const Breadcrumb = ({ classes = "", children }) => {
+  return <p className={`breadcrumb ${classes} mb-4 fw-300`}>{children}</p>;
 };
 
 export default Breadcrumb;

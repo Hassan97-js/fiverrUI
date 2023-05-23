@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
-import { RiHeartFill, RiStarFill } from "react-icons/ri";
+import { RiHeartFill } from "react-icons/ri";
+
+import Stars from "../stars/Stars";
 
 import { formatCurrency } from "../../utils";
 
@@ -12,7 +14,7 @@ const RouteGigProjectCard = ({ gig }) => {
 
   return (
     <Link
-      to="gig/123"
+      to="/gig/123"
       className="route-project-card radius-base overflow-hidden pb-3">
       <div
         style={{
@@ -43,12 +45,9 @@ const RouteGigProjectCard = ({ gig }) => {
 
         <p className="description light-text mb-5">{description}</p>
 
-        <div className="star flex items-center gap-2">
-          <RiStarFill color="#e6cc00" size="1.2em" aria-label="A star icon" />
-          <span>{client.stars}</span>
-        </div>
+        <Stars>{client.stars}</Stars>
 
-        <hr className="d-block w-100 my-4" />
+        <hr className="divider d-block w-100 my-4" />
 
         <div className="flex items-center justify-between">
           <RiHeartFill color="#f94449" size="1.2em" aria-label="A heart icon" />

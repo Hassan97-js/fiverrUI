@@ -1,0 +1,9 @@
+.gig-section {
+  .box {
+    border: 1px solid #b3b3b3;
+  }
+
+  .items {
+    grid-template-columns: 1fr 1fr;
+  }
+}

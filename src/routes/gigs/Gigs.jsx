@@ -1,4 +1,4 @@
-import { RiArrowDownSLine } from "react-icons/ri";
+import { useState } from "react";
 import { RouteGigProjectCard, Breadcrumb, Button } from "../../components";
 
 import { routeGigs } from "../../data";
@@ -6,17 +6,28 @@ import { routeGigs } from "../../data";
 import "./Gigs.scss";
 
 const Gigs = () => {
+  const [selected, setSelected] = useState("sales");
+
+  /* Handler */
+  const handleSelect = (event) => {
+    const { value } = event.target;
+    setSelected(value);
+  };
+
+  /* JSX */
   const routeGigCards = routeGigs.map((gig) => {
     return <RouteGigProjectCard key={gig.id} gig={gig} />;
   });
 
   return (
-    <section className="container py-24">
-      <Breadcrumb />
+    <section className="gigs-section container py-24">
+      <Breadcrumb>FIVERR &gt; GRAPHICS & DESIGN &gt;</Breadcrumb>
+
       <h1 className="mb-4">AI Artists</h1>
       <h3 className="fw-300">
         Explore the boundaries of art and technology with Fiverr&apos;s AI artists
       </h3>
+
       <div className="gigs-menu flex item-center justify-between my-4">
         <form className="left flex items-center gap-3 py-5">
           <span className="budget">Budget</span>
@@ -26,23 +37,23 @@ const Gigs = () => {
             Apply
           </Button>
         </form>
-        <div className="right flex items-center gap-3">
+
+        <div className="right relative flex justify-end items-center gap-3">
           <span className="sort-by">Sort by</span>
-          <button className="flex items-center gap-2 p-0 text-dark">
-            <span className="sort-type fw-500">Best Selling</span>
-            <RiArrowDownSLine
-              color="#777"
-              size="1.1em"
-              aria-label="A facebook logo"
-            />
-          </button>
-          <div className="select-dropdown">
-            <span>Newest</span>
-            <span>Best Selling</span>
-          </div>
+
+          <form>
+            <select
+              className="select-dropdown bg-white p-3 outline-0 radius-base cursor-pointer"
+              value={selected}
+              onChange={handleSelect}>
+              <option value="createdAt">Newest</option>
+              <option value="sales">Best Selling</option>
+            </select>
+          </form>
         </div>
       </div>
-      <div className="gigs grid gap-10 ">{routeGigCards}</div>
+
+      <div className="gigs grid gap-10">{routeGigCards}</div>
     </section>
   );
 };

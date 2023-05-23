@@ -1,3 +1,25 @@
+.gigs-section .sort-by {
+  color: #555;
+}
+
+.gigs-section .select-dropdown {
+  border: 1px solid #b3b3b3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 2em;
+  padding-right: 2em;
+  cursor: pointer;
+}
+
+.gigs-menu .right {
+  width: 400px;
+}
+
+.gigs-menu .select-dropdown {
+  width: 200px;
+}
+
 .gigs {
   grid-template-columns: repeat(auto-fit, minmax(16.25rem, 1fr));
 }

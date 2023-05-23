@@ -11,6 +11,7 @@ import FiverrBusiness from "./fiverr-business/FiverrBusiness";
 import RouteGigProjectCard from "./route-gig-project-card/RouteGigProjectCard";
 
 import Button from "./custom-button/Button";
+import Stars from "./stars/Stars";
 
 export {
   Navbar,
@@ -24,5 +25,6 @@ export {
   Features,
   FiverrBusiness,
   Button,
+  Stars,
   Breadcrumb
 };

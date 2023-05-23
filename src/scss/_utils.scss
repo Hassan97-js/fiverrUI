@@ -49,6 +49,9 @@
 .justify-between {
   justify-content: space-between !important;
 }
+.justify-end {
+  justify-content: end;
+}
 .items-center {
   align-items: center !important;
 }
@@ -184,6 +187,9 @@
 .mt-1 {
   margin-top: 0.125rem !important;
 }
+.mt-3 {
+  margin-top: 0.5rem !important;
+}
 .mt-5 {
   margin-top: 1.25rem !important;
 }
@@ -203,6 +209,10 @@
 }
 .mb-5 {
   margin-bottom: 1.25rem !important;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem !important;
 }
 
 .my-4 {

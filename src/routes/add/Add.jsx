@@ -1,7 +1,7 @@
 import "./Add.scss";
 
 const Add = () => {
-  return <div className="add">Add</div>;
+  return <h1 className="add">Add</h1>;
 };
 
 export default Add;

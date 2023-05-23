@@ -16,21 +16,19 @@ const Slider = ({
   itemsClass = ""
 }) => {
   return (
-    <section className="slider container py-24">
-      <div style={styles}>
-        <Carousel
-          draggable={draggable}
-          responsive={responsive}
-          infinite={infinite}
-          autoPlay={autoPlay}
-          autoPlaySpeed={autoPlaySpeed}
-          keyBoardControl={keyBoardControl}
-          removeArrowOnDeviceType={removeArrowOnDeviceType}
-          itemClass={itemsClass}>
-          {children}
-        </Carousel>
-      </div>
-    </section>
+    <div style={styles}>
+      <Carousel
+        draggable={draggable}
+        responsive={responsive}
+        infinite={infinite}
+        autoPlay={autoPlay}
+        autoPlaySpeed={autoPlaySpeed}
+        keyBoardControl={keyBoardControl}
+        removeArrowOnDeviceType={removeArrowOnDeviceType}
+        itemClass={itemsClass}>
+        {children}
+      </Carousel>
+    </div>
   );
 };
 
