@@ -88,6 +88,13 @@ button {
   cursor: pointer;
 }
 
+button.btn--outline {
+  border: 1px solid #222;
+  color: #222;
+  padding: 0.5em 1.5em;
+  border-radius: 0.25rem;
+}
+
 .link:link,
 .link:visited {
   color: inherit;

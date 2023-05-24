@@ -22,6 +22,7 @@ const Home = () => {
   const GigProjectsCards = gigProjects.map((project) => {
     return <SliderGigProjectCard key={project.id} project={project} />;
   });
+
   return (
     <>
       <Featured />

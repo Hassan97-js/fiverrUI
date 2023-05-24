@@ -6,6 +6,8 @@ import "./Slider.scss";
 const Slider = ({
   children,
   responsive,
+  className = "",
+  containerClass = "",
   draggable,
   infinite,
   autoPlay,
@@ -13,11 +15,15 @@ const Slider = ({
   keyBoardControl,
   removeArrowOnDeviceType,
   styles = {},
-  itemsClass = ""
+  itemsClass = "",
+  sliderClassName = "",
+  slidesToSlide = 1
 }) => {
   return (
     <div style={styles}>
       <Carousel
+        className={className}
+        containerClass={containerClass}
         draggable={draggable}
         responsive={responsive}
         infinite={infinite}
@@ -25,7 +31,9 @@ const Slider = ({
         autoPlaySpeed={autoPlaySpeed}
         keyBoardControl={keyBoardControl}
         removeArrowOnDeviceType={removeArrowOnDeviceType}
-        itemClass={itemsClass}>
+        itemClass={itemsClass}
+        slidesToSlide={slidesToSlide}
+        sliderClass={sliderClassName}>
         {children}
       </Carousel>
     </div>

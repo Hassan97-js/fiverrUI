@@ -1,12 +1,14 @@
-import { Breadcrumb, Button, Slider } from "../../components";
+import { Breadcrumb, Slider } from "../../components";
 import { Stars } from "../../components";
+import Reviews from "../../components/reviews/Reviews";
 
 import { uiConfig } from "../../data";
 
-const { responsive } = uiConfig;
+const { responsiveItemsOne } = uiConfig;
 
 import "./Gig.scss";
 
+/* TODO: REFACTOR THIS COMPONENT */
 const Gig = () => {
   return (
     <section className="gig-section container py-24">
@@ -15,21 +17,26 @@ const Gig = () => {
           <Breadcrumb>FIVERR &gt; GRAPHICS & DESIGN &gt;</Breadcrumb>
           <h1>I will create AI generated art for you</h1>
 
-          <div className="user">
-            <img src="" alt="" />
-            <span>John Doe</span>
-            <Stars>5</Stars>
+          <div className="user flex gap-3">
+            <img
+              className="radius-full object-cover"
+              src="https://picsum.photos/200"
+              alt=""
+              width={30}
+              height={30}
+            />
+
+            <div>
+              <span className="fw-500">John Doe</span>
+              <Stars>5</Stars>
+            </div>
           </div>
         </div>
 
         <Slider
-          styles={{
-            boxShadow: "0 2px 10px rgba(0, 0, 0, 0.15)",
-            borderRadius: "0.375rem"
-          }}
-          itemsClass="p-6"
+          containerClass="radius-md"
           draggable={true}
-          responsive={responsive}
+          responsive={responsiveItemsOne}
           infinite={true}
           autoPlay={true}
           autoPlaySpeed={3000}
@@ -40,29 +47,34 @@ const Gig = () => {
             alt=""
           />
           <img
+            className="object-cover object-position-center"
             src="https://images.pexels.com/photos/1462935/pexels-photo-1462935.jpeg?auto=compress&cs=tinysrgb&w=1600"
             alt=""
           />
           <img
+            className="object-cover object-position-center"
             src="https://images.pexels.com/photos/1054777/pexels-photo-1054777.jpeg?auto=compress&cs=tinysrgb&w=1600"
             alt=""
           />
           <img
+            className="object-cover object-position-center"
             src="https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress&cs=tinysrgb&w=1600"
             alt=""
           />
           <img
+            className="object-cover object-position-center"
             src="https://images.pexels.com/photos/1462935/pexels-photo-1462935.jpeg?auto=compress&cs=tinysrgb&w=1600"
             alt=""
           />
           <img
+            className="object-cover object-position-center"
             src="https://images.pexels.com/photos/1054777/pexels-photo-1054777.jpeg?auto=compress&cs=tinysrgb&w=1600"
             alt=""
           />
         </Slider>
 
         <div>
-          <h2>About This Gig</h2>
+          <h2 className="mb-1">About This Gig</h2>
           <p>
             I use an AI program to create images based on text prompts. This means I
             can help you to create a vision you have through a textual description of
@@ -81,7 +93,7 @@ const Gig = () => {
 
         <div>
           <div className="seller">
-            <h2 className="mb-4">About The Seller</h2>
+            <h2 className="seller-heading">About The Seller</h2>
 
             <div className="user flex items-center gap-3">
               <img
@@ -98,7 +110,9 @@ const Gig = () => {
                   <Stars>5</Stars>
                 </div>
 
-                <button className="text-dark">Contact Me</button>
+                <button className="btn--outline btn--seller radius-md">
+                  Contact Me
+                </button>
               </div>
             </div>
           </div>
@@ -137,6 +151,8 @@ const Gig = () => {
             </p>
           </div>
         </div>
+
+        <Reviews />
       </div>
     </section>
   );
