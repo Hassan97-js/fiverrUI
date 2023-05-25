@@ -13,7 +13,7 @@ import RemixIcon from "../remix-icon/RemixIcon";
 import assetsData from "../../assets";
 const { footerLogoSVG } = assetsData.svgs;
 
-import "./Footer.scss";
+import "./Footer.css";
 
 const Footer = () => {
   return (

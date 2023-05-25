@@ -3,7 +3,7 @@ import Stars from "../stars/Stars";
 import RemixIcon from "../remix-icon/RemixIcon";
 import { RiThumbUpLine, RiThumbDownLine } from "react-icons/ri";
 
-import "./Reviews.scss";
+import "./Reviews.css";
 
 const Review = ({
   sellerName,
@@ -13,14 +13,14 @@ const Review = ({
   description
 }) => {
   return (
-    <div className="item flex flex-column gap-3 flex-size-1">
+    <div className="item flex flex-column gap-3 flex-size-1 radius-md">
       <div className="user flex gap-3">
         <img className="pp" src={sellerImgURL} alt="" />
         <div className="info">
           <span>{sellerName}</span>
           <div className="country flex gap-2 items-center">
             <img className="flag" src={countryImgURL} alt="" />
-            <span>{countryName}</span>
+            <span className="country">{countryName}</span>
           </div>
         </div>
       </div>
@@ -39,7 +39,7 @@ const Review = ({
             size="1em"
             aria-label="A thumb up icon"
           />
-          <span>Yes</span>
+          <span className="answer">Yes</span>
         </button>
 
         <button className="flex items-center gap-2">

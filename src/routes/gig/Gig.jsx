@@ -1,14 +1,40 @@
-import { AboutSeller, Breadcrumb, Slider, Stars, Reviews } from "../../components";
+import {
+  AboutSeller,
+  Breadcrumb,
+  Slider,
+  Stars,
+  Reviews,
+  GigCTA
+} from "../../components";
 
 import { uiConfig } from "../../data";
 
 const { responsiveItemsOne } = uiConfig;
 
-import "./Gig.scss";
+import "./Gig.css";
 
 const Gig = () => {
+  const gigServices = [
+    {
+      id: 1,
+      text: "Prompt writing"
+    },
+    {
+      id: 2,
+      text: "Artwork delivery"
+    },
+    {
+      id: 3,
+      text: "Image upscaling"
+    },
+    {
+      id: 4,
+      text: "Aditional design"
+    }
+  ];
+
   return (
-    <section className="gig-section container py-24">
+    <section className="gig-section relative container py-24">
       <div className="left flex flex-column gap-10">
         <div>
           <Breadcrumb>FIVERR &gt; GRAPHICS & DESIGN &gt;</Breadcrumb>
@@ -30,7 +56,9 @@ const Gig = () => {
           </div>
         </div>
 
-        <Slider containerClass="radius-md" responsive={responsiveItemsOne}>
+        <Slider
+          containerClass="gig-slider radius-md"
+          responsive={responsiveItemsOne}>
           <img
             src="https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress&cs=tinysrgb&w=1600"
             alt=""
@@ -97,6 +125,15 @@ const Gig = () => {
 
         <Reviews />
       </div>
+
+      <GigCTA
+        deliveryDays="2"
+        description="I will create a unique high quality AI generated image based on a description that you give me"
+        price="59.99"
+        priceText="1 AI generated image"
+        revisionsNumber="3"
+        services={gigServices}
+      />
     </section>
   );
 };

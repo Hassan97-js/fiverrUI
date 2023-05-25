@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import "./SliderGigCategoryCard.scss";
+import "./SliderGigCategoryCard.css";
 
 const SliderGigCategoryCard = ({ item }) => {
   return (

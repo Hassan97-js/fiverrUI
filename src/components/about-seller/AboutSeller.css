@@ -1,0 +1,27 @@
+.about-seller .box {
+  border: 1px solid #b3b3b3;
+  width: 100%;
+  max-width: 500px;
+}
+
+.about-seller .box .items {
+  grid-template-columns: 1fr 1fr;
+}
+
+.about-seller .box .items .desc {
+  font-weight: 500;
+  color: #222;
+}
+
+.about-seller .box p {
+  color: #444;
+}
+
+.about-seller h2.seller-heading {
+  margin-bottom: 1em;
+}
+
+.about-seller .btn--seller {
+  margin-top: 1em;
+  margin-bottom: 2em;
+}

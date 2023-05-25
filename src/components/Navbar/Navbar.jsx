@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 
 import { isActive } from "../../utils";
 
-import "./Navbar.scss";
+import "./Navbar.css";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
@@ -26,22 +26,25 @@ const Navbar = () => {
     isSeller: true
   };
 
-  const navbarClassName = `${
-    active || pathname !== "/" ? "navbar active" : "navbar"
-  }`;
-
   return (
-    <nav className={navbarClassName}>
-      <div className="flex-nav container py-6">
-        <div className="logo fw-700">
+    <nav
+      className={`flex flex-col items-center justify-center bg-green-950 text-white drop-shadow-xl px-8 ${
+        active || pathname !== "/"
+          ? "navbar navbar--active bg-white text-neutral-900"
+          : "navbar"
+      }`}>
+      <div className="container relative flex flex-col gap-6 lg:flex-row lg:gap-0 items-center justify-between w-full py-5">
+        <div className="font-bold text-3xl">
           <Link to="." className="link" aria-label="Logo" title="Logo">
             fiverr
           </Link>
 
-          <span className="dot">.</span>
+          <span className="text-green-400">.</span>
         </div>
 
-        <ul className="links" role="list">
+        <ul
+          className="flex flex-col lg:flex-row items-center gap-8 font-medium font-montserrat"
+          role="list">
           <li>
             <Link to="." className="link" aria-label="Fiverr Business" title="Home">
               Fiverr Business
@@ -79,8 +82,10 @@ const Navbar = () => {
           )}
 
           {currentUser && (
-            <li className="btn-wrapper">
-              <button type="button" className="btn btn--join">
+            <li>
+              <button
+                type="button"
+                className="btn--join text-white py-2 px-4 rounded-md border border-white hover:bg-green-500 hover:border-green-500">
                 Join
               </button>
             </li>
@@ -88,9 +93,12 @@ const Navbar = () => {
         </ul>
 
         <div className="relative">
-          <figure className="user-info" onClick={handleOpenMenu}>
+          <figure
+            className="flex items-center gap-3 m-0 cursor-pointer"
+            onClick={handleOpenMenu}>
             <div className="image-wrapper">
               <img
+                className="rounded-full object-cover object-center"
                 src="https://faces3.b-cdn.net/Colombia.png"
                 width={40}
                 height={40}
@@ -98,11 +106,27 @@ const Navbar = () => {
               />
             </div>
 
-            <figcaption>{currentUser?.name}</figcaption>
+            <figcaption className="user-select-none">{currentUser?.name}</figcaption>
           </figure>
 
+          {/* .user-menu {
+  visibility: hidden;
+  opacity: 0;
+
+  position: absolute;
+  top: 54px;
+  right: -84px;
+  z-index: 1040;
+
+
+  transition: all 0.25s ease;
+}*/}
+
           {currentUser && (
-            <div className={`${isOpen ? "user-menu open" : "user-menu"}`}>
+            <div
+              className={`flex flex-col gap-3 w-52 p-4 bg-white rounded-md border border-gray-300 text-gray-600 cursor-pointer ${
+                isOpen ? "user-menu open" : "user-menu"
+              } font-montserrat`}>
               {currentUser?.isSeller && (
                 <>
                   <Link className="link" to="mygigs" aria-label="Gigs" title="Gigs">
@@ -124,7 +148,7 @@ const Navbar = () => {
 
               <Link
                 className="link"
-                to="."
+                to="messages"
                 aria-label="Add New Gig"
                 title="Messages">
                 Messages
@@ -143,7 +167,7 @@ const Navbar = () => {
         <>
           <div className="menu-separator" />
 
-          <div className="menu container-fluid grid-menu p-6">
+          <div className="menu container grid-menu p-6">
             <Link className="link" to=".">
               Graphics & Design
             </Link>

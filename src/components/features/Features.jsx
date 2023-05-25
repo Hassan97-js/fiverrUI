@@ -1,6 +1,6 @@
 import assetsData from "../../assets";
 
-import "./Features.scss";
+import "./Features.css";
 
 const { featuresVideo } = assetsData.videos;
 const { featuresCheckIcon } = assetsData.icons;

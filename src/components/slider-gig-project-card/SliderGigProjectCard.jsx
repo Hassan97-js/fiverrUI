@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 
-import "./SliderGigProjectCard.scss";
+import "./SliderGigProjectCard.css";
 
 const SliderGigProjectCard = ({ project }) => {
   const { imgURL, category, client } = project;
-  
+
   return (
     <Link to="/" className="slider-project-card flex flex-column gap-4">
       <div className="project-img flex-size-2">

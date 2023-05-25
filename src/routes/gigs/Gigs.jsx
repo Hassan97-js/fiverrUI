@@ -3,7 +3,7 @@ import { RouteGigProjectCard, Breadcrumb, Button } from "../../components";
 
 import { routeGigs } from "../../data";
 
-import "./Gigs.scss";
+import "./Gigs.css";
 
 const Gigs = () => {
   const [selected, setSelected] = useState("sales");

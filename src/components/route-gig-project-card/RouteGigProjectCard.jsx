@@ -6,7 +6,7 @@ import Stars from "../stars/Stars";
 
 import { formatCurrency } from "../../utils";
 
-import "./RouteGigProjectCard.scss";
+import "./RouteGigProjectCard.css";
 
 const RouteGigProjectCard = ({ gig }) => {
   const { imgURL, client, price, description } = gig;

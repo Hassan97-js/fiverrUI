@@ -1,6 +1,6 @@
 import Review from "./Review";
 
-import "./Reviews.scss";
+import "./Reviews.css";
 
 const Reviews = () => {
   return (

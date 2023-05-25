@@ -8,7 +8,7 @@ import {
 
 import RemixIcon from "../remix-icon/RemixIcon";
 
-import "./TrustedBy.scss";
+import "./TrustedBy.css";
 
 const TrustedBy = () => {
   return (

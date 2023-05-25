@@ -1,0 +1,43 @@
+.gig-section {
+  display: grid;
+  grid-template-columns: 1fr 24.375rem;
+  gap: 3em;
+}
+
+.gig-section .user {
+  margin-top: 1em;
+}
+
+.gig-section h2 {
+  color: #222;
+  margin-bottom: 0.8em;
+  font-weight: 400;
+}
+
+.gig-section .gig-slider {
+  max-width: 43.75rem;
+}
+
+.gig-section .item .user img {
+  object-fit: cover;
+  border-radius: 999px;
+}
+
+.gig-section .item .user .pp {
+  width: 2.8125rem;
+  height: 2.8125rem;
+}
+
+.gig-section .item .user .flag {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+@media all and (max-width: 83.125rem) {
+  .gig-section {
+    display: block;
+  }
+  .gig-section .gig-slider {
+    max-width: 100%;
+  }
+}

@@ -1,4 +1,4 @@
 # Todos
 
-- Refactor the codebase
+- Refactor footer
 - Use tailwindcss if better

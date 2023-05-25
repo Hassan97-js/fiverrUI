@@ -1,6 +1,6 @@
 import Stars from "../stars/Stars";
 
-import "./AboutSeller.scss";
+import "./AboutSeller.css";
 
 const AboutSeller = ({
   sellerName,

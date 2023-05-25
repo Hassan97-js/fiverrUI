@@ -11,9 +11,11 @@ import FiverrBusiness from "./fiverr-business/FiverrBusiness";
 import RouteGigProjectCard from "./route-gig-project-card/RouteGigProjectCard";
 import AboutSeller from "./about-seller/AboutSeller";
 import Reviews from "./reviews/Reviews";
+import GigCTA from "./gig-cta/GigCTA";
 
 import Button from "./custom-button/Button";
 import Stars from "./stars/Stars";
+import RemixIcon from "./remix-icon/RemixIcon";
 
 export {
   Navbar,
@@ -24,11 +26,13 @@ export {
   SliderGigCategoryCard,
   SliderGigProjectCard,
   RouteGigProjectCard,
+  GigCTA,
   Features,
   FiverrBusiness,
   Button,
   Stars,
   Breadcrumb,
   AboutSeller,
-  Reviews
+  Reviews,
+  RemixIcon
 };

@@ -2,7 +2,7 @@ import assetsData from "../../assets";
 
 import Button from "../custom-button/Button";
 
-import "./FiverrBusiness.scss";
+import "./FiverrBusiness.css";
 
 const { fiverBusinessImage } = assetsData.images;
 const { featuresCheckIcon } = assetsData.icons;

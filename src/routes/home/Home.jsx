@@ -13,8 +13,6 @@ import { gigCategories, gigProjects, uiConfig } from "../../data";
 
 const { responsive } = uiConfig;
 
-import "./Home.scss";
-
 const Home = () => {
   const GigCategoriesCards = gigCategories.map((category) => {
     return <SliderGigCategoryCard key={category.id} item={category} />;
