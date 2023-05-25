@@ -1,0 +1,23 @@
+.about-seller {
+  .box {
+    border: 1px solid #b3b3b3;
+
+    .desc {
+      font-weight: 500;
+      color: #222;
+    }
+
+    p {
+      color: #444;
+    }
+  }
+
+  h2.seller-heading {
+    margin-bottom: 1em;
+  }
+
+  .btn--seller {
+    margin-top: 1em;
+    margin-bottom: 2em;
+  }
+}

@@ -29,14 +29,7 @@ const Home = () => {
       <TrustedBy />
 
       <div className="container py-24">
-        <GigCategorySlider
-          draggable={true}
-          responsive={responsive}
-          infinite={true}
-          autoPlay={true}
-          autoPlaySpeed={3000}
-          keyBoardControl={true}
-          removeArrowOnDeviceType={["tablet", "mobile"]}>
+        <GigCategorySlider responsive={responsive}>
           {GigCategoriesCards}
         </GigCategorySlider>
       </div>
@@ -51,13 +44,7 @@ const Home = () => {
             borderRadius: "0.375rem"
           }}
           itemsClass="p-6"
-          draggable={true}
-          responsive={responsive}
-          infinite={true}
-          autoPlay={true}
-          autoPlaySpeed={3000}
-          keyBoardControl={true}
-          removeArrowOnDeviceType={["tablet", "mobile"]}>
+          responsive={responsive}>
           {GigProjectsCards}
         </GigProjectsSlider>
       </div>

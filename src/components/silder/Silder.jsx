@@ -8,12 +8,6 @@ const Slider = ({
   responsive,
   className = "",
   containerClass = "",
-  draggable,
-  infinite,
-  autoPlay,
-  autoPlaySpeed,
-  keyBoardControl,
-  removeArrowOnDeviceType,
   styles = {},
   itemsClass = "",
   sliderClassName = "",
@@ -22,18 +16,18 @@ const Slider = ({
   return (
     <div style={styles}>
       <Carousel
-        className={className}
+        infinite={true}
+        autoPlay={true}
+        draggable={true}
+        autoPlaySpeed={3000}
+        keyBoardControl={true}
         containerClass={containerClass}
-        draggable={draggable}
-        responsive={responsive}
-        infinite={infinite}
-        autoPlay={autoPlay}
-        autoPlaySpeed={autoPlaySpeed}
-        keyBoardControl={keyBoardControl}
-        removeArrowOnDeviceType={removeArrowOnDeviceType}
+        className={className}
+        sliderClass={sliderClassName}
         itemClass={itemsClass}
-        slidesToSlide={slidesToSlide}
-        sliderClass={sliderClassName}>
+        responsive={responsive}
+        removeArrowOnDeviceType={["tablet", "mobile"]}
+        slidesToSlide={slidesToSlide}>
         {children}
       </Carousel>
     </div>

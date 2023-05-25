@@ -1,6 +1,11 @@
 .reviews {
   .item {
-    min-width: 350px;
+    min-width: 21.875rem;
+    min-height: 23.75rem;
+
+    @media all and (max-width: 31.25em) {
+      min-width: 100%;
+    }
   }
 
   .review-desc {

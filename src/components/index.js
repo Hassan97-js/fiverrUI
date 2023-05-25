@@ -9,6 +9,8 @@ import SliderGigProjectCard from "./slider-gig-project-card/SliderGigProjectCard
 import Features from "./features/Features";
 import FiverrBusiness from "./fiverr-business/FiverrBusiness";
 import RouteGigProjectCard from "./route-gig-project-card/RouteGigProjectCard";
+import AboutSeller from "./about-seller/AboutSeller";
+import Reviews from "./reviews/Reviews";
 
 import Button from "./custom-button/Button";
 import Stars from "./stars/Stars";
@@ -26,5 +28,7 @@ export {
   FiverrBusiness,
   Button,
   Stars,
-  Breadcrumb
+  Breadcrumb,
+  AboutSeller,
+  Reviews
 };

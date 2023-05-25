@@ -1,3 +1,4 @@
 # Todos
 
-- MAKE A REVIEW CARD
+- Refactor the codebase
+- Use tailwindcss if better

@@ -3,15 +3,6 @@
     margin-top: 1em;
   }
 
-  .box {
-    border: 1px solid #b3b3b3;
-
-    .desc {
-      font-weight: 500;
-      color: #222;
-    }
-  }
-
   .item .user {
     img {
       object-fit: cover;
@@ -33,18 +24,5 @@
     color: #222;
     margin-bottom: 0.8em;
     font-weight: 400;
-  }
-
-  h2.seller-heading {
-    margin-bottom: 1em;
-  }
-
-  .btn--seller {
-    margin-top: 1em;
-    margin-bottom: 2em;
-  }
-
-  p {
-    color: #444;
   }
 }

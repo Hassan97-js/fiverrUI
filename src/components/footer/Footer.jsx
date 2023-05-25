@@ -8,11 +8,12 @@ import {
   RiTwitterFill
 } from "react-icons/ri";
 
+import RemixIcon from "../remix-icon/RemixIcon";
+
 import assetsData from "../../assets";
+const { footerLogoSVG } = assetsData.svgs;
 
 import "./Footer.scss";
-
-const { footerLogoSVG } = assetsData.svgs;
 
 const Footer = () => {
   return (
@@ -178,19 +179,40 @@ const Footer = () => {
           </div>
 
           <div className="flex justify-center items-center gap-6 py-2">
-            <RiFacebookCircleFill
+            <RemixIcon
+              icon={RiFacebookCircleFill}
               color="#666"
               size="2em"
               aria-label="A facebook logo"
             />
-            <RiInstagramFill color="#666" size="2em" aria-label="A Instagram logo" />
-            <RiLinkedinBoxFill
+
+            <RemixIcon
+              icon={RiInstagramFill}
               color="#666"
               size="2em"
-              aria-label="A LinkedIn logo"
+              aria-label="An instagram logo"
             />
-            <RiPinterestFill color="#666" size="2em" aria-label="A Pinterest logo" />
-            <RiTwitterFill color="#666" size="2em" aria-label="A Twitter logo" />
+
+            <RemixIcon
+              icon={RiPinterestFill}
+              color="#666"
+              size="2em"
+              aria-label="A pinterest logo"
+            />
+
+            <RemixIcon
+              icon={RiLinkedinBoxFill}
+              color="#666"
+              size="2em"
+              aria-label="A linkedIn logo"
+            />
+
+            <RemixIcon
+              icon={RiTwitterFill}
+              color="#666"
+              size="2em"
+              aria-label="A twitter logo"
+            />
           </div>
         </div>
       </div>
