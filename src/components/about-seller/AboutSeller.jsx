@@ -20,9 +20,7 @@ const AboutSeller = ({
 
         <div className="user flex items-center gap-3">
           <img
-            className="self-start object-cover object-postion-center radius-full"
-            width={50}
-            height={50}
+            className="self-start w-12 h-12 object-cover object-postion-center rounded-full"
             src={sellerImg}
             alt=""
           />

@@ -1,22 +1,21 @@
-import assetsData from "../../assets";
+import { FaCheckCircle } from "react-icons/fa";
 
 import Button from "../custom-button/Button";
+import CustomIcon from "../custom-icon/CustomIcon";
 
-import "./FiverrBusiness.css";
+import assetsData from "../../assets";
 
 const { fiverBusinessImage } = assetsData.images;
-const { featuresCheckIcon } = assetsData.icons;
 
+// TODO: MAKE IT RESPONSIVE
 const FiverrBusiness = () => {
   return (
-    <section className="fiverr-business py-24">
-      <div className="container flex gap-28">
-        <div className="left flex flex-column gap-10 flex-size-2">
+    <section className="bg-indigo-950 text-white px-7 py-24">
+      <div className="container mx-auto flex flex-col xl:flex-row gap-28">
+        <div className="left flex flex-col gap-10 flex-1 text-base">
           <div>
-            <h1 className="heading-lg mb-2">fiverr business</h1>
-            <h2 className="heading-xl mb-4">
-              A business solution designed for teams
-            </h2>
+            <h1 className="mb-2">fiverr business</h1>
+            <h3 className="mb-4">A business solution designed for teams</h3>
 
             <p>
               Upgrade to a curated experience packed with tools and benefits,
@@ -24,12 +23,12 @@ const FiverrBusiness = () => {
             </p>
           </div>
 
-          <ul className="flex flex-column gap-4 fw-300" role="list">
-            <div className="flex gap-3">
-              <img
-                className="icon self-start"
-                src={featuresCheckIcon}
-                alt="A check icon"
+          <ul className="flex flex-col gap-4 font-normal" role="list">
+            <div className="flex items-center gap-3">
+              <CustomIcon
+                icon={FaCheckCircle}
+                size="1em"
+                aria-label="A check icon"
               />
               <li>
                 Find high-quality services at every price point. No hourly rates,
@@ -37,11 +36,11 @@ const FiverrBusiness = () => {
               </li>
             </div>
 
-            <div className="flex gap-3">
-              <img
-                className="icon self-start"
-                src={featuresCheckIcon}
-                alt="A check icon"
+            <div className="flex items-center gap-3">
+              <CustomIcon
+                icon={FaCheckCircle}
+                size="1em"
+                aria-label="A check icon"
               />
               <li>
                 Find high-quality services at every price point. No hourly rates,
@@ -49,11 +48,11 @@ const FiverrBusiness = () => {
               </li>
             </div>
 
-            <div className="flex gap-3">
-              <img
-                className="icon self-start"
-                src={featuresCheckIcon}
-                alt="A check icon"
+            <div className="flex items-center gap-3">
+              <CustomIcon
+                icon={FaCheckCircle}
+                size="1em"
+                aria-label="A check icon"
               />
               <li>
                 Find high-quality services at every price point. No hourly rates,
@@ -62,12 +61,12 @@ const FiverrBusiness = () => {
             </div>
           </ul>
 
-          <Button className="w-max-content">Explore Fiverr Business</Button>
+          <Button className="max-w-max rounded-md">Explore Fiverr Business</Button>
         </div>
 
-        <div className="right flex-size-3">
+        <div>
           <img
-            className="radius-base object-cover object-position-right w-100 h-100"
+            className="rounded-md object-cover object-right w-full h-full"
             src={fiverBusinessImage}
           />
         </div>

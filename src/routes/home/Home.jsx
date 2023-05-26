@@ -32,10 +32,10 @@ const Home = () => {
         </GigCategorySlider>
       </div>
 
-      <Features />
+        <Features />
       <FiverrBusiness />
 
-      <div className="container py-24">
+      <div className="container mx-auto py-24">
         <GigProjectsSlider
           styles={{
             boxShadow: "0 2px 10px rgba(0, 0, 0, 0.15)",

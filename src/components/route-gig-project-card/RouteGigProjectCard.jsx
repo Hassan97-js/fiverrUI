@@ -11,44 +11,39 @@ import "./RouteGigProjectCard.css";
 const RouteGigProjectCard = ({ gig }) => {
   const { imgURL, client, price, description } = gig;
 
+  const styles = {
+    backgroundImage: `url(${imgURL})`,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundPosition: "top"
+  };
+
   const formattedPrice = formatCurrency(price);
 
   return (
-    <Link
-      to="/gig/123"
-      className="route-project-card radius-base overflow-hidden pb-3">
-      <div
-        style={{
-          backgroundImage: `url(${imgURL})`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          backgroundPosition: "top",
-          height: 200
-        }}
-        role="image"></div>
+    <Link to="/gig/123" className="shadow-md rounded-sm overflow-hidden pb-3">
+      <div style={styles} className="h-48" role="image"></div>
 
-      <div className="client-info flex-size-3 px-4 mt-5">
-        <div className="flex flex-column gap-3">
+      <div className="px-4 mt-5">
+        <div className="flex flex-col gap-3">
           <div className="flex items-center gap-3">
             <img
-              className="object-cover radius-full"
+              className="object-cover rounded-full w-8 h-8"
               src={client.profileURL}
               alt="a freelancing client image"
-              width={30}
-              height={30}
             />
 
-            <strong>{client.fullName}</strong>
+            <strong className="font-semibold">{client.fullName}</strong>
           </div>
 
-          <span className="fw-500 mb-2">Gig: {gig.id}</span>
+          <span className="font-medium text-neutral-500 mb-2">Gig: {gig.id}</span>
         </div>
 
-        <p className="description light-text mb-5">{description}</p>
+        <p className="mb-5">{description}</p>
 
         <Stars>{client.stars}</Stars>
 
-        <hr className="divider d-block w-100 my-4" />
+        <hr className="block w-full my-4" />
 
         <div className="flex items-center justify-between">
           <CustomIcon
@@ -58,9 +53,11 @@ const RouteGigProjectCard = ({ gig }) => {
             aria-label="A heart icon"
           />
 
-          <div className="gig-details flex flex-column items-end">
-            <p className="light-text upper">Starting at</p>
-            <strong className="price">{formattedPrice}</strong>
+          <div className="flex flex-col items-end">
+            <p className="uppercase text-neutral-500 text-sm font-medium">
+              Starting at
+            </p>
+            <strong className="text-lg font-semibold">{formattedPrice}</strong>
           </div>
         </div>
       </div>

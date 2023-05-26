@@ -58,28 +58,13 @@
     font-size: 0.8rem;
   }
 
-  /* input {
+  input {
     border: 0.8px solid #b2b2b2;
     color: #222;
     outline: none;
     border-radius: 0.25rem;
     padding: 0.2em 0.5em;
     font-size: 1rem;
-  }
-
-  p {
-    margin-bottom: 0;
-  }
-
-  a:link,
-  a:visited {
-    color: currentColor;
-    text-decoration: none;
-  }
-
-  a:hover,
-  a:active {
-    color: currentColor;
   }
 
   button {
@@ -105,6 +90,23 @@
     cursor: pointer;
   }
 
+  /* p {
+    margin-bottom: 0;
+  }
+
+  a:link,
+  a:visited {
+    color: currentColor;
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:active {
+    color: currentColor;
+  }
+
+
+
   button.btn--outline {
     border: 1px solid #222;
     color: #222;
@@ -116,5 +118,5 @@
   .link:visited {
     color: inherit;
     text-decoration: none;
-  } */
+  }  */
 }

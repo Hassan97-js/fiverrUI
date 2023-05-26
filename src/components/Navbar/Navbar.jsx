@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import { isActive } from "../../utils";
 
 import "./Navbar.css";
+import Button from "../custom-button/Button";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
@@ -28,7 +29,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`flex flex-col items-center justify-center bg-green-950 text-white drop-shadow-xl px-8 ${
+      className={`flex flex-col items-center justify-center bg-green-900 text-white drop-shadow-xl px-8 ${
         active || pathname !== "/"
           ? "navbar navbar--active bg-white text-neutral-900"
           : "navbar"
@@ -83,11 +84,11 @@ const Navbar = () => {
 
           {currentUser && (
             <li>
-              <button
+              <Button
                 type="button"
-                className="btn--join text-white py-2 px-4 rounded-md border border-white hover:bg-green-500 hover:border-green-500">
+                className="text-white py-2 px-4 rounded-md border border-white bg-green-600 hover:bg-green-700">
                 Join
-              </button>
+              </Button>
             </li>
           )}
         </ul>
@@ -154,7 +155,7 @@ const Navbar = () => {
         <>
           <div className="menu-separator" />
 
-          <div className="menu container grid-menu p-6">
+          <div className="menu container grid-menu sr-only md:not-sr-only p-6">
             <Link className="link" to=".">
               Graphics & Design
             </Link>

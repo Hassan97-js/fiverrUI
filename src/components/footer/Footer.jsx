@@ -172,13 +172,13 @@ const Footer = () => {
 
         <hr className="block w-full my-8 bg-gray-200" />
 
-        <div className="footer--bottom flex items-center justify-between gap-3">
-          <div className="flex gap-3">
+        <div className="footer--bottom flex flex-col md:flex-row md:items-center justify-between gap-3">
+          <div className="flex flex-col md:flex-row gap-3">
             <img src={footerLogoSVG} alt="fiverr logo" width="70" />
             <p className="mt-3">&copy; Fiverr International Ltd. 2023</p>
           </div>
 
-          <div className="flex justify-center items-center gap-6 py-2">
+          <div className="flex md:justify-center items-center gap-6 py-2">
             <CustomIcon
               icon={RiFacebookCircleFill}
               color="#666"

@@ -20,30 +20,36 @@ const Gigs = () => {
   });
 
   return (
-    <section className="gigs-section container py-24">
+    <section className="gigs-section text-neutral-700 container mx-auto py-24 px-10">
       <Breadcrumb>FIVERR &gt; GRAPHICS & DESIGN &gt;</Breadcrumb>
 
-      <h1 className="mb-4">AI Artists</h1>
-      <h3 className="fw-300">
+      <h1 className="mb-4 text-neutral-800">AI Artists</h1>
+      <h5 className="font-normal">
         Explore the boundaries of art and technology with Fiverr&apos;s AI artists
-      </h3>
+      </h5>
 
-      <div className="gigs-menu flex item-center justify-between my-4">
-        <form className="left flex items-center gap-3 py-5">
-          <span className="budget">Budget</span>
-          <input className="min-input" type="text" placeholder="min" />
-          <input className="max-input" type="text" placeholder="max" />
-          <Button type="button" sm={true}>
+      <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-5 my-4">
+        <form className="flex flex-col lg:flex-row lg:items-center gap-5 py-5">
+          <p className="mb-2 lg:mb-0">Budget</p>
+
+          <input type="text" placeholder="min" />
+
+          <input type="text" placeholder="max" />
+
+          <Button
+            className="bg-green-600 tracking-wider font-medium rounded-md"
+            type="button"
+            sm={true}>
             Apply
           </Button>
         </form>
 
-        <div className="right relative flex justify-end items-center gap-3">
-          <span className="sort-by">Sort by</span>
+        <div className="relative flex flex-col lg:flex-row lg:justify-end lg:items-center lg:gap-3 w-96">
+          <span className="font-medium -mb-2">Sort by</span>
 
-          <form>
+          <form className="my-4">
             <select
-              className="select-dropdown bg-white p-3 outline-0 radius-base cursor-pointer"
+              className="bg-white border border-neutral-300 outline-0 radius-base p-3 w-52 cursor-pointer rounded-sm"
               value={selected}
               onChange={handleSelect}>
               <option value="createdAt">Newest</option>

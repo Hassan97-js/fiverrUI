@@ -1,30 +1,26 @@
 import { Link } from "react-router-dom";
 
-import "./SliderGigProjectCard.css";
-
 const SliderGigProjectCard = ({ project }) => {
   const { imgURL, category, client } = project;
 
   return (
-    <Link to="/" className="slider-project-card flex flex-column gap-4">
-      <div className="project-img flex-size-2">
-        <img className="radius-base" src={imgURL} alt={`${category} gig image`} />
+    <Link to="/" className="flex flex-col gap-4">
+      <div>
+        <img className="rounded-sm" src={imgURL} alt={`${category} gig image`} />
       </div>
 
-      <div className="client-info flex-size-3 flex items-center gap-3">
-        <div className="client-img">
+      <div className="flex items-center gap-3">
+        <div>
           <img
-            className="object-cover radius-full"
+            className="object-cover w-8 h-8 rounded-full"
             src={client.profileURL}
             alt="a freelancing client image"
-            width={30}
-            height={30}
           />
         </div>
 
-        <div className="about">
-          <strong>Gig: {project.id}</strong>
-          <p>{client.fullName}</p>
+        <div>
+          <strong className="text-neutral-700 text-sm">Gig: {project.id}</strong>
+          <p className="text-neutral-600 text-sm">{client.fullName}</p>
         </div>
       </div>
     </Link>

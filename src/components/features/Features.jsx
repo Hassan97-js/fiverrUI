@@ -1,16 +1,14 @@
 import assetsData from "../../assets";
 
 import { FaCheckCircle } from "react-icons/fa";
+import CustomIcon from "../custom-icon/CustomIcon";
 
 const { featuresVideo } = assetsData.videos;
-
-import "./Features.css";
-import CustomIcon from "../custom-icon/CustomIcon";
 
 const Features = () => {
   return (
     <section className="features py-24">
-      <div className="container mx-auto flex flex-col lg:flex-row gap-28">
+      <div className="container flex flex-col mx-auto px-7 xl:flex-row gap-28">
         <div>
           <video
             className="rounded-md object-cover object-right w-full h-full"
@@ -30,7 +28,7 @@ const Features = () => {
               <CustomIcon
                 icon={FaCheckCircle}
                 size="1em"
-                aria-label="A facebook logo"
+                aria-label="A check logo"
               />
               <span className="text-lg text-neutral-700 font-medium">
                 The best for every budget
@@ -47,7 +45,7 @@ const Features = () => {
               <CustomIcon
                 icon={FaCheckCircle}
                 size="1em"
-                aria-label="A facebook logo"
+                aria-label="A check logo"
               />
               <span className="text-lg text-neutral-700 font-medium">
                 The best for every budget
@@ -64,7 +62,7 @@ const Features = () => {
               <CustomIcon
                 icon={FaCheckCircle}
                 size="1em"
-                aria-label="A facebook logo"
+                aria-label="A check logo"
               />
               <span className="text-lg text-neutral-700 font-medium">
                 The best for every budget
