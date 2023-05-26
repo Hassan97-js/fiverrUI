@@ -4,22 +4,15 @@ const Error = () => {
   const error = useRouteError();
   console.error(error);
 
-  const h1Styles = {
-    fontSize: "3rem",
-    fontWeight: "bold",
-    marginBottom: "1.3rem"
-  };
-
-  const pStyles = {
-    fontSize: "1.5rem",
-    marginBottom: "1rem"
-  };
-
   return (
-    <div className="flex-center flex-column min-vh-screen" id="error-page">
-      <h1 style={h1Styles}>Oops!</h1>
-      <p style={pStyles}>Sorry, an unexpected error has occurred.</p>
-      <p style={pStyles} className="text-muted">
+    <div
+      className="flex flex-col justify-center items-center min-h-screen"
+      id="error-page">
+      <h1 className="text-7xl mb-7">Oops!</h1>
+      <p className="text-3xl font-normal text-gray-500 mb-12">
+        Sorry, an unexpected error has occurred.
+      </p>
+      <p className="text-xl font-bold text-gray-500">
         <i>{error.statusText || error.message}</i>
       </p>
     </div>

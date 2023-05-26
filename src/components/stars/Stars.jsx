@@ -1,10 +1,10 @@
 import { RiStarFill } from "react-icons/ri";
-import RemixIcon from "../remix-icon/RemixIcon";
+import CustomIcon from "../custom-icon/CustomIcon";
 
 const Stars = ({ children }) => {
   return (
-    <div className="star flex items-center gap-2">
-      <RemixIcon
+    <div className="flex items-center gap-2">
+      <CustomIcon
         icon={RiStarFill}
         color="#e6cc00"
         size="1.2em"

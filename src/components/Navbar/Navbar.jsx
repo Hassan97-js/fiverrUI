@@ -109,19 +109,6 @@ const Navbar = () => {
             <figcaption className="user-select-none">{currentUser?.name}</figcaption>
           </figure>
 
-          {/* .user-menu {
-  visibility: hidden;
-  opacity: 0;
-
-  position: absolute;
-  top: 54px;
-  right: -84px;
-  z-index: 1040;
-
-
-  transition: all 0.25s ease;
-}*/}
-
           {currentUser && (
             <div
               className={`flex flex-col gap-3 w-52 p-4 bg-white rounded-md border border-gray-300 text-gray-600 cursor-pointer ${

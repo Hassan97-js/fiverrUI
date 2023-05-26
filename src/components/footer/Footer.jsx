@@ -8,7 +8,7 @@ import {
   RiTwitterFill
 } from "react-icons/ri";
 
-import RemixIcon from "../remix-icon/RemixIcon";
+import CustomIcon from "../custom-icon/CustomIcon";
 
 import assetsData from "../../assets";
 const { footerLogoSVG } = assetsData.svgs;
@@ -18,7 +18,7 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <footer className="footer p-6">
-      <div className="container">
+      <div className="container mx-auto">
         <nav className="grid footer--grid">
           <ul role="list">
             <h2>Categories</h2>
@@ -170,44 +170,44 @@ const Footer = () => {
           </ul>
         </nav>
 
-        <hr className="d-block w-100 my-8" />
+        <hr className="block w-full my-8 bg-gray-200" />
 
         <div className="footer--bottom flex items-center justify-between gap-3">
           <div className="flex gap-3">
             <img src={footerLogoSVG} alt="fiverr logo" width="70" />
-            <p>&copy; Fiverr International Ltd. 2023</p>
+            <p className="mt-3">&copy; Fiverr International Ltd. 2023</p>
           </div>
 
           <div className="flex justify-center items-center gap-6 py-2">
-            <RemixIcon
+            <CustomIcon
               icon={RiFacebookCircleFill}
               color="#666"
               size="2em"
               aria-label="A facebook logo"
             />
 
-            <RemixIcon
+            <CustomIcon
               icon={RiInstagramFill}
               color="#666"
               size="2em"
               aria-label="An instagram logo"
             />
 
-            <RemixIcon
+            <CustomIcon
               icon={RiPinterestFill}
               color="#666"
               size="2em"
               aria-label="A pinterest logo"
             />
 
-            <RemixIcon
+            <CustomIcon
               icon={RiLinkedinBoxFill}
               color="#666"
               size="2em"
               aria-label="A linkedIn logo"
             />
 
-            <RemixIcon
+            <CustomIcon
               icon={RiTwitterFill}
               color="#666"
               size="2em"

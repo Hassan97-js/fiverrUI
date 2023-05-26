@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { RiHeartFill } from "react-icons/ri";
 
-import RemixIcon from "../remix-icon/RemixIcon";
+import CustomIcon from "../custom-icon/CustomIcon";
 import Stars from "../stars/Stars";
 
 import { formatCurrency } from "../../utils";
@@ -51,7 +51,7 @@ const RouteGigProjectCard = ({ gig }) => {
         <hr className="divider d-block w-100 my-4" />
 
         <div className="flex items-center justify-between">
-          <RemixIcon
+          <CustomIcon
             icon={RiHeartFill}
             color="#f94449"
             size="1.2em"

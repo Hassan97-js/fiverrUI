@@ -1,56 +1,76 @@
 import assetsData from "../../assets";
 
-import "./Features.css";
+import { FaCheckCircle } from "react-icons/fa";
 
 const { featuresVideo } = assetsData.videos;
-const { featuresCheckIcon } = assetsData.icons;
+
+import "./Features.css";
+import CustomIcon from "../custom-icon/CustomIcon";
 
 const Features = () => {
   return (
     <section className="features py-24">
-      <div className="container flex gap-28">
-        <div className="left flex-size-3">
+      <div className="container mx-auto flex flex-col lg:flex-row gap-28">
+        <div>
           <video
-            className="radius-base object-cover object-position-right w-100 h-100"
+            className="rounded-md object-cover object-right w-full h-full"
             src={featuresVideo}
             muted
             autoPlay
             loop></video>
         </div>
 
-        <div className="right flex flex-column gap-10 flex-size-2">
-          <h1 className="mb-4">
+        <div className="flex flex-col gap-10 flex-grow">
+          <h1 className="text-neutral-900">
             A whole world of freelance talent at your fingertips
           </h1>
 
           <div>
-            <div className="title">
-              <img src={featuresCheckIcon} alt="A check icon" />
-              <span>The best for every budget</span>
+            <div className="flex items-center gap-2 mb-2">
+              <CustomIcon
+                icon={FaCheckCircle}
+                size="1em"
+                aria-label="A facebook logo"
+              />
+              <span className="text-lg text-neutral-700 font-medium">
+                The best for every budget
+              </span>
             </div>
-            <p>
+            <p className="text-neutral-600">
               Find high-quality services at every price point. No hourly rates, just
               project-based pricing.
             </p>
           </div>
 
           <div>
-            <div className="title">
-              <img src={featuresCheckIcon} alt="A check icon" />
-              <span>The best for every budget</span>
+            <div className="flex items-center gap-2 mb-2">
+              <CustomIcon
+                icon={FaCheckCircle}
+                size="1em"
+                aria-label="A facebook logo"
+              />
+              <span className="text-lg text-neutral-700 font-medium">
+                The best for every budget
+              </span>
             </div>
-            <p>
+            <p className="text-neutral-600">
               Find high-quality services at every price point. No hourly rates, just
               project-based pricing.
             </p>
           </div>
 
           <div>
-            <div className="title">
-              <img src={featuresCheckIcon} alt="A check icon" />
-              <span>The best for every budget</span>
+            <div className="flex items-center gap-2 mb-2">
+              <CustomIcon
+                icon={FaCheckCircle}
+                size="1em"
+                aria-label="A facebook logo"
+              />
+              <span className="text-lg text-neutral-700 font-medium">
+                The best for every budget
+              </span>
             </div>
-            <p>
+            <p className="text-neutral-600">
               Find high-quality services at every price point. No hourly rates, just
               project-based pricing.
             </p>

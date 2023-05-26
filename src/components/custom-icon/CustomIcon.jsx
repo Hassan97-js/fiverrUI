@@ -2,7 +2,7 @@
 import { IconContext } from 'react-icons';
 import { RiErrorWarningLine } from 'react-icons/ri';
 
-const RemixIcon = ({
+const CustomIcon = ({
   icon: IconComponent = RiErrorWarningLine,
   size = '1em',
   color = 'currentColor',
@@ -17,4 +17,4 @@ const RemixIcon = ({
   );
 };
 
-export default RemixIcon;
+export default CustomIcon;

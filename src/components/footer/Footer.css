@@ -1,5 +1,5 @@
 .footer .footer--grid {
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(11.25rem, 1fr));
   gap: 1.5em 2em;
 }
 
@@ -9,13 +9,4 @@
 
 .footer .footer--grid li {
   max-width: 20ch;
-}
-
-.footer .footer--grid hr {
-  background-color: #888;
-  color: #888;
-}
-
-.footer--bottom p {
-  margin-top: 0.625rem;
 }

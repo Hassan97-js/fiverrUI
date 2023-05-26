@@ -1,6 +1,6 @@
 import Stars from "../stars/Stars";
 
-import RemixIcon from "../remix-icon/RemixIcon";
+import CustomIcon from "../custom-icon/CustomIcon";
 import { RiThumbUpLine, RiThumbDownLine } from "react-icons/ri";
 
 import "./Reviews.css";
@@ -33,7 +33,7 @@ const Review = ({
         <span>Helpful?</span>
 
         <button className="flex items-center gap-2">
-          <RemixIcon
+          <CustomIcon
             icon={RiThumbUpLine}
             color="#666"
             size="1em"
@@ -43,7 +43,7 @@ const Review = ({
         </button>
 
         <button className="flex items-center gap-2">
-          <RemixIcon
+          <CustomIcon
             icon={RiThumbDownLine}
             color="#666"
             size="1em"

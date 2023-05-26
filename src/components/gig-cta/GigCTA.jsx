@@ -1,7 +1,7 @@
 import { FaCheck, FaRecycle, FaRegClock } from "react-icons/fa";
 
 import Button from "../custom-button/Button";
-import RemixIcon from "../remix-icon/RemixIcon";
+import CustomIcon from "../custom-icon/CustomIcon";
 
 import "./GigCTA.css";
 
@@ -25,7 +25,7 @@ const GigCTA = ({
 
       <div className="details flex items-center gap-5">
         <div className="item flex items-center gap-3">
-          <RemixIcon
+          <CustomIcon
             icon={FaRegClock}
             color="#666"
             size="1em"
@@ -35,7 +35,7 @@ const GigCTA = ({
         </div>
 
         <div className="item flex items-center gap-3">
-          <RemixIcon
+          <CustomIcon
             icon={FaRecycle}
             color="#666"
             size="1em"
@@ -49,7 +49,7 @@ const GigCTA = ({
         {services.map((service) => {
           return (
             <div key={service.id} className="item flex items-center gap-3">
-              <RemixIcon
+              <CustomIcon
                 icon={FaCheck}
                 color="#7dca5c"
                 size="1em"
