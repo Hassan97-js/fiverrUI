@@ -1,11 +1,9 @@
 import Review from "./Review";
 
-import "./Reviews.css";
-
 const Reviews = () => {
   return (
     <section className="reviews">
-      <h2>Reviews</h2>
+      <h2 className="mb-6">Reviews</h2>
 
       <div className="items flex flex-wrap gap-10">
         <Review
@@ -32,7 +30,7 @@ const Reviews = () => {
         <Review
           sellerName="Lyle Giles"
           sellerImgURL="https://images.pexels.com/photos/842980/pexels-photo-842980.jpeg?auto=compress&cs=tinysrgb&w=1600"
-          countryImgURL="https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1fa-1f1f8.png"
+          countryImgURL="https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1e9-1f1ea.png"
           countryName="Germany"
           description="Amazing work! Communication was amazing, each and every day he sent me
           images that I was free to request changes to. They listened, understood,

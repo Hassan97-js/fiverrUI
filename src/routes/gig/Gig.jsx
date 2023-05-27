@@ -34,64 +34,65 @@ const Gig = () => {
   ];
 
   return (
-    <section className="gig-section relative container py-24">
-      <div className="left flex flex-column gap-10">
+    <section className="gig-section relative container mx-auto py-24 px-8 text-neutral-700">
+      <div className="flex flex-col gap-10">
         <div>
           <Breadcrumb>FIVERR &gt; GRAPHICS & DESIGN &gt;</Breadcrumb>
-          <h1>I will create AI generated art for you</h1>
+          <h1 className="text-neutral-800">
+            I will create AI generated art for you
+          </h1>
 
-          <div className="user flex gap-3">
+          <div className="user flex gap-3 mt-4">
             <img
-              className="radius-full object-cover"
+              className="rounded-full object-cover w-7 h-7"
               src="https://picsum.photos/200"
               alt=""
-              width={30}
-              height={30}
             />
 
             <div>
-              <span className="fw-500">John Doe</span>
+              <span className="font-medium">John Doe</span>
               <Stars>5</Stars>
             </div>
           </div>
         </div>
 
         <Slider
-          containerClass="gig-slider radius-md"
+          className="max-w-full lg:max-w-3xl rounded-md"
+          containerClass="gig-slider"
           responsive={responsiveItemsOne}>
           <img
             src="https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress&cs=tinysrgb&w=1600"
             alt=""
           />
           <img
-            className="object-cover object-position-center"
+            className="object-cover object-center"
             src="https://images.pexels.com/photos/1462935/pexels-photo-1462935.jpeg?auto=compress&cs=tinysrgb&w=1600"
             alt=""
           />
           <img
-            className="object-cover object-position-center"
+            className="object-cover object-center"
             src="https://images.pexels.com/photos/1054777/pexels-photo-1054777.jpeg?auto=compress&cs=tinysrgb&w=1600"
             alt=""
           />
           <img
-            className="object-cover object-position-center"
+            className="object-cover object-center"
             src="https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress&cs=tinysrgb&w=1600"
             alt=""
           />
           <img
-            className="object-cover object-position-center"
+            className="object-cover object-center"
             src="https://images.pexels.com/photos/1462935/pexels-photo-1462935.jpeg?auto=compress&cs=tinysrgb&w=1600"
             alt=""
           />
           <img
-            className="object-cover object-position-center"
+            className="object-cover object-center"
             src="https://images.pexels.com/photos/1054777/pexels-photo-1054777.jpeg?auto=compress&cs=tinysrgb&w=1600"
             alt=""
           />
         </Slider>
 
         <div>
-          <h2 className="mb-1">About This Gig</h2>
+          <h2 className="text-neutral-800 mb-4 font-medium">About This Gig</h2>
           <p>
             I use an AI program to create images based on text prompts. This means I
             can help you to create a vision you have through a textual description of

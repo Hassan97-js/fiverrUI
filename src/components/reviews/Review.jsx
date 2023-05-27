@@ -3,8 +3,6 @@ import Stars from "../stars/Stars";
 import CustomIcon from "../custom-icon/CustomIcon";
 import { RiThumbUpLine, RiThumbDownLine } from "react-icons/ri";
 
-import "./Reviews.css";
-
 const Review = ({
   sellerName,
   sellerImgURL,
@@ -13,39 +11,42 @@ const Review = ({
   description
 }) => {
   return (
-    <div className="item flex flex-column gap-3 flex-size-1 radius-md">
-      <div className="user flex gap-3">
-        <img className="pp" src={sellerImgURL} alt="" />
-        <div className="info">
-          <span>{sellerName}</span>
-          <div className="country flex gap-2 items-center">
-            <img className="flag" src={countryImgURL} alt="" />
-            <span className="country">{countryName}</span>
+    <div className="flex flex-col gap-3 flex-1 rounded-sm shadow-md px-8 py-6 min-w-[21.875rem] min-h-[23.75rem]">
+      <div className="flex gap-3">
+        <img
+          className="w-8 h-8 object-cover object-center rounded-full"
+          src={sellerImgURL}
+          alt=""
+        />
+
+        <div>
+          <span className="font-medium">{sellerName}</span>
+          <div className="flex gap-2 items-center">
+            <img
+              className="w-4 h-4"
+              src={countryImgURL}
+              alt={`${countryName} flag`}
+            />
+            <span>{countryName}</span>
           </div>
         </div>
       </div>
 
       <Stars>5</Stars>
 
-      <p className="review-desc">{description}</p>
+      <p className="max-w-[45ch]">{description}</p>
 
-      <div className="helpful fw-500 flex items-center gap-3 mt-auto">
+      <div className="font-medium flex items-center gap-3 mt-auto">
         <span>Helpful?</span>
 
         <button className="flex items-center gap-2">
-          <CustomIcon
-            icon={RiThumbUpLine}
-            color="#666"
-            size="1em"
-            aria-label="A thumb up icon"
-          />
-          <span className="answer">Yes</span>
+          <CustomIcon icon={RiThumbUpLine} size="1em" aria-label="A thumb up icon" />
+          <span>Yes</span>
         </button>
 
         <button className="flex items-center gap-2">
           <CustomIcon
             icon={RiThumbDownLine}
-            color="#666"
             size="1em"
             aria-label="A thumb down icon"
           />
