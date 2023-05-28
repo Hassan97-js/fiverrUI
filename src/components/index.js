@@ -16,6 +16,7 @@ import GigCTA from "./gig-cta/GigCTA";
 import Button from "./custom-button/Button";
 import Stars from "./stars/Stars";
 import CustomIcon from "./custom-icon/CustomIcon";
+import Table from "./table/Table";
 
 export {
   Navbar,
@@ -34,5 +35,6 @@ export {
   Breadcrumb,
   AboutSeller,
   Reviews,
-  CustomIcon
+  CustomIcon,
+  Table
 };

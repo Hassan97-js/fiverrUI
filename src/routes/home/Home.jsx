@@ -27,7 +27,7 @@ const Home = () => {
       <Featured />
       <TrustedBy />
 
-      <div className="container mx-auto py-24 px-6">
+      <div className="section-container">
         <GigCategorySlider responsive={responsive}>
           {GigCategoriesCards}
         </GigCategorySlider>
@@ -36,7 +36,7 @@ const Home = () => {
       <Features />
       <FiverrBusiness />
 
-      <div className="container mx-auto py-24 px-6">
+      <div className="section-container">
         <GigProjectsSlider
           className="shadow-md"
           itemsClass="p-6"

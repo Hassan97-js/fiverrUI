@@ -18,7 +18,7 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <footer className="footer p-6">
-      <div className="container mx-auto">
+      <div className="section-container">
         <nav className="grid footer--grid">
           <ul role="list">
             <h2>Categories</h2>

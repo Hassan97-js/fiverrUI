@@ -34,7 +34,7 @@ const Gig = () => {
   ];
 
   return (
-    <section className="gig-section relative container mx-auto py-24 px-8 text-neutral-700">
+    <section className="gig-section relative section-container text-neutral-700">
       <div className="flex flex-col gap-10">
         <div>
           <Breadcrumb>FIVERR &gt; GRAPHICS & DESIGN &gt;</Breadcrumb>

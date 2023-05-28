@@ -20,7 +20,7 @@ const Gigs = () => {
   });
 
   return (
-    <section className="gigs-section text-neutral-700 container mx-auto py-24 px-10">
+    <section className="gigs-section section-container text-neutral-700">
       <Breadcrumb>FIVERR &gt; GRAPHICS & DESIGN &gt;</Breadcrumb>
 
       <h1 className="mb-4 text-neutral-800">AI Artists</h1>
