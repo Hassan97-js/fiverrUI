@@ -6,7 +6,7 @@ const { heroSearchIcon } = assetsData.icons;
 const Featured = () => {
   return (
     <section className="flex justify-center bg-green-950 text-white">
-      <div className="container px-7 pt-7 flex lg:flex-row md:items-center justify-center flex-col gap-6">
+      <div className="container px-6 pt-7 flex lg:flex-row md:items-center justify-center flex-col gap-6">
         <div className="flex flex-col py-14 gap-6">
           <h1>
             Find the perfect <i className="text-green-400">freelance</i> services for

@@ -17,6 +17,7 @@ const Home = () => {
   const GigCategoriesCards = gigCategories.map((category) => {
     return <SliderGigCategoryCard key={category.id} item={category} />;
   });
+
   const GigProjectsCards = gigProjects.map((project) => {
     return <SliderGigProjectCard key={project.id} project={project} />;
   });
@@ -26,21 +27,18 @@ const Home = () => {
       <Featured />
       <TrustedBy />
 
-      <div className="container mx-auto py-24">
+      <div className="container mx-auto py-24 px-6">
         <GigCategorySlider responsive={responsive}>
           {GigCategoriesCards}
         </GigCategorySlider>
       </div>
 
-        <Features />
+      <Features />
       <FiverrBusiness />
 
-      <div className="container mx-auto py-24">
+      <div className="container mx-auto py-24 px-6">
         <GigProjectsSlider
-          styles={{
-            boxShadow: "0 2px 10px rgba(0, 0, 0, 0.15)",
-            borderRadius: "0.375rem"
-          }}
+          className="shadow-md"
           itemsClass="p-6"
           responsive={responsive}>
           {GigProjectsCards}

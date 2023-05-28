@@ -7,10 +7,9 @@ import assetsData from "../../assets";
 
 const { fiverBusinessImage } = assetsData.images;
 
-// TODO: MAKE IT RESPONSIVE
 const FiverrBusiness = () => {
   return (
-    <section className="bg-indigo-950 text-white px-7 py-24">
+    <section className="bg-indigo-950 text-white px-6 py-24">
       <div className="container mx-auto flex flex-col xl:flex-row gap-28">
         <div className="left flex flex-col gap-10 flex-1 text-base">
           <div>
@@ -26,6 +25,7 @@ const FiverrBusiness = () => {
           <ul className="flex flex-col gap-4 font-normal" role="list">
             <div className="flex items-center gap-3">
               <CustomIcon
+                className="shrink-0"
                 icon={FaCheckCircle}
                 size="1em"
                 aria-label="A check icon"
@@ -38,6 +38,7 @@ const FiverrBusiness = () => {
 
             <div className="flex items-center gap-3">
               <CustomIcon
+                className="shrink-0"
                 icon={FaCheckCircle}
                 size="1em"
                 aria-label="A check icon"
@@ -50,6 +51,7 @@ const FiverrBusiness = () => {
 
             <div className="flex items-center gap-3">
               <CustomIcon
+                className="shrink-0"
                 icon={FaCheckCircle}
                 size="1em"
                 aria-label="A check icon"

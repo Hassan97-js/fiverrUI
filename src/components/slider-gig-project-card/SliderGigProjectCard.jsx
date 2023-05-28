@@ -6,7 +6,7 @@ const SliderGigProjectCard = ({ project }) => {
   return (
     <Link to="/" className="flex flex-col gap-4">
       <div>
-        <img className="rounded-sm" src={imgURL} alt={`${category} gig image`} />
+        <img className="rounded-md" src={imgURL} alt={`${category} gig image`} />
       </div>
 
       <div className="flex items-center gap-3">

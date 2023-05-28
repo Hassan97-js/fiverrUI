@@ -35,7 +35,7 @@ const Navbar = () => {
           ? "navbar navbar--active bg-white text-neutral-900"
           : "navbar"
       }`}>
-      <div className="container relative flex flex-col gap-6 lg:flex-row lg:gap-0 items-center justify-between w-full py-5">
+      <div className="container relative flex flex-col gap-10 lg:flex-row lg:gap-0 items-center justify-between w-full py-5">
         <div className="font-bold text-3xl">
           <Link to="." className="link" aria-label="Logo" title="Logo">
             fiverr
