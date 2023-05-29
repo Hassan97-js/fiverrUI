@@ -1,5 +1,5 @@
-const Table = ({ data }) => {
-  const { tableHeaders, tableData } = data[0];
+const Table = ({ data, striped = true }) => {
+  const { tableHeaders, tableData, isMessages } = data[0];
 
   return (
     <div className="relative overflow-x-auto">
@@ -18,41 +18,54 @@ const Table = ({ data }) => {
 
         <tbody>
           {tableData.map((item, idx) => {
+            const isUnread = item.data?.lastMessage?.unread;
+
             return (
               <tr
                 key={item.id}
-                className={`${idx % 2 !== 0 ? "border-b bg-gray-50" : ""}`}>
+                className={`border-b ${isUnread ? "bg-green-100/50" : ""} ${
+                  striped && idx % 2 !== 0 ? "bg-gray-50" : ""
+                }`}>
                 <td
                   scope="row"
                   className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                  <img
-                    className="w-10 h-10 object-cover object-center rounded-sm"
-                    src={item.data.imgURL}
-                    alt="An image describing a gig"
-                  />
+                  {item.data?.imgURL ? (
+                    <img
+                      className="w-10 h-10 object-cover object-center rounded-sm"
+                      src={item.data.imgURL}
+                      alt="An image describing a gig"
+                    />
+                  ) : (
+                    item.data.buyer
+                  )}
                 </td>
 
                 <td
                   scope="row"
                   className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                  {item.data.title}
+                  <p className="truncate w-96">
+                    {item.data?.title || item.data.lastMessage.text}
+                  </p>
                 </td>
 
                 <td
                   scope="row"
                   className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                  {item.data.price}
+                  {item.data?.price || item.data.date}
                 </td>
 
-                <td
-                  scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                  {item.data?.sales || item.data?.buyer || item.data?.seller}
-                </td>
+                {!isMessages &&
+                  (item.data?.sales || item.data?.buyer || item.data?.seller) && (
+                    <td
+                      scope="row"
+                      className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                      {item.data?.sales || item.data?.buyer || item.data?.seller}
+                    </td>
+                  )}
                 <td
                   scope="row"
                   className="pl-10 py-4 font-medium text-gray-900 whitespace-nowrap">
-                  <button>{item.data.action || item.data.contact}</button>
+                  {item.data?.action || item.data.contact}
                 </td>
               </tr>
             );

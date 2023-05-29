@@ -1,4 +1,3 @@
-
 import {
   Add,
   Error,
@@ -33,6 +32,10 @@ const routerConfig = [
         element: <MyGigs />
       },
       {
+        path: "add",
+        element: <Add />
+      },
+      {
         path: "orders",
         element: <Orders />
       },
@@ -44,10 +47,7 @@ const routerConfig = [
         path: "message/:id",
         element: <Message />
       },
-      {
-        path: "add",
-        element: <Add />
-      },
+
       {
         path: "gig/:id",
         element: <Gig />

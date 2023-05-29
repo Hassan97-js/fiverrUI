@@ -1,6 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 
+import { useClickAway, useScroll } from "../../hooks";
 import { isActive } from "../../utils";
 
 import "./Navbar.css";
@@ -9,13 +10,12 @@ const Navbar = () => {
   const [active, setActive] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
+  const dropdownRef = useRef(null);
+
   const { pathname } = useLocation();
 
-  useEffect(() => {
-    window.addEventListener("scroll", () => isActive(setActive));
-
-    return () => window.removeEventListener("scroll", isActive);
-  }, []);
+  useScroll(() => isActive(setActive));
+  useClickAway(dropdownRef, () => setIsOpen(false));
 
   /* Handlers */
   const handleOpenMenu = () => setIsOpen((isOpen) => !isOpen);
@@ -107,6 +107,7 @@ const Navbar = () => {
 
           {currentUser && (
             <div
+              ref={dropdownRef}
               className={`flex flex-col gap-3 w-52 p-4 bg-white rounded-md border border-gray-300 text-gray-600 cursor-pointer ${
                 isOpen ? "user-menu open" : "user-menu"
               } font-montserrat`}>
@@ -117,7 +118,7 @@ const Navbar = () => {
                   </Link>
                   <Link
                     className="link"
-                    to="add"
+                    to="/add"
                     aria-label="Add New Gig"
                     title="Add New Gig">
                     Add New Gig

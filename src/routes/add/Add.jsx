@@ -1,7 +1,11 @@
 import "./Add.css";
 
 const Add = () => {
-  return <h1 className="add">Add</h1>;
+  return (
+    <section className="section-container">
+      <h1>Add new Gig</h1>
+    </section>
+  );
 };
 
 export default Add;

@@ -21,12 +21,14 @@ const myGigsTableData = [
           price: 40,
           sales: 55,
           action: (
-            <CustomIcon
-              icon={FaTrash}
-              color="rgb(239 68 68)"
-              size="1em"
-              aria-label="A check logo"
-            />
+            <button>
+              <CustomIcon
+                icon={FaTrash}
+                color="rgb(239 68 68)"
+                size="1em"
+                aria-label="A trash icon"
+              />
+            </button>
           )
         }
       },
@@ -39,12 +41,14 @@ const myGigsTableData = [
           price: 58,
           sales: 100,
           action: (
-            <CustomIcon
-              icon={FaTrash}
-              color="rgb(239 68 68)"
-              size="1em"
-              aria-label="A check logo"
-            />
+            <button>
+              <CustomIcon
+                icon={FaTrash}
+                color="rgb(239 68 68)"
+                size="1em"
+                aria-label="A trash icon"
+              />
+            </button>
           )
         }
       },
@@ -57,12 +61,14 @@ const myGigsTableData = [
           price: 92,
           sales: 20,
           action: (
-            <CustomIcon
-              icon={FaTrash}
-              color="rgb(239 68 68)"
-              size="1em"
-              aria-label="A check logo"
-            />
+            <button>
+              <CustomIcon
+                icon={FaTrash}
+                color="rgb(239 68 68)"
+                size="1em"
+                aria-label="A trash icon"
+              />
+            </button>
           )
         }
       },
@@ -75,12 +81,14 @@ const myGigsTableData = [
           price: 101,
           sales: 14,
           action: (
-            <CustomIcon
-              icon={FaTrash}
-              color="rgb(239 68 68)"
-              size="1em"
-              aria-label="A check logo"
-            />
+            <button>
+              <CustomIcon
+                icon={FaTrash}
+                color="rgb(239 68 68)"
+                size="1em"
+                aria-label="A trash icon"
+              />
+            </button>
           )
         }
       }
@@ -116,7 +124,13 @@ const ordersTableData = [
           price: 40,
           [sellerOrBuyer]: "John Doe",
           contact: (
-            <CustomIcon icon={FaEnvelope} size="1em" aria-label="An Envelope icon" />
+            <button>
+              <CustomIcon
+                icon={FaEnvelope}
+                size="1em"
+                aria-label="An Envelope icon"
+              />
+            </button>
           )
         }
       },
@@ -129,7 +143,13 @@ const ordersTableData = [
           price: 58,
           [sellerOrBuyer]: "John Doe",
           contact: (
-            <CustomIcon icon={FaEnvelope} size="1em" aria-label="An Envelope icon" />
+            <button>
+              <CustomIcon
+                icon={FaEnvelope}
+                size="1em"
+                aria-label="An Envelope icon"
+              />
+            </button>
           )
         }
       },
@@ -142,7 +162,13 @@ const ordersTableData = [
           price: 92,
           [sellerOrBuyer]: "John Doe",
           contact: (
-            <CustomIcon icon={FaEnvelope} size="1em" aria-label="An Envelope icon" />
+            <button>
+              <CustomIcon
+                icon={FaEnvelope}
+                size="1em"
+                aria-label="An Envelope icon"
+              />
+            </button>
           )
         }
       },
@@ -155,7 +181,13 @@ const ordersTableData = [
           price: 101,
           [sellerOrBuyer]: "John Doe",
           contact: (
-            <CustomIcon icon={FaEnvelope} size="1em" aria-label="An Envelope icon" />
+            <button>
+              <CustomIcon
+                icon={FaEnvelope}
+                size="1em"
+                aria-label="An Envelope icon"
+              />
+            </button>
           )
         }
       }
@@ -163,4 +195,78 @@ const ordersTableData = [
   }
 ];
 
-export { ordersTableData, myGigsTableData };
+const messagesTableData = [
+  {
+    isMessages: true,
+    tableHeaders: [
+      { id: 1, text: "Buyer" },
+      { id: 2, text: "Last Message" },
+      { id: 3, text: "Date" },
+      { id: 4, text: "Action" }
+    ],
+    tableData: [
+      {
+        id: 1,
+        data: {
+          buyer: "John Doe",
+          lastMessage: {
+            text: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
+            unread: true
+          },
+          date: "1 hour ago",
+          action: <button className="btn btn-sm btn-secondary">Mark as Read</button>
+        }
+      },
+      {
+        id: 2,
+        data: {
+          buyer: "John Doe",
+          lastMessage: {
+            text: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
+            unread: true
+          },
+          date: "2 hours ago",
+          action: <button className="btn btn-sm btn-secondary">Mark as Read</button>
+        }
+      },
+      {
+        id: 3,
+        data: {
+          buyer: "John Doe",
+          lastMessage: {
+            text: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
+            unread: true
+          },
+          date: "1 day ago",
+          action: <button className="btn btn-sm btn-secondary">Mark as Read</button>
+        }
+      },
+      {
+        id: 4,
+        data: {
+          buyer: "John Doe",
+          lastMessage: {
+            text: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
+            unread: false
+          },
+          date: "2 days ago",
+          action: <button className="btn btn-sm btn-secondary">Mark as Read</button>
+        }
+      },
+      {
+        id: 5,
+        data: {
+          buyer: "John Doe",
+          lastMessage: {
+            text: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
+            unread: false
+          },
+          date: "1 week ago",
+          action: <button className="btn btn-sm btn-secondary">Mark as Read</button>
+        }
+      }
+    ]
+  }
+];
+
+export { ordersTableData, myGigsTableData, messagesTableData };
