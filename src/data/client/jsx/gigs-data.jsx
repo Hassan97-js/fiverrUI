@@ -214,7 +214,8 @@ const messagesTableData = [
             unread: true
           },
           date: "1 hour ago",
-          action: <button className="btn btn-sm btn-secondary">Mark as Read</button>
+          action: <button className="btn btn-sm btn-secondary">Mark as Read</button>,
+          routePath: "/message/123"
         }
       },
       {
@@ -226,7 +227,8 @@ const messagesTableData = [
             unread: true
           },
           date: "2 hours ago",
-          action: <button className="btn btn-sm btn-secondary">Mark as Read</button>
+          action: <button className="btn btn-sm btn-secondary">Mark as Read</button>,
+          routePath: "/message/123"
         }
       },
       {
@@ -238,7 +240,8 @@ const messagesTableData = [
             unread: true
           },
           date: "1 day ago",
-          action: <button className="btn btn-sm btn-secondary">Mark as Read</button>
+          action: <button className="btn btn-sm btn-secondary">Mark as Read</button>,
+          routePath: "/message/123"
         }
       },
       {
@@ -250,7 +253,8 @@ const messagesTableData = [
             unread: false
           },
           date: "2 days ago",
-          action: <button className="btn btn-sm btn-secondary">Mark as Read</button>
+          action: <button className="btn btn-sm btn-secondary">Mark as Read</button>,
+          routePath: "/message/123"
         }
       },
       {
@@ -262,7 +266,8 @@ const messagesTableData = [
             unread: false
           },
           date: "1 week ago",
-          action: <button className="btn btn-sm btn-secondary">Mark as Read</button>
+          action: <button className="btn btn-sm btn-secondary">Mark as Read</button>,
+          routePath: "/message/123"
         }
       }
     ]

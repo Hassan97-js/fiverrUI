@@ -42,9 +42,9 @@ nav.navbar--active {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   grid-template-rows: repeat(3, 3.125rem);
-  align-items: center;
+  align-items: end;
   justify-items: center;
-  gap: 1.5em;
+  gap: 2em;
 }
 
 .menu-separator {

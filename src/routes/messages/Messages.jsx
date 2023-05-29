@@ -7,7 +7,7 @@ import "./Messages.css";
 const Messages = () => {
   return (
     <section className="section-container">
-      <Table data={messagesTableData} striped={false} />
+      <Table data={messagesTableData} striped={false} clickable={true} />
     </section>
   );
 };

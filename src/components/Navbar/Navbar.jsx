@@ -151,7 +151,7 @@ const Navbar = () => {
         <>
           <div className="menu-separator" />
 
-          <div className="menu container grid-menu sr-only md:not-sr-only p-6">
+          <div className="menu container grid-menu hidden md:grid mt-8">
             <Link className="link" to=".">
               Graphics & Design
             </Link>

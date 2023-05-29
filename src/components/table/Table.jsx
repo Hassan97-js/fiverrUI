@@ -1,8 +1,12 @@
-const Table = ({ data, striped = true }) => {
+import { useNavigate } from "react-router-dom";
+
+const Table = ({ data, striped = true, clickable = false }) => {
   const { tableHeaders, tableData, isMessages } = data[0];
 
+  const navigate = useNavigate();
+
   return (
-    <div className="relative overflow-x-auto">
+    <div className="relative shadow-md overflow-x-auto">
       <table className="w-full text-sm text-left text-gray-500">
         <thead className="text-xs bg-gray-50 text-gray-700 uppercase">
           <tr>
@@ -19,13 +23,15 @@ const Table = ({ data, striped = true }) => {
         <tbody>
           {tableData.map((item, idx) => {
             const isUnread = item.data?.lastMessage?.unread;
+            const linkRoutePath = item.data?.routePath;
 
             return (
               <tr
+                onClick={() => (clickable ? navigate(linkRoutePath ?? "") : null)}
                 key={item.id}
-                className={`border-b ${isUnread ? "bg-green-100/50" : ""} ${
-                  striped && idx % 2 !== 0 ? "bg-gray-50" : ""
-                }`}>
+                className={`border-b ${clickable ? "cursor-pointer" : ""} ${
+                  isUnread ? "bg-green-100/50" : ""
+                }${striped && idx % 2 !== 0 ? "bg-gray-50" : ""}`}>
                 <td
                   scope="row"
                   className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
@@ -40,31 +46,24 @@ const Table = ({ data, striped = true }) => {
                   )}
                 </td>
 
-                <td
-                  scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
                   <p className="truncate w-96">
                     {item.data?.title || item.data.lastMessage.text}
                   </p>
                 </td>
 
-                <td
-                  scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
                   {item.data?.price || item.data.date}
                 </td>
 
                 {!isMessages &&
                   (item.data?.sales || item.data?.buyer || item.data?.seller) && (
-                    <td
-                      scope="row"
-                      className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
                       {item.data?.sales || item.data?.buyer || item.data?.seller}
                     </td>
                   )}
-                <td
-                  scope="row"
-                  className="pl-10 py-4 font-medium text-gray-900 whitespace-nowrap">
+
+                <td className="pl-10 py-4 font-medium text-gray-900 whitespace-nowrap">
                   {item.data?.action || item.data.contact}
                 </td>
               </tr>
