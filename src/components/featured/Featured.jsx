@@ -7,14 +7,14 @@ const Featured = () => {
   return (
     <section className="flex justify-center bg-green-950 text-white">
       <div className="container px-6 pt-7 flex lg:flex-row md:items-center justify-center flex-col gap-6">
-        <div className="flex flex-col py-14 gap-6">
+        <div className="flex flex-col py-14 gap-10">
           <h1>
             Find the perfect <i className="text-green-400">freelance</i> services for
             your business
           </h1>
 
           <div
-            className="flex md:flex-row md:justify-between flex-col bg-white rounded-sm overflow-hidden"
+            className="flex flex-col md:flex-row md:justify-between bg-white rounded overflow-hidden"
             role="Search">
             <div role="Search Input" className="flex items-center flex-1 gap-2">
               <img
@@ -29,9 +29,7 @@ const Featured = () => {
               />
             </div>
 
-            <button className="w-full p-3 md:w-32 bg-green-600 text-white border-0 outline-none">
-              Search
-            </button>
+            <button className="btn btn-primary w-36 rounded-none">Search</button>
           </div>
 
           <div className="flex flex-col md:flex-row items-center gap-3">

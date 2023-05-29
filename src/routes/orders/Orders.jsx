@@ -1,7 +1,14 @@
+import { Table } from "../../components";
+import { ordersTableData } from "../../data";
+
 import "./Orders.css";
 
 const Orders = () => {
-  return <div className="orders">Orders</div>;
+  return (
+    <section className="section-container">
+      <Table data={ordersTableData} />
+    </section>
+  );
 };
 
 export default Orders;

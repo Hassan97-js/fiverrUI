@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-import Button from "../custom-button/Button";
-
 import { isActive } from "../../utils";
 
 import "./Navbar.css";
@@ -85,11 +83,7 @@ const Navbar = () => {
 
           {currentUser && (
             <li>
-              <Button
-                type="button"
-                className="text-white py-2 px-4 rounded-md border border-green-600 bg-green-600">
-                Join
-              </Button>
+              <button className="btn btn-primary">Join</button>
             </li>
           )}
         </ul>

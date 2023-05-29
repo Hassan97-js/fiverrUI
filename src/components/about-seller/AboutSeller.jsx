@@ -32,9 +32,7 @@ const AboutSeller = ({
             </div>
           </div>
 
-          <button className="border border-neutral-800 font-medium rounded-md mb-9 mt-7 py-1 px-5">
-            Contact me
-          </button>
+          <button className="btn btn-secondary mt-6 mb-10">Contact me</button>
         </div>
       </div>
 

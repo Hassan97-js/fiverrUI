@@ -1,6 +1,5 @@
 import { FaCheck, FaRecycle, FaRegClock } from "react-icons/fa";
 
-import Button from "../custom-button/Button";
 import CustomIcon from "../custom-icon/CustomIcon";
 
 const GigCTA = ({
@@ -48,9 +47,9 @@ const GigCTA = ({
           );
         })}
 
-        <Button className="font-medium block w-full mt-5 rounded-md tracking-wide">
+        <button className="btn btn-primary block w-full mt-5 tracking-wide">
           Continue
-        </Button>
+        </button>
       </div>
     </div>
   );

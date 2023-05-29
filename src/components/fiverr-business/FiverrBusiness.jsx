@@ -1,6 +1,5 @@
 import { FaCheckCircle } from "react-icons/fa";
 
-import Button from "../custom-button/Button";
 import CustomIcon from "../custom-icon/CustomIcon";
 
 import assetsData from "../../assets";
@@ -63,7 +62,9 @@ const FiverrBusiness = () => {
             </div>
           </ul>
 
-          <Button className="max-w-max rounded-md">Explore Fiverr Business</Button>
+          <button className="btn btn-primary self-start">
+            Explore Fiverr Business
+          </button>
         </div>
 
         <div>

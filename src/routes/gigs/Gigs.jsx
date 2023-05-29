@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { RouteGigProjectCard, Breadcrumb, Button } from "../../components";
+import { RouteGigProjectCard, Breadcrumb } from "../../components";
 
 import { routeGigs } from "../../data";
 
@@ -36,12 +36,9 @@ const Gigs = () => {
 
           <input type="text" placeholder="max" />
 
-          <Button
-            className="bg-green-600 tracking-wider font-medium rounded-md"
-            type="button"
-            sm={true}>
+          <button type="button" className="btn btn-secondary btn-xs tracking-wider">
             Apply
-          </Button>
+          </button>
         </form>
 
         <div className="relative flex flex-col lg:flex-row lg:justify-end lg:items-center lg:gap-3 w-96">
