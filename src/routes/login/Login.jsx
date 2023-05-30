@@ -1,10 +1,7 @@
-import "./Login.css";
-
 const Login = () => {
   return (
     <>
       <h1 className="login">Login</h1>
-      
     </>
   );
 };

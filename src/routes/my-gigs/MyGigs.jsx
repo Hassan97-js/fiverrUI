@@ -3,8 +3,6 @@ import { Table } from "../../components";
 
 import { myGigsTableData } from "../../data";
 
-import "./MyGigs.css";
-
 const MyGigs = () => {
   return (
     <section className="section-container">

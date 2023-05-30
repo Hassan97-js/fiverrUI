@@ -1,7 +1,7 @@
 import { Table } from "../../components";
 import { ordersTableData } from "../../data";
 
-import "./Orders.css";
+
 
 const Orders = () => {
   return (

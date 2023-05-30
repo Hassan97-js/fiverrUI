@@ -2,8 +2,6 @@ import { Table } from "../../components";
 
 import { messagesTableData } from "../../data";
 
-import "./Messages.css";
-
 const Messages = () => {
   return (
     <section className="section-container">

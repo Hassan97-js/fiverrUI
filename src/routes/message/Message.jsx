@@ -1,7 +1,5 @@
 import { Breadcrumb, ChatInput, ChatRoom } from "../../components";
 
-import "./Message.css";
-
 const Message = () => {
   return (
     <section className="section-container">
