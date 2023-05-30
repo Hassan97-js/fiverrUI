@@ -27,10 +27,12 @@ const Home = () => {
       <Featured />
       <TrustedBy />
 
-      <div className="section-container">
-        <GigCategorySlider responsive={responsive}>
-          {GigCategoriesCards}
-        </GigCategorySlider>
+      <div className="bg-gray-50">
+        <div className="section-container">
+          <GigCategorySlider responsive={responsive}>
+            {GigCategoriesCards}
+          </GigCategorySlider>
+        </div>
       </div>
 
       <Features />

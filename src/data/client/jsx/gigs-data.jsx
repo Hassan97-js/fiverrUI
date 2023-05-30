@@ -120,7 +120,7 @@ const ordersTableData = [
         data: {
           imgURL:
             "https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1600",
-          title: "order 1",
+          title: "Order 1",
           price: 40,
           [sellerOrBuyer]: "John Doe",
           contact: (

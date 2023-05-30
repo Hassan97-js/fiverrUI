@@ -10,7 +10,11 @@
 
 @layer components {
   .btn {
-    @apply text-white text-base font-medium rounded-lg px-5 py-2.5 focus:outline-none transition;
+    @apply text-center text-base font-medium rounded-lg px-5 py-2.5 focus:outline-none transition;
+  }
+
+  .btn-sharp {
+    @apply text-center text-base font-medium px-5 py-2.5 focus:outline-none transition;
   }
 
   .btn-xs {
@@ -22,11 +26,15 @@
   }
 
   .btn-primary {
-    @apply bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300;
+    @apply text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300;
   }
 
   .btn-secondary {
-    @apply bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:ring-gray-300;
+    @apply text-white bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:ring-gray-300;
+  }
+
+  .btn-secondary-outline {
+    @apply text-gray-700 hover:text-white border border-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300;
   }
 }
 
@@ -42,32 +50,31 @@
     @apply flex-1;
   }
 
-  h1,
+  h1 {
+    @apply font-bold text-5xl leading-tight;
+  }
+
   h2,
   h3,
   h4,
   h5 {
-    @apply leading-tight;
-  }
-
-  h1 {
-    @apply font-bold text-5xl;
+    @apply font-semibold leading-tight;
   }
 
   h2 {
-    @apply font-semibold text-3xl;
+    @apply text-3xl;
   }
 
   h3 {
-    @apply font-semibold text-2xl;
+    @apply text-2xl;
   }
 
   h4 {
-    @apply font-semibold text-xl;
+    @apply text-xl;
   }
 
   h5 {
-    @apply font-semibold text-lg;
+    @apply text-lg;
   }
 
   small,

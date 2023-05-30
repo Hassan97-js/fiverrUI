@@ -7,7 +7,7 @@ const { featuresVideo } = assetsData.videos;
 
 const Features = () => {
   return (
-    <section className="features py-24">
+    <section className="py-24">
       <div className="container flex flex-col mx-auto px-6 xl:flex-row gap-28">
         <div>
           <video

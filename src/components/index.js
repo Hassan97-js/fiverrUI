@@ -14,9 +14,12 @@ import Reviews from "./reviews/Reviews";
 import GigCTA from "./gig-cta/GigCTA";
 
 import Button from "./custom-button/Button";
+import ArrowIcon from "./arrow-icon/ArrowIcon";
 import Stars from "./stars/Stars";
 import CustomIcon from "./custom-icon/CustomIcon";
 import Table from "./table/Table";
+import ChatInput from "./chat-input/ChatInput";
+import ChatRoom from "./chat-room/ChatRoom";
 
 export {
   Navbar,
@@ -31,10 +34,13 @@ export {
   Features,
   FiverrBusiness,
   Button,
+  ArrowIcon,
   Stars,
   Breadcrumb,
   AboutSeller,
   Reviews,
   CustomIcon,
-  Table
+  Table,
+  ChatInput,
+  ChatRoom
 };

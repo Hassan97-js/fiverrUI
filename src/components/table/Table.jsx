@@ -25,16 +25,20 @@ const Table = ({ data, striped = true, clickable = false }) => {
             const isUnread = item.data?.lastMessage?.unread;
             const linkRoutePath = item.data?.routePath;
 
+            const handleNavigate = () => {
+              clickable ? navigate(linkRoutePath ?? "") : null;
+            };
+
             return (
               <tr
-                onClick={() => (clickable ? navigate(linkRoutePath ?? "") : null)}
                 key={item.id}
                 className={`border-b ${clickable ? "cursor-pointer" : ""} ${
                   isUnread ? "bg-green-100/50" : ""
                 }${striped && idx % 2 !== 0 ? "bg-gray-50" : ""}`}>
                 <td
                   scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                  onClick={handleNavigate}>
                   {item.data?.imgURL ? (
                     <img
                       className="w-10 h-10 object-cover object-center rounded-sm"
@@ -46,7 +50,9 @@ const Table = ({ data, striped = true, clickable = false }) => {
                   )}
                 </td>
 
-                <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                <td
+                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                  onClick={handleNavigate}>
                   <p className="truncate w-96">
                     {item.data?.title || item.data.lastMessage.text}
                   </p>

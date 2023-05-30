@@ -1,10 +1,18 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
-const useClickAway = (ref, fn) => {
+import { isActive } from "../utils";
+
+const useClickAway = (ref) => {
+  const [isOpen, setIsOpen] = useState(false);
+
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (!ref?.current.contains(event.target)) {
-        fn();
+      if (ref?.current.parentElement.contains(event.target)) {
+        setIsOpen(!isOpen);
+      }
+
+      if (!ref?.current.parentElement.contains(event.target)) {
+        setIsOpen(false);
       }
     };
 
@@ -14,13 +22,17 @@ const useClickAway = (ref, fn) => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [ref, fn]);
+  }, [ref, isOpen]);
+
+  return [isOpen];
 };
 
-const useScroll = (fn) => {
+const useScroll = () => {
+  const [active, setActive] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
-      fn();
+      isActive(setActive);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -29,7 +41,9 @@ const useScroll = (fn) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [fn]);
+  }, [active]);
+
+  return [active];
 };
 
 export { useClickAway, useScroll };
