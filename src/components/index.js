@@ -21,6 +21,12 @@ import Table from "./table/Table";
 import ChatInput from "./chat-input/ChatInput";
 import ChatRoom from "./chat-room/ChatRoom";
 
+import TextInput from "./text-input/TextInput";
+import SelectInput from "./SelectInput";
+import TextareaInput from "./TextareaInput";
+import FileInput from "./FileInput";
+import AgreeCheckbox from "./AgreeCheckbox";
+
 export {
   Navbar,
   Footer,
@@ -42,5 +48,10 @@ export {
   CustomIcon,
   Table,
   ChatInput,
-  ChatRoom
+  ChatRoom,
+  TextInput,
+  SelectInput,
+  TextareaInput,
+  FileInput,
+  AgreeCheckbox
 };
