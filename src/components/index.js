@@ -22,6 +22,7 @@ import ChatInput from "./chat-input/ChatInput";
 import ChatRoom from "./chat-room/ChatRoom";
 
 import TextInput from "./text-input/TextInput";
+import CustomInput from "./custom-input/CustomInput";
 import SelectInput from "./SelectInput";
 import TextareaInput from "./TextareaInput";
 import FileInput from "./FileInput";
@@ -50,6 +51,7 @@ export {
   ChatInput,
   ChatRoom,
   TextInput,
+  CustomInput,
   SelectInput,
   TextareaInput,
   FileInput,

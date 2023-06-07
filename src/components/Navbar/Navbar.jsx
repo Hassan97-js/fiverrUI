@@ -1,6 +1,7 @@
 import { useRef } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
+import { makeApiRequest } from "../../utils";
 import { useClickAway, useScroll } from "../../hooks";
 
 import "./Navbar.css";
@@ -8,15 +9,24 @@ import "./Navbar.css";
 const Navbar = () => {
   const { pathname } = useLocation();
 
+  const navigate = useNavigate();
+
   const dropdownRef = useRef(null);
   const [isOpen] = useClickAway(dropdownRef);
   const [active] = useScroll();
 
-  const currentUser = {
-    id: 1,
-    name: "John Doe",
-    isSeller: true
+  const handleLogout = async () => {
+    try {
+      await makeApiRequest("post", "auth/logout");
+      // use Context API instead (LATER)
+      localStorage.removeItem("currentUser");
+      navigate("/");
+    } catch (error) {
+      throw Error(error);
+    }
   };
+
+  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
   return (
     <nav className="navbar flex flex-col items-center justify-center bg-white drop-shadow-md px-8">
@@ -78,17 +88,19 @@ const Navbar = () => {
         <div className="relative">
           <figure className="flex items-center gap-3 m-0 cursor-pointer">
             <div className="image-wrapper">
-              <img
-                className="rounded-full object-cover object-center"
-                src="https://faces3.b-cdn.net/Colombia.png"
-                width={40}
-                height={40}
-                alt="Profile picture"
-              />
+              {!!currentUser && (
+                <img
+                  className="rounded-full object-cover object-center"
+                  src={currentUser?.img || "https://faces3.b-cdn.net/Colombia.png"}
+                  width={40}
+                  height={40}
+                  alt="Profile picture"
+                />
+              )}
             </div>
 
             <figcaption className="select-none font-medium">
-              {currentUser?.name}
+              {currentUser?.username}
             </figcaption>
           </figure>
 
@@ -126,7 +138,12 @@ const Navbar = () => {
                 Messages
               </Link>
 
-              <Link className="link" to="." aria-label="Logout" title="Logout">
+              <Link
+                className="link"
+                to="."
+                aria-label="Logout"
+                title="Logout"
+                onClick={handleLogout}>
                 Logout
               </Link>
             </div>
