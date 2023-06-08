@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 
 import { Navbar, Footer } from "../components";
 
-const Root = () => {
+function Root() {
   return (
     <>
       <Navbar />
@@ -12,6 +12,6 @@ const Root = () => {
       <Footer />
     </>
   );
-};
+}
 
 export default Root;

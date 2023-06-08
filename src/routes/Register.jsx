@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
-import { CustomInput, FileInput } from "../components";
+import { CustomInput, FileInput, CustomToggle, TextareaInput } from "../components";
 
 import { makeApiRequest } from "../utils";
 
@@ -10,14 +10,17 @@ const registerFormState = {
   username: "",
   password: "",
   profileImg: "",
-  country: ""
+  country: "",
+  phone: "",
+  description: "",
+  isSeller: false
 };
 
-const Register = () => {
+function Register() {
   const [formState, setFormState] = useState(registerFormState);
   const [error, setError] = useState(null);
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   useEffect(() => {
     console.log(formState);
@@ -27,6 +30,17 @@ const Register = () => {
     console.log(error);
   }, [error]);
 
+  const handleToggleChange = (event) => {
+    const { name: eventName, checked: checkedValue } = event.target;
+
+    setFormState((prevState) => {
+      return {
+        ...prevState,
+        [eventName]: checkedValue
+      };
+    });
+  };
+
   const handleChange = (event) => {
     const {
       name: eventName,
@@ -34,9 +48,17 @@ const Register = () => {
       files: fileEventValue
     } = event.target;
 
-    fileEventValue && console.log("fileEventValue", [...fileEventValue]);
+    // fileEventValue && console.log("fileEventValue", fileEventValue[0]);
 
-    const currentEventValue = fileEventValue ? [...fileEventValue][0] : eventValue;
+    let currentEventValue;
+
+    if (eventValue) {
+      currentEventValue = eventValue;
+    }
+
+    if (fileEventValue) {
+      currentEventValue = fileEventValue[0];
+    }
 
     setFormState((prevState) => {
       return {
@@ -44,6 +66,10 @@ const Register = () => {
         [eventName]: currentEventValue
       };
     });
+  };
+
+  const handleFormReset = () => {
+    setFormState(registerFormState);
   };
 
   const handleSubmit = async (event) => {
@@ -55,7 +81,10 @@ const Register = () => {
         username: formState.username,
         password: formState.password,
         profileImg: formState.profileImg,
-        country: formState.country
+        country: formState.country,
+        phone: formState.phone,
+        description: formState.description,
+        isSeller: formState.isSeller
       };
 
       const response = await makeApiRequest("post", "/auth/register", data);
@@ -78,7 +107,7 @@ const Register = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="section-container flex flex-col lg:flex-row justify-center gap-x-16">
+      className="section-container flex flex-col-reverse lg:flex-row justify-center gap-16">
       <div className="flex flex-col gap-x-10 gap-y-9 w-full">
         <span className="text-4xl font-bold self-start">Register</span>
 
@@ -134,35 +163,49 @@ const Register = () => {
           {error && <span className="text-sm text-red-600">{error}</span>}
         </div>
 
-        <button type="submit" className="btn btn-primary self-start">
-          Register
-        </button>
+        <div className="flex gap-4">
+          <button type="submit" className="btn btn-primary self-start">
+            Register
+          </button>
+
+          <button
+            type="button"
+            className="btn btn-primary-outline self-start"
+            onClick={handleFormReset}>
+            Reset
+          </button>
+        </div>
       </div>
 
       <div className="flex flex-col gap-x-10 gap-y-9 w-full">
-        <span className="text-4xl font-bold self-start ">Become a seller</span>
+        <span className="text-4xl font-bold self-start">Become a seller</span>
 
         <div>
-          <div className="flex flex-col gap-x-8 gap-y-6">
-            {/* <CustomInput
-              inputValue={formState.username}
-              inputName="username"
-              labelText="Username"
-              inputId="username"
-              placeholderText="Enter your username"
-              onChangeHandler={handleChange}
+          <div className="flex flex-col gap-x-8 gap-y-6 mt-8">
+            <CustomToggle
+              inputName="isSeller"
+              labelText="Activate account"
+              isToggled={formState.isSeller}
+              onChangeHandler={handleToggleChange}
             />
 
             <CustomInput
-              classNames="mb-3"
-              inputValue={formState.password}
-              inputName="password"
-              inputType="password"
-              labelText="Password"
-              inputId="password"
-              placeholderText="Enter your password"
+              inputValue={formState.phone}
+              inputName="phone"
+              labelText="Phone Number"
+              inputId="phone"
+              placeholderText="Enter your phone number"
               onChangeHandler={handleChange}
-            /> */}
+            />
+
+            <TextareaInput
+              inputValue={formState.description}
+              inputName="description"
+              inputId="description"
+              labelText="Description"
+              placeholderText="A short description of yourself"
+              onChangeHandler={handleChange}
+            />
           </div>
 
           {error && <span className="text-sm text-red-600">{error}</span>}
@@ -170,6 +213,6 @@ const Register = () => {
       </div>
     </form>
   );
-};
+}
 
 export default Register;

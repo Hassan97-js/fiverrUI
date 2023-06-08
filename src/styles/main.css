@@ -29,6 +29,10 @@
     @apply text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300;
   }
 
+  .btn-primary-outline {
+    @apply text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300;
+  }
+
   .btn-secondary {
     @apply text-white bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:ring-gray-300;
   }

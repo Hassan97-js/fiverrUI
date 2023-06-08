@@ -11,6 +11,8 @@ import MyGigs from "./MyGigs";
 import Orders from "./Orders";
 import Register from "./Register";
 
+import { submitLogin } from "./actions";
+
 export {
   Root,
   Error,
@@ -23,5 +25,6 @@ export {
   Messages,
   MyGigs,
   Orders,
-  Register
+  Register,
+  submitLogin
 };

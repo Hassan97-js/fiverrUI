@@ -13,7 +13,7 @@ const { responsiveItemsOne } = uiConfig;
 
 import "./Gig.css";
 
-const Gig = () => {
+function Gig() {
   const gigServices = [
     {
       id: 1,
@@ -137,6 +137,6 @@ const Gig = () => {
       />
     </section>
   );
-};
+}
 
 export default Gig;

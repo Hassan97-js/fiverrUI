@@ -5,7 +5,7 @@ import { routeGigs } from "../../data";
 
 import "./Gigs.css";
 
-const Gigs = () => {
+function Gigs() {
   const [selected, setSelected] = useState("sales");
 
   /* Handler */
@@ -59,6 +59,6 @@ const Gigs = () => {
       <div className="gigs grid gap-10">{routeGigCards}</div>
     </section>
   );
-};
+}
 
 export default Gigs;

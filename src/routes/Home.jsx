@@ -13,7 +13,7 @@ import { gigCategories, gigProjects, uiConfig } from "../data";
 
 const { responsive } = uiConfig;
 
-const Home = () => {
+function Home() {
   const GigCategoriesCards = gigCategories.map((category) => {
     return <SliderGigCategoryCard key={category.id} item={category} />;
   });
@@ -48,6 +48,6 @@ const Home = () => {
       </div>
     </>
   );
-};
+}
 
 export default Home;

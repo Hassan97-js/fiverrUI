@@ -3,7 +3,7 @@ import { Table } from "../components";
 
 import { myGigsTableData } from "../data";
 
-const MyGigs = () => {
+function MyGigs() {
   return (
     <section className="section-container">
       <div className="flex items-center justify-end mb-4">
@@ -15,6 +15,6 @@ const MyGigs = () => {
       <Table data={myGigsTableData} />
     </section>
   );
-};
+}
 
 export default MyGigs;

@@ -1,13 +1,12 @@
 function CustomInput({
   classNames,
   inputType = "text",
-  inputValue = "",
-  inputName = "",
+  inputName,
   inputId,
   inputMinLength = 1,
   inputMaxLength = 30,
   labelText,
-  placeholderText = "",
+  placeholderText,
   onChangeHandler = () => {},
   ...otherProps
 }) {
@@ -22,7 +21,6 @@ function CustomInput({
       <input
         {...otherProps}
         type={inputType}
-        value={inputValue}
         name={inputName}
         id={inputId}
         minLength={inputMinLength}

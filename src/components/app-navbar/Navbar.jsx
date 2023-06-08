@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { NavLink, Link, useLocation, useNavigate } from "react-router-dom";
 
 import { makeApiRequest } from "../../utils";
 import { useClickAway, useScroll } from "../../hooks";
@@ -14,6 +14,10 @@ function Navbar() {
   const dropdownRef = useRef(null);
   const [isOpen] = useClickAway(dropdownRef);
   const [active] = useScroll();
+
+  const setNavLinkActive = ({ isActive }) => {
+    return isActive ? "link underline" : "link";
+  };
 
   const handleLogout = async () => {
     try {
@@ -44,38 +48,54 @@ function Navbar() {
           className="flex flex-col lg:flex-row items-center gap-8 font-medium"
           role="list">
           <li>
-            <Link to="." className="link" aria-label="Fiverr Business" title="Home">
+            <NavLink
+              to="/business"
+              className={setNavLinkActive}
+              aria-label="Fiverr Business"
+              title="Home">
               Fiverr Business
-            </Link>
+            </NavLink>
           </li>
 
           <li>
-            <Link to="." className="link" aria-label="Explore" title="Explore">
+            <NavLink
+              to="/explore"
+              className={setNavLinkActive}
+              aria-label="Explore"
+              title="Explore">
               Explore
-            </Link>
+            </NavLink>
           </li>
 
           <li>
-            <Link to="." className="link" aria-label="English" title="English">
+            <NavLink
+              to="/english"
+              className={setNavLinkActive}
+              aria-label="English"
+              title="English">
               English
-            </Link>
+            </NavLink>
           </li>
 
           <li className="link">
-            <Link to="login" className="link" aria-label="Login" title="Login">
+            <NavLink
+              to="/login"
+              className={setNavLinkActive}
+              aria-label="Login"
+              title="Login">
               Login
-            </Link>
+            </NavLink>
           </li>
 
           {!currentUser?.isSeller && (
             <li>
-              <Link
-                to="."
-                className="link"
+              <NavLink
+                to="/become-seller"
+                className={setNavLinkActive}
                 aria-label="Become a Seller"
                 title="Become a Seller">
                 Become a Seller
-              </Link>
+              </NavLink>
             </li>
           )}
 

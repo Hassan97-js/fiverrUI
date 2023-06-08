@@ -1,6 +1,6 @@
 import { Breadcrumb, ChatInput, ChatRoom } from "../components";
 
-const Message = () => {
+function Message() {
   return (
     <section className="section-container">
       <Breadcrumb />
@@ -8,6 +8,6 @@ const Message = () => {
       <ChatInput />
     </section>
   );
-};
+}
 
 export default Message;

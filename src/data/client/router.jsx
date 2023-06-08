@@ -10,7 +10,8 @@ import {
   MyGigs,
   Orders,
   Register,
-  Root
+  Root,
+  submitLogin
 } from "../../routes";
 
 const routerConfig = [
@@ -29,7 +30,24 @@ const routerConfig = [
       },
       {
         path: "login",
-        element: <Login />
+        element: <Login />,
+        action: submitLogin
+      },
+      {
+        path: "business",
+        element: <h1>Fiverr Business</h1>
+      },
+      {
+        path: "explore",
+        element: <h1>Fiverr Explore</h1>
+      },
+      {
+        path: "english",
+        element: <h1>Fiverr English</h1>
+      },
+      {
+        path: "become-seller",
+        element: <h1>Become a Seller</h1>
       },
       {
         path: "gigs",
