@@ -6,7 +6,7 @@ import assetsData from "../assets";
 
 const { fiverBusinessImage } = assetsData.images;
 
-const FiverrBusiness = () => {
+function FiverrBusiness() {
   return (
     <section className="bg-indigo-950 text-white px-6 py-24">
       <div className="container mx-auto flex flex-col xl:flex-row gap-28">
@@ -76,6 +76,6 @@ const FiverrBusiness = () => {
       </div>
     </section>
   );
-};
+}
 
 export default FiverrBusiness;

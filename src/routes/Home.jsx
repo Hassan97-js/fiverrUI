@@ -7,9 +7,9 @@ import {
   FiverrBusiness,
   Slider as GigCategorySlider,
   Slider as GigProjectsSlider
-} from "../../components";
+} from "../components";
 
-import { gigCategories, gigProjects, uiConfig } from "../../data";
+import { gigCategories, gigProjects, uiConfig } from "../data";
 
 const { responsive } = uiConfig;
 

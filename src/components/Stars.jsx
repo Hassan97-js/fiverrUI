@@ -1,7 +1,7 @@
 import { RiStarFill } from "react-icons/ri";
 import CustomIcon from "./CustomIcon";
 
-const Stars = ({ children }) => {
+function Stars({ children }) {
   return (
     <div className="flex items-center gap-2">
       <CustomIcon
@@ -14,6 +14,6 @@ const Stars = ({ children }) => {
       <span>{children}</span>
     </div>
   );
-};
+}
 
 export default Stars;

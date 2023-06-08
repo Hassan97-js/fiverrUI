@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const SliderGigProjectCard = ({ project }) => {
+function SliderGigProjectCard({ project }) {
   const { imgURL, category, client } = project;
 
   return (
@@ -25,6 +25,6 @@ const SliderGigProjectCard = ({ project }) => {
       </div>
     </Link>
   );
-};
+}
 
 export default SliderGigProjectCard;

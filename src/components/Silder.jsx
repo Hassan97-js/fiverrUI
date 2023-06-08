@@ -1,7 +1,7 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-const Slider = ({
+function Slider({
   children,
   responsive,
   className = "",
@@ -10,7 +10,7 @@ const Slider = ({
   itemsClass = "",
   sliderClassName = "",
   slidesToSlide = 1
-}) => {
+}) {
   return (
     <div style={styles}>
       <Carousel
@@ -30,6 +30,6 @@ const Slider = ({
       </Carousel>
     </div>
   );
-};
+}
 
 export default Slider;

@@ -3,13 +3,13 @@ import Stars from "../Stars";
 import CustomIcon from "../CustomIcon";
 import { RiThumbUpLine, RiThumbDownLine } from "react-icons/ri";
 
-const Review = ({
+function Review({
   sellerName,
   sellerImgURL,
   countryName,
   countryImgURL,
   description
-}) => {
+}) {
   return (
     <div className="flex flex-col gap-3 flex-1 rounded-sm shadow-md px-8 py-6 min-w-[21.875rem] min-h-[23.75rem]">
       <div className="flex gap-3">
@@ -55,6 +55,6 @@ const Review = ({
       </div>
     </div>
   );
-};
+}
 
 export default Review;

@@ -6,7 +6,7 @@ import { useClickAway, useScroll } from "../../hooks";
 
 import "./Navbar.css";
 
-const Navbar = () => {
+function Navbar() {
   const { pathname } = useLocation();
 
   const navigate = useNavigate();
@@ -195,6 +195,6 @@ const Navbar = () => {
       </div>
     </nav>
   );
-};
+}
 
 export default Navbar;

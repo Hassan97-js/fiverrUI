@@ -1,15 +1,15 @@
-import Root from "./root/Root";
-import Error from "./error/Error";
-import Add from "./add/Add";
+import Root from "./Root";
+import Error from "./Error";
+import Add from "./Add";
 import Gig from "./gig/Gig";
 import Gigs from "./gigs/Gigs";
-import Home from "./home/Home";
-import Login from "./login/Login";
-import Message from "./message/Message";
-import Messages from "./messages/Messages";
-import MyGigs from "./my-gigs/MyGigs";
-import Orders from "./orders/Orders";
-import Register from "./register/Register";
+import Home from "./Home";
+import Login from "./Login";
+import Message from "./Message";
+import Messages from "./Messages";
+import MyGigs from "./MyGigs";
+import Orders from "./Orders";
+import Register from "./Register";
 
 export {
   Root,

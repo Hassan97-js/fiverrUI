@@ -1,6 +1,6 @@
-import { Table } from "../../components";
+import { Table } from "../components";
 
-import { messagesTableData } from "../../data";
+import { messagesTableData } from "../data";
 
 const Messages = () => {
   return (

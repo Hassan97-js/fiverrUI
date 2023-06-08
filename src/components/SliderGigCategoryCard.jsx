@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const SliderGigCategoryCard = ({ item }) => {
+function SliderGigCategoryCard({ item }) {
   const styles = {
     background: `linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url(${item.imgURL})`,
     backgroundRepeat: "no-repeat",
@@ -19,6 +19,6 @@ const SliderGigCategoryCard = ({ item }) => {
       </div>
     </Link>
   );
-};
+}
 
 export default SliderGigCategoryCard;

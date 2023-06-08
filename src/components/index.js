@@ -2,7 +2,7 @@ import Navbar from "./app-navbar/Navbar";
 import Breadcrumb from "./Breadcrumb";
 import Footer from "./footer/Footer";
 import Featured from "./Featured";
-import TrustedBy from "./trusted-by/TrustedBy";
+import TrustedBy from "./TrustedBy";
 import Slider from "./Silder";
 import SliderGigCategoryCard from "./SliderGigCategoryCard";
 import SliderGigProjectCard from "./SliderGigProjectCard";
@@ -13,13 +13,12 @@ import AboutSeller from "./AboutSeller";
 import Reviews from "./reviews/Reviews";
 import GigCTA from "./GigCTA";
 
-import Button from "./custom-button/Button";
 import ArrowIcon from "./ArrowIcon";
 import Stars from "./Stars";
 import CustomIcon from "./CustomIcon";
 import Table from "./Table";
-import ChatInput from "./ChatInput";
-import ChatRoom from "./ChatRoom";
+import ChatInput from "./chat/ChatInput";
+import ChatRoom from "./chat/ChatRoom";
 
 import TextInput from "./form/TextInput";
 import CustomInput from "./form/CustomInput";
@@ -41,7 +40,6 @@ export {
   GigCTA,
   Features,
   FiverrBusiness,
-  Button,
   ArrowIcon,
   Stars,
   Breadcrumb,

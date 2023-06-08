@@ -1,4 +1,4 @@
-import { Breadcrumb, ChatInput, ChatRoom } from "../../components";
+import { Breadcrumb, ChatInput, ChatRoom } from "../components";
 
 const Message = () => {
   return (

@@ -1,4 +1,4 @@
-const ChatMessage = ({ isSender }) => {
+function ChatMessage({ isSender }) {
   return (
     <div
       className={`flex gap-4 bg-gray-200/60 max-w-lg py-3 px-5 ${
@@ -20,6 +20,6 @@ const ChatMessage = ({ isSender }) => {
       </p>
     </div>
   );
-};
+}
 
 export default ChatMessage;

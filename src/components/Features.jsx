@@ -5,7 +5,7 @@ import CustomIcon from "./CustomIcon";
 
 const { featuresVideo } = assetsData.videos;
 
-const Features = () => {
+function Features() {
   return (
     <section className="py-24">
       <div className="container flex flex-col mx-auto px-6 xl:flex-row gap-28">
@@ -77,6 +77,6 @@ const Features = () => {
       </div>
     </section>
   );
-};
+}
 
 export default Features;

@@ -1,6 +1,6 @@
 import Stars from "./Stars";
 
-const AboutSeller = ({
+function AboutSeller({
   sellerName,
   sellerImg,
   rating,
@@ -10,7 +10,7 @@ const AboutSeller = ({
   lastDelivery,
   languages,
   aboutSeller
-}) => {
+}) {
   return (
     <div className="text-neutral-700">
       <div>
@@ -70,6 +70,6 @@ const AboutSeller = ({
       </div>
     </div>
   );
-};
+}
 
 export default AboutSeller;

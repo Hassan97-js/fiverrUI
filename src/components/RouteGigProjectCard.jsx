@@ -6,7 +6,7 @@ import Stars from "./Stars";
 
 import { formatCurrency } from "../utils";
 
-const RouteGigProjectCard = ({ gig }) => {
+function RouteGigProjectCard({ gig }) {
   const { imgURL, client, price, description } = gig;
 
   const styles = {
@@ -61,6 +61,6 @@ const RouteGigProjectCard = ({ gig }) => {
       </div>
     </Link>
   );
-};
+}
 
 export default RouteGigProjectCard;

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 import ArrowIcon from "./ArrowIcon";
 
-const Breadcrumb = () => {
+function Breadcrumb() {
   return (
     <nav className="flex" aria-label="Breadcrumb">
       <ol className="flex items-center space-x-1 md:space-x-3 mb-8">
@@ -47,6 +47,6 @@ const Breadcrumb = () => {
       </ol>
     </nav>
   );
-};
+}
 
 export default Breadcrumb;

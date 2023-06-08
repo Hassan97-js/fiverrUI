@@ -3,7 +3,7 @@ import assetsData from "../assets";
 const { heroManImage } = assetsData.images;
 const { heroSearchIcon } = assetsData.icons;
 
-const Featured = () => {
+function Featured() {
   return (
     <section className="flex justify-center text-gray-800 bg-gray-200/60">
       <div className="container px-6 pt-7 flex lg:flex-row md:items-center justify-center flex-col gap-6">
@@ -63,6 +63,6 @@ const Featured = () => {
       </div>
     </section>
   );
-};
+}
 
 export default Featured;

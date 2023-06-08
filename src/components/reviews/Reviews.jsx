@@ -1,6 +1,6 @@
 import Review from "./Review";
 
-const Reviews = () => {
+function Reviews() {
   return (
     <section className="reviews">
       <h2 className="mb-6">Reviews</h2>
@@ -39,6 +39,6 @@ const Reviews = () => {
       </div>
     </section>
   );
-};
+}
 
 export default Reviews;

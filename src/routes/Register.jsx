@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { CustomInput, FileInput } from "../../components";
+import { CustomInput, FileInput } from "../components";
 
-import { makeApiRequest } from "../../utils";
+import { makeApiRequest } from "../utils";
 
 const registerFormState = {
   email: "",

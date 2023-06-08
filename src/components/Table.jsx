@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-const Table = ({ data, striped = true, clickable = false }) => {
+function Table({ data, striped = true, clickable = false }) {
   const { tableHeaders, tableData, isMessages } = data[0];
 
   const navigate = useNavigate();
@@ -79,6 +79,6 @@ const Table = ({ data, striped = true, clickable = false }) => {
       </table>
     </div>
   );
-};
+}
 
 export default Table;

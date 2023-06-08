@@ -2,14 +2,14 @@ import { FaCheck, FaRecycle, FaRegClock } from "react-icons/fa";
 
 import CustomIcon from "./CustomIcon";
 
-const GigCTA = ({
+function GigCTA({
   price,
   priceText,
   description,
   deliveryDays,
   revisionsNumber,
   services
-}) => {
+}) {
   return (
     <div className="text-neutral-700 flex flex-col gap-5 radius-md lg:sticky lg:top-80 self-start border border-neutral-300 py-8 px-10 mt-10">
       <div>
@@ -53,6 +53,6 @@ const GigCTA = ({
       </div>
     </div>
   );
-};
+}
 
 export default GigCTA;

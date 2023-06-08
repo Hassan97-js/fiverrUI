@@ -8,7 +8,7 @@ import {
 
 import CustomIcon from "./CustomIcon";
 
-const TrustedBy = () => {
+function TrustedBy() {
   return (
     <section className="text-gray-500/60 flex flex-col items-center py-12">
       <strong className="text-base mb-2">Trusted by:</strong>
@@ -38,6 +38,6 @@ const TrustedBy = () => {
       </div>
     </section>
   );
-};
+}
 
 export default TrustedBy;

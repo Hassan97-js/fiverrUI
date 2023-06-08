@@ -1,6 +1,6 @@
 import ChatMessage from "./ChatMessage";
 
-const ChatRoom = () => {
+function ChatRoom() {
   return (
     <div className="flex flex-col bg-gray-50/80 w-full p-8 rounded-lg">
       <ChatMessage isSender={true} />
@@ -12,6 +12,6 @@ const ChatRoom = () => {
       <ChatMessage isSender={true} />
     </div>
   );
-};
+}
 
 export default ChatRoom;

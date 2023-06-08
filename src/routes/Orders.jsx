@@ -1,7 +1,5 @@
-import { Table } from "../../components";
-import { ordersTableData } from "../../data";
-
-
+import { Table } from "../components";
+import { ordersTableData } from "../data";
 
 const Orders = () => {
   return (

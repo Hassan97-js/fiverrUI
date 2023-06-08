@@ -1,4 +1,4 @@
-const ArrowIcon = () => {
+function ArrowIcon() {
   return (
     <svg
       aria-hidden="true"
@@ -12,6 +12,6 @@ const ArrowIcon = () => {
         clipRule="evenodd"></path>
     </svg>
   );
-};
+}
 
 export default ArrowIcon;

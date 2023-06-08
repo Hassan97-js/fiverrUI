@@ -1,4 +1,4 @@
-const ChatInput = () => {
+function ChatInput() {
   return (
     <form>
       <label htmlFor="chat" className="sr-only">
@@ -29,6 +29,6 @@ const ChatInput = () => {
       </div>
     </form>
   );
-};
+}
 
 export default ChatInput;

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import { Table } from "../../components";
+import { Table } from "../components";
 
-import { myGigsTableData } from "../../data";
+import { myGigsTableData } from "../data";
 
 const MyGigs = () => {
   return (

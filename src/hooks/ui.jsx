@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import { isActive } from "../utils";
 
-const useClickAway = (ref) => {
+function useClickAway(ref) {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -24,9 +24,9 @@ const useClickAway = (ref) => {
   }, [ref, isOpen]);
 
   return [isOpen];
-};
+}
 
-const useScroll = () => {
+function useScroll() {
   const [active, setActive] = useState(false);
 
   useEffect(() => {
@@ -42,6 +42,6 @@ const useScroll = () => {
   }, [active]);
 
   return [active];
-};
+}
 
 export { useClickAway, useScroll };

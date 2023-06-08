@@ -4,7 +4,7 @@ import {
   SelectInput,
   TextInput,
   TextareaInput
-} from "../../components";
+} from "../components";
 
 function Add() {
   const options = [

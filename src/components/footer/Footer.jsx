@@ -15,7 +15,7 @@ const { footerLogoSVG } = assetsData.svgs;
 
 import "./Footer.css";
 
-const Footer = () => {
+function Footer() {
   return (
     <footer className="footer p-6">
       <div className="section-container">
@@ -232,6 +232,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
+}
 
 export default Footer;
