@@ -53,7 +53,6 @@ const Login = () => {
 
       // use Context API instead (LATER)
       localStorage.setItem("currentUser", JSON.stringify(response.data));
-      document.cookie = "__cf_bm=''";
       navigate("/");
 
       setError(null);

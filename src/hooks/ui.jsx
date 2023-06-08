@@ -7,18 +7,17 @@ const useClickAway = (ref) => {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (ref?.current.parentElement.contains(event.target)) {
+      if (ref?.current?.parentElement?.contains(event.target)) {
         setIsOpen(!isOpen);
       }
 
-      if (!ref?.current.parentElement.contains(event.target)) {
+      if (!ref?.current?.parentElement?.contains(event.target)) {
         setIsOpen(false);
       }
     };
 
     document.addEventListener("mousedown", handleClickOutside);
 
-    // clean up
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
@@ -37,7 +36,6 @@ const useScroll = () => {
 
     window.addEventListener("scroll", handleScroll);
 
-    // clean up
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };

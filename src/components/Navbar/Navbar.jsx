@@ -18,6 +18,7 @@ const Navbar = () => {
   const handleLogout = async () => {
     try {
       await makeApiRequest("post", "auth/logout");
+      
       // use Context API instead (LATER)
       localStorage.removeItem("currentUser");
       navigate("/");
@@ -90,10 +91,8 @@ const Navbar = () => {
             <div className="image-wrapper">
               {!!currentUser && (
                 <img
-                  className="rounded-full object-cover object-center"
+                  className="w-10 h-10 rounded-full object-cover object-center"
                   src={currentUser?.img || "https://faces3.b-cdn.net/Colombia.png"}
-                  width={40}
-                  height={40}
                   alt="Profile picture"
                 />
               )}
