@@ -1,4 +1,4 @@
-import Navbar from "./navbar123/Navbar";
+import Navbar from "./navbar/Navbar";
 import Breadcrumb from "./Breadcrumb";
 import Footer from "./footer/Footer";
 import Featured from "./Featured";
