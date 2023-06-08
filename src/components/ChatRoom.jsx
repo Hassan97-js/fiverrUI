@@ -1,4 +1,4 @@
-import ChatMessage from "../chat-message/ChatMessage";
+import ChatMessage from "./ChatMessage";
 
 const ChatRoom = () => {
   return (

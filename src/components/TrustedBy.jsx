@@ -6,7 +6,7 @@ import {
   RiTwitterFill
 } from "react-icons/ri";
 
-import CustomIcon from "../custom-icon/CustomIcon";
+import CustomIcon from "./CustomIcon";
 
 const TrustedBy = () => {
   return (

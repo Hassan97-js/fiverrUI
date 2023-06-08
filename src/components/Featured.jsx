@@ -1,4 +1,4 @@
-import assetsData from "../../assets";
+import assetsData from "../assets";
 
 const { heroManImage } = assetsData.images;
 const { heroSearchIcon } = assetsData.icons;

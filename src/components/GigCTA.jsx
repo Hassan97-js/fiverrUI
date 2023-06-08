@@ -1,6 +1,6 @@
 import { FaCheck, FaRecycle, FaRegClock } from "react-icons/fa";
 
-import CustomIcon from "../custom-icon/CustomIcon";
+import CustomIcon from "./CustomIcon";
 
 const GigCTA = ({
   price,

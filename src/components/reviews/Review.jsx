@@ -1,6 +1,6 @@
-import Stars from "../stars/Stars";
+import Stars from "../Stars";
 
-import CustomIcon from "../custom-icon/CustomIcon";
+import CustomIcon from "../CustomIcon";
 import { RiThumbUpLine, RiThumbDownLine } from "react-icons/ri";
 
 const Review = ({

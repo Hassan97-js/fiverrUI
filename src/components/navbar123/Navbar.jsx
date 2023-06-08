@@ -18,7 +18,7 @@ const Navbar = () => {
   const handleLogout = async () => {
     try {
       await makeApiRequest("post", "auth/logout");
-      
+
       // use Context API instead (LATER)
       localStorage.removeItem("currentUser");
       navigate("/");
@@ -79,9 +79,11 @@ const Navbar = () => {
             </li>
           )}
 
-          {currentUser && (
+          {!currentUser && (
             <li>
-              <button className="btn btn-secondary">Join</button>
+              <Link to="/register" className="btn btn-secondary">
+                Join
+              </Link>
             </li>
           )}
         </ul>

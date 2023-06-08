@@ -1,32 +1,33 @@
-import Navbar from "./navbar/Navbar";
-import Breadcrumb from "./breadcrumb/Breadcrumb";
+import Navbar from "./navbar123/Navbar";
+import Breadcrumb from "./Breadcrumb";
 import Footer from "./footer/Footer";
-import Featured from "./featured/Featured";
+import Featured from "./Featured";
 import TrustedBy from "./trusted-by/TrustedBy";
-import Slider from "./silder/Silder";
-import SliderGigCategoryCard from "./slider-gig-category-card/SliderGigCategoryCard";
-import SliderGigProjectCard from "./slider-gig-project-card/SliderGigProjectCard";
-import Features from "./features/Features";
-import FiverrBusiness from "./fiverr-business/FiverrBusiness";
-import RouteGigProjectCard from "./route-gig-project-card/RouteGigProjectCard";
-import AboutSeller from "./about-seller/AboutSeller";
+import Slider from "./Silder";
+import SliderGigCategoryCard from "./SliderGigCategoryCard";
+import SliderGigProjectCard from "./SliderGigProjectCard";
+import Features from "./Features";
+import FiverrBusiness from "./FiverrBusiness";
+import RouteGigProjectCard from "./RouteGigProjectCard";
+import AboutSeller from "./AboutSeller";
 import Reviews from "./reviews/Reviews";
-import GigCTA from "./gig-cta/GigCTA";
+import GigCTA from "./GigCTA";
 
 import Button from "./custom-button/Button";
-import ArrowIcon from "./arrow-icon/ArrowIcon";
-import Stars from "./stars/Stars";
-import CustomIcon from "./custom-icon/CustomIcon";
-import Table from "./table/Table";
-import ChatInput from "./chat-input/ChatInput";
-import ChatRoom from "./chat-room/ChatRoom";
+import ArrowIcon from "./ArrowIcon";
+import Stars from "./Stars";
+import CustomIcon from "./CustomIcon";
+import Table from "./Table";
+import ChatInput from "./ChatInput";
+import ChatRoom from "./ChatRoom";
 
-import TextInput from "./text-input/TextInput";
-import CustomInput from "./custom-input/CustomInput";
-import SelectInput from "./SelectInput";
-import TextareaInput from "./TextareaInput";
-import FileInput from "./FileInput";
-import AgreeCheckbox from "./AgreeCheckbox";
+import TextInput from "./form/TextInput";
+import CustomInput from "./form/CustomInput";
+import SelectInput from "./form/SelectInput";
+import TextareaInput from "./form/TextareaInput";
+import FileInput from "./form/FileInput";
+import AgreeCheckbox from "./form/AgreeCheckbox";
+import CustomToggle from "./form/CustomToggle";
 
 export {
   Navbar,
@@ -53,6 +54,7 @@ export {
   TextInput,
   CustomInput,
   SelectInput,
+  CustomToggle,
   TextareaInput,
   FileInput,
   AgreeCheckbox

@@ -24,6 +24,14 @@ const routerConfig = [
         element: <Home />
       },
       {
+        path: "register",
+        element: <Register />
+      },
+      {
+        path: "login",
+        element: <Login />
+      },
+      {
         path: "gigs",
         element: <Gigs />
       },
@@ -53,14 +61,6 @@ const routerConfig = [
         element: <Gig />
       }
     ]
-  },
-  {
-    path: "register",
-    element: <Register />
-  },
-  {
-    path: "login",
-    element: <Login />
   }
 ];
 

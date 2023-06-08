@@ -1,4 +1,4 @@
-import Stars from "../stars/Stars";
+import Stars from "./Stars";
 
 const AboutSeller = ({
   sellerName,

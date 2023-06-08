@@ -1,7 +1,7 @@
-import assetsData from "../../assets";
+import assetsData from "../assets";
 
 import { FaCheckCircle } from "react-icons/fa";
-import CustomIcon from "../custom-icon/CustomIcon";
+import CustomIcon from "./CustomIcon";
 
 const { featuresVideo } = assetsData.videos;
 

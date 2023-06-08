@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import ArrowIcon from "../arrow-icon/ArrowIcon";
+import ArrowIcon from "./ArrowIcon";
 
 const Breadcrumb = () => {
   return (

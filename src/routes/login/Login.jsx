@@ -67,7 +67,7 @@ const Login = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="section-container flex flex-col justify-center items-center h-screen">
+      className="section-container flex flex-col justify-center items-center">
       <div className="flex flex-col gap-x-10 gap-y-9 w-1/4 min-w-max">
         <h1 className="self-start">Login</h1>
 

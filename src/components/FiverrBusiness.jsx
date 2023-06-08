@@ -1,8 +1,8 @@
 import { FaCheckCircle } from "react-icons/fa";
 
-import CustomIcon from "../custom-icon/CustomIcon";
+import CustomIcon from "./CustomIcon";
 
-import assetsData from "../../assets";
+import assetsData from "../assets";
 
 const { fiverBusinessImage } = assetsData.images;
 

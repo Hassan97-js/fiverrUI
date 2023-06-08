@@ -1,4 +1,9 @@
-function FileInput({ titleText, inputId }) {
+function FileInput({
+  titleText,
+  inputId,
+  inputName = "",
+  onChangeHandler = () => {}
+}) {
   return (
     <div>
       <span className="block mb-2 text-sm font-medium text-gray-900">
@@ -33,7 +38,13 @@ function FileInput({ titleText, inputId }) {
             </p>
           </div>
 
-          <input id={inputId} type="file" className="hidden" />
+          <input
+            type="file"
+            id={inputId}
+            name={inputName}
+            className="hidden"
+            onChange={onChangeHandler}
+          />
         </label>
       </div>
     </div>

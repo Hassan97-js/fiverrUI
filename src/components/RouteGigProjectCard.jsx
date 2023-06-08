@@ -1,12 +1,10 @@
 import { Link } from "react-router-dom";
 import { RiHeartFill } from "react-icons/ri";
 
-import CustomIcon from "../custom-icon/CustomIcon";
-import Stars from "../stars/Stars";
+import CustomIcon from "./CustomIcon";
+import Stars from "./Stars";
 
-import { formatCurrency } from "../../utils";
-
-import "./RouteGigProjectCard.css";
+import { formatCurrency } from "../utils";
 
 const RouteGigProjectCard = ({ gig }) => {
   const { imgURL, client, price, description } = gig;
