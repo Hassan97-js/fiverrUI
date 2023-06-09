@@ -4,10 +4,11 @@ import { CustomInput } from "../components";
 
 function Login() {
   const fetcher = useFetcher();
-  console.log(fetcher.state);
+  const isBusy = fetcher.state === "submitting";
 
-  // TODO: FROM HERE
-  const busy = fetcher.state === "submitting";
+  const axiosResponse = fetcher?.data?.response;
+  const actionError = axiosResponse?.data?.message;
+
   return (
     <fetcher.Form
       method="post"
@@ -35,11 +36,16 @@ function Login() {
             />
           </div>
 
-          {/* {error && <span className="text-sm text-red-600">{error}</span>} */}
+          {actionError && (
+            <span className="text-sm text-red-600">{actionError}</span>
+          )}
         </div>
 
-        <button disabled={busy} type="submit" className="btn btn-primary self-start">
-          Log in
+        <button
+          disabled={isBusy}
+          type="submit"
+          className={`btn btn-primary self-start ${isBusy ? "bg-green-400" : ""}`}>
+          {isBusy ? "Logging in..." : "Log in"}
         </button>
       </div>
     </fetcher.Form>

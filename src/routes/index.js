@@ -11,7 +11,7 @@ import MyGigs from "./MyGigs";
 import Orders from "./Orders";
 import Register from "./Register";
 
-import { submitLogin } from "./actions";
+import { submitLogin, submitRegister } from "./actions";
 
 export {
   Root,
@@ -26,5 +26,6 @@ export {
   MyGigs,
   Orders,
   Register,
-  submitLogin
+  submitLogin,
+  submitRegister
 };

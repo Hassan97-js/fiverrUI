@@ -11,7 +11,8 @@ import {
   Orders,
   Register,
   Root,
-  submitLogin
+  submitLogin,
+  submitRegister
 } from "../../routes";
 
 const routerConfig = [
@@ -26,10 +27,13 @@ const routerConfig = [
       },
       {
         path: "register",
-        element: <Register />
+        errorElement: <Error />,
+        element: <Register />,
+        action: submitRegister
       },
       {
         path: "login",
+        errorElement: <Error />,
         element: <Login />,
         action: submitLogin
       },
