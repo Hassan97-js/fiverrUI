@@ -28,6 +28,8 @@ import FileInput from "./form/FileInput";
 import AgreeCheckbox from "./form/AgreeCheckbox";
 import CustomToggle from "./form/CustomToggle";
 
+import UploadWidget from "./form/UploadWidget";
+
 export {
   Navbar,
   Footer,
@@ -55,5 +57,6 @@ export {
   CustomToggle,
   TextareaInput,
   FileInput,
-  AgreeCheckbox
+  AgreeCheckbox,
+  UploadWidget
 };

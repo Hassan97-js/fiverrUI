@@ -15,8 +15,8 @@ async function submitLogin({ request }) {
 
     const response = await makeApiRequest("post", "/auth/login", data);
 
-    if (response.status !== 200) {
-      return Error(`Something went wrong: ${response.status}`);
+    if (response.status > 200 && response.status > 399) {
+      throw Error(`Something went wrong: ${response.status}`);
     }
 
     // use Context API instead (LATER)
