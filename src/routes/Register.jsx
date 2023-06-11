@@ -1,18 +1,31 @@
+import { useEffect, useRef, useState } from "react";
 import { useFetcher } from "react-router-dom";
 
 import { UploadButton, UploadWidget } from "../components";
 
 import { CustomInput, CustomToggle, TextareaInput } from "../components";
-import { useState } from "react";
 
 function Register() {
-  const [uploadURL, updateUploadURL] = useState();
-  const [uploadError, updateUploadError] = useState();
+  const [uploadURL, setUploadURL] = useState("");
+  const [uploadError, setUploadError] = useState(null);
 
-  // TODO: FROM HERE
+  const fetcher = useFetcher();
+  const axiosResponse = fetcher?.data?.response;
+  const actionError = axiosResponse?.data?.message;
+
+  const isBusy = fetcher.state === "submitting";
+  const formRef = useRef(null);
+
+  useEffect(() => {
+    if (!isBusy) {
+      formRef.current?.reset();
+      setUploadURL("");
+    }
+  }, [isBusy]);
+
   const handleOnUpload = (error, result, widget) => {
     if (error) {
-      updateUploadError(error);
+      setUploadError(error);
 
       widget.close({
         quiet: true
@@ -21,15 +34,12 @@ function Register() {
       return;
     }
 
-    updateUploadURL(result?.info?.secure_url);
+    setUploadURL(result?.info?.secure_url);
   };
-
-  const fetcher = useFetcher();
-  const axiosResponse = fetcher?.data?.response;
-  const actionError = axiosResponse?.data?.message;
 
   return (
     <fetcher.Form
+      ref={formRef}
       method="post"
       className="section-container flex flex-col-reverse lg:flex-row justify-center gap-16">
       <div className="flex flex-col gap-x-10 gap-y-9 w-full">
@@ -80,10 +90,19 @@ function Register() {
                   };
 
                   return (
-                    <UploadButton
-                      handleOnClick={handleOpenWidget}
-                      imgPreviewURL={uploadURL}
-                    />
+                    <>
+                      <input
+                        type="hidden"
+                        id="imgURL"
+                        name="imgURL"
+                        value={uploadURL}
+                      />
+
+                      <UploadButton
+                        handleOnClick={handleOpenWidget}
+                        imgPreviewURL={uploadURL}
+                      />
+                    </>
                   );
                 }}
               </UploadWidget>

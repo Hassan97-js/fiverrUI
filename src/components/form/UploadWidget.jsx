@@ -63,12 +63,7 @@ function UploadWidget({ children, onUpload }) {
     widget && widget.open();
   };
 
-  return (
-    // <button type="button" className="btn btn-secondary" onClick={handleOpenWidget}>
-    //   Upload
-    // </button>
-    <>{children({ cloudinary, widget, openWidget })}</>
-  );
+  return <>{children({ cloudinary, widget, openWidget })}</>;
 }
 
 export default UploadWidget;

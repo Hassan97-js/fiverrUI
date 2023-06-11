@@ -19,7 +19,7 @@ async function submitLogin({ request }) {
       throw Error(`Something went wrong: ${response.status}`);
     }
 
-    // use Context API instead (LATER)
+    // TODO: use loader instead?
     localStorage.setItem("currentUser", JSON.stringify(response.data));
 
     return redirect("/");

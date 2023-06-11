@@ -23,7 +23,7 @@ function Navbar() {
     try {
       await makeApiRequest("post", "auth/logout");
 
-      // use Context API instead (LATER)
+      // TODO: use loader instead?
       localStorage.removeItem("currentUser");
       navigate("/");
     } catch (error) {
