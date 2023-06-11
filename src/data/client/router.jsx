@@ -50,10 +50,6 @@ const routerConfig = [
         element: <h1>Fiverr English</h1>
       },
       {
-        path: "become-seller",
-        element: <h1>Become a Seller</h1>
-      },
-      {
         path: "gigs",
         element: <Gigs />
       },

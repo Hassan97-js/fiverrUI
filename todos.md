@@ -1,5 +1,6 @@
 # Todos
 
+- Refactor: delete unused assets and unused imports
 - Use Actions and Loaders
 - Implement a Spinner
 - Implement Better Error Handling

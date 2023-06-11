@@ -1,28 +1,27 @@
 import { useFetcher } from "react-router-dom";
 
-// import { Cloudinary } from "@cloudinary/url-gen";
+import { UploadButton, UploadWidget } from "../components";
 
-// import { AdvancedImage, lazyload, placeholder } from "@cloudinary/react";
-
-import { UploadWidget } from "../components";
-
-import { CustomInput, FileInput, CustomToggle, TextareaInput } from "../components";
+import { CustomInput, CustomToggle, TextareaInput } from "../components";
 import { useState } from "react";
 
 function Register() {
-  const [url, updateUrl] = useState();
-  const [error, updateError] = useState();
+  const [uploadURL, updateUploadURL] = useState();
+  const [uploadError, updateUploadError] = useState();
 
   // TODO: FROM HERE
   const handleOnUpload = (error, result, widget) => {
     if (error) {
-      updateError(error);
+      updateUploadError(error);
+
       widget.close({
         quiet: true
       });
+
       return;
     }
-    updateUrl(result?.info?.secure_url);
+
+    updateUploadURL(result?.info?.secure_url);
   };
 
   const fetcher = useFetcher();
@@ -36,11 +35,11 @@ function Register() {
       <div className="flex flex-col gap-x-10 gap-y-9 w-full">
         <span className="text-4xl font-bold self-start">Register</span>
 
-        {/* <AdvancedImage cldImg={myImage} plugins={[lazyload(), placeholder()]} /> */}
-
         {actionError && (
           <span className="text-normal font-bold text-red-500">{actionError}</span>
         )}
+
+        {uploadError && <span className="text-sm text-red-600">{uploadError}</span>}
 
         <div>
           <div className="flex flex-col gap-x-8 gap-y-6">
@@ -74,32 +73,21 @@ function Register() {
 
               <UploadWidget onUpload={handleOnUpload}>
                 {({ openWidget }) => {
-                  const handleOnClick = (e) => {
-                    e.preventDefault();
+                  const handleOpenWidget = (event) => {
+                    event.preventDefault();
+
                     openWidget();
                   };
 
-                  return <button onClick={handleOnClick}>Upload an Image</button>;
+                  return (
+                    <UploadButton
+                      handleOnClick={handleOpenWidget}
+                      imgPreviewURL={uploadURL}
+                    />
+                  );
                 }}
               </UploadWidget>
-
-              {error && <p>{error}</p>}
-
-              {url && (
-                <>
-                  <p>
-                    <img src={url} alt="Uploaded resource" />
-                  </p>
-                  <p>{url}</p>
-                </>
-              )}
             </div>
-
-            {/* <FileInput
-              inputId="profile-img-dropzone-file"
-              titleText="Profile Picture"
-              inputName="profileImg"
-            /> */}
 
             <CustomInput
               classNames="mb-3"

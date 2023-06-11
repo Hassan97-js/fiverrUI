@@ -15,7 +15,7 @@ function UploadWidget({ children, onUpload }) {
       uploadPreset: "fiverr-assets-preset"
     };
 
-    return cloudinary?.createUploadWidget(options, (error, result) => {
+    const onCreateUploadWidget = (error, result) => {
       // The callback is a bit more chatty than failed or success so
       // only trigger when one of those are the case. You can additionally
       // create a separate handler such as onEvent and trigger it on
@@ -23,7 +23,9 @@ function UploadWidget({ children, onUpload }) {
       if (error || result.event === "success") {
         onUpload(error, result, widget);
       }
-    });
+    };
+
+    return cloudinary?.createUploadWidget(options, onCreateUploadWidget);
   };
 
   useEffect(() => {
@@ -57,6 +59,7 @@ function UploadWidget({ children, onUpload }) {
     if (!widget) {
       widget = createWidget();
     }
+
     widget && widget.open();
   };
 

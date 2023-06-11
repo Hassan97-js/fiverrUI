@@ -90,7 +90,7 @@ function Navbar() {
           {!currentUser?.isSeller && (
             <li>
               <NavLink
-                to="/become-seller"
+                to="/register"
                 className={setNavLinkActive}
                 aria-label="Become a Seller"
                 title="Become a Seller">
