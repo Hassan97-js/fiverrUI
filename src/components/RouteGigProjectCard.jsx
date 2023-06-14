@@ -6,11 +6,9 @@ import Stars from "./Stars";
 
 import { formatCurrency } from "../utils";
 
-function RouteGigProjectCard({ gig }) {
-  const { imgURL, client, price, description } = gig;
-
+function RouteGigProjectCard({ gigId, gigCoverImg, price, description, stars }) {
   const styles = {
-    backgroundImage: `url(${imgURL})`,
+    backgroundImage: `url(${gigCoverImg})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     backgroundPosition: "top"
@@ -27,19 +25,19 @@ function RouteGigProjectCard({ gig }) {
           <div className="flex items-center gap-3">
             <img
               className="object-cover rounded-full w-8 h-8"
-              src={client.profileURL}
+              src="https://images.pexels.com/photos/720327/pexels-photo-720327.jpeg?auto=compress&cs=tinysrgb&w=1600"
               alt="a freelancing client image"
             />
 
-            <strong className="font-semibold">{client.fullName}</strong>
+            <strong className="font-semibold">John Doe</strong>
           </div>
 
-          <span className="font-medium text-neutral-500 mb-2">Gig: {gig.id}</span>
+          <span className="font-medium text-neutral-500 mb-2">Gig: {gigId}</span>
         </div>
 
         <p className="mb-5">{description}</p>
 
-        <Stars>{client.stars}</Stars>
+        <Stars>{stars}</Stars>
 
         <hr className="block w-full my-4" />
 

@@ -2,7 +2,7 @@ import { useRouteError, isRouteErrorResponse } from "react-router-dom";
 
 function Error() {
   const error = useRouteError();
-  console.error(error);
+  console.log(error.message);
 
   let errorResponseContent = null;
 
@@ -18,7 +18,7 @@ function Error() {
         <h2 className="text-3xl font-normal text-gray-500 mb-12">{error.status}</h2>
 
         <p className="text-xl font-bold text-gray-500">
-          <i>{(error.data?.message && error.data.message) || "Not Found"}</i>
+          <i>{error?.message || "Not Found"}</i>
         </p>
       </div>
     );

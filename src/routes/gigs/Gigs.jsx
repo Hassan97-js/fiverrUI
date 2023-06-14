@@ -1,22 +1,45 @@
-import { useState } from "react";
-import { RouteGigProjectCard, Breadcrumb } from "../../components";
+import { useFetcher, useLoaderData } from "react-router-dom";
 
-import { routeGigs } from "../../data";
+import { RouteGigProjectCard, Breadcrumb, CustomInput } from "../../components";
 
 import "./Gigs.css";
 
-function Gigs() {
-  const [selected, setSelected] = useState("sales");
+/**
+ * TODOS:
+ * FETCH GIGS FROM DB
+ */
 
-  /* Handler */
-  const handleSelect = (event) => {
-    const { value } = event.target;
-    setSelected(value);
+function Gigs() {
+  const fetcher = useFetcher();
+
+  const axiosResponse = useLoaderData();
+
+  const data = axiosResponse?.data;
+
+  const handleSelect = () => {
+    // const { value } = event.target;
+    fetcher.submit(
+      { idle: true },
+      {
+        method: "post",
+        action: "/gigs"
+      }
+    );
   };
 
-  /* JSX */
-  const routeGigCards = routeGigs.map((gig) => {
-    return <RouteGigProjectCard key={gig.id} gig={gig} />;
+  const routeGigCards = data?.map((gig, idx) => {
+    const { _id: gigId, gigCoverImg, price, description } = gig;
+
+    return (
+      <RouteGigProjectCard
+        key={gigId}
+        gigId={idx + 1}
+        gigCoverImg={gigCoverImg}
+        price={price}
+        description={description}
+        stars="5"
+      />
+    );
   });
 
   return (
@@ -29,12 +52,23 @@ function Gigs() {
       </h5>
 
       <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-5 my-4">
-        <form className="flex flex-col lg:flex-row lg:items-center gap-5 py-5">
-          <p className="mb-2 lg:mb-0">Budget</p>
+        <form className="flex flex-col py-5">
+          <div className="flex flex-col mb-5">
+            <CustomInput
+              classNames="mb-5"
+              lableClassNames="text-gray-600"
+              labelText="Min price"
+              inputName="min"
+              placeholderText="min"
+            />
 
-          <input type="text" placeholder="min" />
-
-          <input type="text" placeholder="max" />
+            <CustomInput
+              lableClassNames="text-gray-600"
+              labelText="Max price"
+              inputName="max"
+              placeholderText="max"
+            />
+          </div>
 
           <button type="button" className="btn btn-secondary btn-xs tracking-wider">
             Apply
@@ -44,15 +78,15 @@ function Gigs() {
         <div className="relative flex flex-col lg:flex-row lg:justify-end lg:items-center lg:gap-3 w-96">
           <span className="font-medium -mb-2">Sort by</span>
 
-          <form className="my-4">
+          <fetcher.Form className="my-4">
             <select
               className="bg-white border border-neutral-300 outline-0 radius-base p-3 w-52 cursor-pointer rounded-sm"
-              value={selected}
+              defaultValue="createdAt"
               onChange={handleSelect}>
               <option value="createdAt">Newest</option>
               <option value="sales">Best Selling</option>
             </select>
-          </form>
+          </fetcher.Form>
         </div>
       </div>
 

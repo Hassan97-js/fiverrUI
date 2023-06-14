@@ -15,7 +15,7 @@ async function submitLogin({ request }) {
 
     const response = await makeApiRequest("post", "/auth/login", data);
 
-    if (response.status > 200 && response.status > 399) {
+    if (response.status > 399 && response.status < 600) {
       throw Error(`Something went wrong: ${response.status}`);
     }
 
@@ -43,10 +43,9 @@ async function submitRegister({ request }) {
 
     const response = await makeApiRequest("post", "/auth/register", data);
 
-    if (response.status > 200 && response.status > 399) {
+    if (response.status > 399 && response.status < 600) {
       throw Error(`Something went wrong: ${response.status}`);
     }
-
     // console.log(response);
 
     return redirect("/");
@@ -55,4 +54,18 @@ async function submitRegister({ request }) {
   }
 }
 
-export { submitLogin, submitRegister };
+function filterGigsBy({ request }) {
+  try {
+    // if (response.status > 399 && response.status < 600) {
+    //   throw Error(`Something went wrong: ${response.status}`);
+    // }
+    // https://reactrouter.com/en/main/hooks/use-submit
+    // https://reactrouter.com/en/main/hooks/use-fetcher#fetchersubmit
+    console.log(request);
+    return null;
+  } catch (error) {
+    return error;
+  }
+}
+
+export { filterGigsBy, submitLogin, submitRegister };

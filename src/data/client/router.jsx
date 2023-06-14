@@ -11,8 +11,10 @@ import {
   Orders,
   Register,
   Root,
+  getGigsFromDB,
   submitLogin,
-  submitRegister
+  submitRegister,
+  filterGigsBy
 } from "../../routes";
 
 const routerConfig = [
@@ -51,7 +53,10 @@ const routerConfig = [
       },
       {
         path: "gigs",
-        element: <Gigs />
+        element: <Gigs />,
+        errorElement: <Error />,
+        loader: getGigsFromDB,
+        action: filterGigsBy
       },
       {
         path: "mygigs",

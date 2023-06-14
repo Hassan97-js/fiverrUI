@@ -77,15 +77,17 @@ function Navbar() {
             </NavLink>
           </li>
 
-          <li className="link">
-            <NavLink
-              to="/login"
-              className={setNavLinkActive}
-              aria-label="Login"
-              title="Login">
-              Login
-            </NavLink>
-          </li>
+          {!currentUser && (
+            <li className="link">
+              <NavLink
+                to="/login"
+                className={setNavLinkActive}
+                aria-label="Login"
+                title="Login">
+                Login
+              </NavLink>
+            </li>
+          )}
 
           {!currentUser?.isSeller && (
             <li>
