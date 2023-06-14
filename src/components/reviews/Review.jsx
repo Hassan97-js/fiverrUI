@@ -40,14 +40,13 @@ function Review({
         <span>Helpful?</span>
 
         <button className="flex items-center gap-2">
-          <CustomIcon icon={RiThumbUpLine} size="1em" aria-label="A thumb up icon" />
+          <CustomIcon icon={RiThumbUpLine} aria-label="A thumb up icon" />
           <span>Yes</span>
         </button>
 
         <button className="flex items-center gap-2">
           <CustomIcon
             icon={RiThumbDownLine}
-            size="1em"
             aria-label="A thumb down icon"
           />
           <span>No</span>

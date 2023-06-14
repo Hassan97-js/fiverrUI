@@ -195,35 +195,40 @@ function Footer() {
           <div className="flex md:justify-center items-center gap-6 py-2">
             <CustomIcon
               icon={RiFacebookCircleFill}
-              color="#666"
+              colorOverride={true}
+              className="text-gray-500"
               size="2em"
               aria-label="A facebook logo"
             />
 
             <CustomIcon
               icon={RiInstagramFill}
-              color="#666"
+              colorOverride={true}
+              className="text-gray-500"
               size="2em"
               aria-label="An instagram logo"
             />
 
             <CustomIcon
               icon={RiPinterestFill}
-              color="#666"
+              colorOverride={true}
+              className="text-gray-500"
               size="2em"
               aria-label="A pinterest logo"
             />
 
             <CustomIcon
               icon={RiLinkedinBoxFill}
-              color="#666"
+              colorOverride={true}
+              className="text-gray-500"
               size="2em"
               aria-label="A linkedIn logo"
             />
 
             <CustomIcon
               icon={RiTwitterFill}
-              color="#666"
+              colorOverride={true}
+              className="text-gray-500"
               size="2em"
               aria-label="A twitter logo"
             />

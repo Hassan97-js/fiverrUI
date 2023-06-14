@@ -6,9 +6,11 @@ function Root() {
   return (
     <>
       <Navbar />
+
       <main>
         <Outlet />
       </main>
+
       <Footer />
     </>
   );

@@ -19,22 +19,18 @@ function Features() {
         </div>
 
         <div className="flex flex-col gap-10 flex-grow">
-          <h1 className="text-neutral-900">
+          <h1 className="text-gray-900">
             A whole world of freelance talent at your fingertips
           </h1>
 
           <div>
             <div className="flex items-center gap-2 mb-2">
-              <CustomIcon
-                icon={FaCheckCircle}
-                size="1em"
-                aria-label="A check logo"
-              />
-              <span className="text-lg text-neutral-700 font-medium">
+              <CustomIcon icon={FaCheckCircle} aria-label="A check logo" />
+              <span className="text-lg text-gray-700 font-medium">
                 The best for every budget
               </span>
             </div>
-            <p className="text-neutral-600">
+            <p className="text-gray-600">
               Find high-quality services at every price point. No hourly rates, just
               project-based pricing.
             </p>
@@ -44,14 +40,13 @@ function Features() {
             <div className="flex items-center gap-2 mb-2">
               <CustomIcon
                 icon={FaCheckCircle}
-                size="1em"
                 aria-label="A check logo"
               />
-              <span className="text-lg text-neutral-700 font-medium">
+              <span className="text-lg text-gray-700 font-medium">
                 The best for every budget
               </span>
             </div>
-            <p className="text-neutral-600">
+            <p className="text-gray-600">
               Find high-quality services at every price point. No hourly rates, just
               project-based pricing.
             </p>
@@ -61,14 +56,13 @@ function Features() {
             <div className="flex items-center gap-2 mb-2">
               <CustomIcon
                 icon={FaCheckCircle}
-                size="1em"
                 aria-label="A check logo"
               />
-              <span className="text-lg text-neutral-700 font-medium">
+              <span className="text-lg text-gray-700 font-medium">
                 The best for every budget
               </span>
             </div>
-            <p className="text-neutral-600">
+            <p className="text-gray-600">
               Find high-quality services at every price point. No hourly rates, just
               project-based pricing.
             </p>

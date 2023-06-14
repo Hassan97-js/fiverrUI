@@ -24,8 +24,8 @@ const myGigsTableData = [
             <button>
               <CustomIcon
                 icon={FaTrash}
-                color="rgb(239 68 68)"
-                size="1em"
+                colorOverride={true}
+                className="text-red-500"
                 aria-label="A trash icon"
               />
             </button>
@@ -44,8 +44,8 @@ const myGigsTableData = [
             <button>
               <CustomIcon
                 icon={FaTrash}
-                color="rgb(239 68 68)"
-                size="1em"
+                colorOverride={true}
+                className="text-red-500"
                 aria-label="A trash icon"
               />
             </button>
@@ -64,8 +64,8 @@ const myGigsTableData = [
             <button>
               <CustomIcon
                 icon={FaTrash}
-                color="rgb(239 68 68)"
-                size="1em"
+                colorOverride={true}
+                className="text-red-500"
                 aria-label="A trash icon"
               />
             </button>
@@ -84,8 +84,8 @@ const myGigsTableData = [
             <button>
               <CustomIcon
                 icon={FaTrash}
-                color="rgb(239 68 68)"
-                size="1em"
+                colorOverride={true}
+                className="text-red-500"
                 aria-label="A trash icon"
               />
             </button>
@@ -125,11 +125,7 @@ const ordersTableData = [
           [sellerOrBuyer]: "John Doe",
           contact: (
             <button>
-              <CustomIcon
-                icon={FaEnvelope}
-                size="1em"
-                aria-label="An Envelope icon"
-              />
+              <CustomIcon icon={FaEnvelope} aria-label="An Envelope icon" />
             </button>
           )
         }
@@ -144,11 +140,7 @@ const ordersTableData = [
           [sellerOrBuyer]: "John Doe",
           contact: (
             <button>
-              <CustomIcon
-                icon={FaEnvelope}
-                size="1em"
-                aria-label="An Envelope icon"
-              />
+              <CustomIcon icon={FaEnvelope} aria-label="An Envelope icon" />
             </button>
           )
         }
@@ -163,11 +155,7 @@ const ordersTableData = [
           [sellerOrBuyer]: "John Doe",
           contact: (
             <button>
-              <CustomIcon
-                icon={FaEnvelope}
-                size="1em"
-                aria-label="An Envelope icon"
-              />
+              <CustomIcon icon={FaEnvelope} aria-label="An Envelope icon" />
             </button>
           )
         }
@@ -182,11 +170,7 @@ const ordersTableData = [
           [sellerOrBuyer]: "John Doe",
           contact: (
             <button>
-              <CustomIcon
-                icon={FaEnvelope}
-                size="1em"
-                aria-label="An Envelope icon"
-              />
+              <CustomIcon icon={FaEnvelope} aria-label="An Envelope icon" />
             </button>
           )
         }

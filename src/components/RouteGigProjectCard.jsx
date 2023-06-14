@@ -46,7 +46,8 @@ function RouteGigProjectCard({ gig }) {
         <div className="flex items-center justify-between">
           <CustomIcon
             icon={RiHeartFill}
-            color="#f94449"
+            colorOverride={true}
+            className="text-red-500"
             size="1.2em"
             aria-label="A heart icon"
           />

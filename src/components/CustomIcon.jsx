@@ -4,7 +4,8 @@ import { RiErrorWarningLine } from "react-icons/ri";
 function CustomIcon({
   icon: IconComponent = RiErrorWarningLine,
   size = "1em",
-  color = "currentColor",
+  colorOverride = false,
+  color = !colorOverride ? "currentColor" : null,
   className = "",
   style = {},
   ...rest

@@ -6,7 +6,8 @@ function Stars({ children }) {
     <div className="flex items-center gap-2">
       <CustomIcon
         icon={RiStarFill}
-        color="#e6cc00"
+        colorOverride={true}
+        className="text-yellow-400"
         size="1.2em"
         aria-label="A star icon"
       />

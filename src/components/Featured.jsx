@@ -1,7 +1,9 @@
+import { FaSearch } from "react-icons/fa";
+
 import assetsData from "../assets";
+import CustomIcon from "./CustomIcon";
 
 const { heroManImage } = assetsData.images;
-const { heroSearchIcon } = assetsData.icons;
 
 function Featured() {
   return (
@@ -19,11 +21,12 @@ function Featured() {
             <div
               role="Search Input"
               className="bg-white flex items-center flex-1 gap-2">
-              <img
-                className="w-5 h-5 m-3"
-                src={heroSearchIcon}
-                alt="A search icon"
+              <CustomIcon
+                className="w-4 h-4 m-3"
+                icon={FaSearch}
+                aria-label="A search icon"
               />
+
               <input
                 className="block w-full h-full border-0 outline-none"
                 type="text"

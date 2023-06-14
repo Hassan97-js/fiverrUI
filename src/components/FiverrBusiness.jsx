@@ -26,7 +26,6 @@ function FiverrBusiness() {
               <CustomIcon
                 className="shrink-0"
                 icon={FaCheckCircle}
-                size="1em"
                 aria-label="A check icon"
               />
               <li>
@@ -39,7 +38,6 @@ function FiverrBusiness() {
               <CustomIcon
                 className="shrink-0"
                 icon={FaCheckCircle}
-                size="1em"
                 aria-label="A check icon"
               />
               <li>
@@ -52,7 +50,6 @@ function FiverrBusiness() {
               <CustomIcon
                 className="shrink-0"
                 icon={FaCheckCircle}
-                size="1em"
                 aria-label="A check icon"
               />
               <li>
