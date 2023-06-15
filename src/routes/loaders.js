@@ -1,14 +1,23 @@
+import { defer } from "react-router-dom";
+
 import { makeApiRequest } from "../utils";
 
-async function getGigsFromDB() {
+async function getGigsFromDB({ request }) {
   try {
-    const response = await makeApiRequest("get", "gigs");
+    const url = new URL(request.url);
+    const searchParams = new URLSearchParams(url.search);
 
-    if (response.status > 399 && response.status < 600) {
-      throw Error(`Something went wrong: ${response.status}`);
+    if (!searchParams.get("sortBy")) {
+      searchParams.append("sortBy", "createdAt");
     }
 
-    return response;
+    const gigs = makeApiRequest("get", "gigs", null, searchParams);
+
+    // if (response.status > 399 && response.status < 600) {
+    //   throw Error(`Something went wrong: ${response.status}`);
+    // }
+
+    return defer({ gigs });
   } catch (error) {
     throw error.response.data;
   }

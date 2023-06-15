@@ -12,7 +12,7 @@ function SliderGigCategoryCard({ item }) {
     <Link
       style={styles}
       className="block relative text-white w-full h-80"
-      to="/gigs?category=design">
+      to="/gigs?category=web-design">
       <div className="pt-7 pl-7">
         <p className="font-thin">{item.description}</p>
         <p className="text-2xl font-medium">{item.title}</p>

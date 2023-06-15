@@ -6,7 +6,14 @@ import Stars from "./Stars";
 
 import { formatCurrency } from "../utils";
 
-function RouteGigProjectCard({ gigId, gigCoverImg, price, description, stars }) {
+function RouteGigProjectCard({
+  gigId,
+  gigCoverImg,
+  category,
+  price,
+  description,
+  stars
+}) {
   const styles = {
     backgroundImage: `url(${gigCoverImg})`,
     backgroundRepeat: "no-repeat",
@@ -17,7 +24,9 @@ function RouteGigProjectCard({ gigId, gigCoverImg, price, description, stars }) 
   const formattedPrice = formatCurrency(price);
 
   return (
-    <Link to="/gig/123" className="shadow-md rounded-sm overflow-hidden pb-3">
+    <Link
+      to="/gig/123"
+      className="max-w-sm shadow-md rounded-sm overflow-hidden pb-3">
       <div style={styles} className="h-48" role="image"></div>
 
       <div className="px-4 mt-5">
@@ -29,7 +38,7 @@ function RouteGigProjectCard({ gigId, gigCoverImg, price, description, stars }) 
               alt="a freelancing client image"
             />
 
-            <strong className="font-semibold">John Doe</strong>
+            <strong className="font-semibold">John Doe ({category})</strong>
           </div>
 
           <span className="font-medium text-neutral-500 mb-2">Gig: {gigId}</span>

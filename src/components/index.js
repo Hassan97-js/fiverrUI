@@ -27,6 +27,7 @@ import TextareaInput from "./form/TextareaInput";
 import FileInput from "./form/FileInput";
 import AgreeCheckbox from "./form/AgreeCheckbox";
 import CustomToggle from "./form/CustomToggle";
+import Spinner from "./Spinner";
 
 import UploadWidget from "./form/UploadWidget";
 import UploadButton from "./form/UploadButton";
@@ -58,6 +59,7 @@ export {
   CustomToggle,
   TextareaInput,
   FileInput,
+  Spinner,
   AgreeCheckbox,
   UploadWidget,
   UploadButton

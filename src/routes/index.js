@@ -12,7 +12,7 @@ import Orders from "./Orders";
 import Register from "./Register";
 
 import { getGigsFromDB } from "./loaders";
-import { submitLogin, submitRegister, filterGigsBy } from "./actions";
+import { submitLogin, submitRegister } from "./actions";
 
 export {
   Root,
@@ -29,6 +29,5 @@ export {
   Register,
   getGigsFromDB,
   submitLogin,
-  submitRegister,
-  filterGigsBy
+  submitRegister
 };

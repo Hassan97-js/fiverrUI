@@ -54,18 +54,4 @@ async function submitRegister({ request }) {
   }
 }
 
-function filterGigsBy({ request }) {
-  try {
-    // if (response.status > 399 && response.status < 600) {
-    //   throw Error(`Something went wrong: ${response.status}`);
-    // }
-    // https://reactrouter.com/en/main/hooks/use-submit
-    // https://reactrouter.com/en/main/hooks/use-fetcher#fetchersubmit
-    console.log(request);
-    return null;
-  } catch (error) {
-    return error;
-  }
-}
-
-export { filterGigsBy, submitLogin, submitRegister };
+export { submitLogin, submitRegister };

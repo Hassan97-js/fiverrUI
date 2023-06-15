@@ -9,6 +9,7 @@ function CustomInput({
   lableClassNames = "text-gray-900",
   placeholderText = "",
   onChangeHandler = () => {},
+  isRequired = true,
   ...otherProps
 }) {
   return (
@@ -28,8 +29,8 @@ function CustomInput({
         maxLength={inputMaxLength}
         className={`bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 outline-none block w-full p-2.5 ${classNames}`}
         placeholder={placeholderText}
-        required
         autoComplete="on"
+        required={isRequired}
         onChange={onChangeHandler}
       />
     </div>

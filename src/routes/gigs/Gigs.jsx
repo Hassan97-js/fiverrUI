@@ -1,46 +1,22 @@
-import { useFetcher, useLoaderData } from "react-router-dom";
+import { Suspense } from "react";
+import { Await, Form, useLoaderData } from "react-router-dom";
 
-import { RouteGigProjectCard, Breadcrumb, CustomInput } from "../../components";
+import {
+  Spinner,
+  RouteGigProjectCard,
+  Breadcrumb,
+  CustomInput
+} from "../../components";
 
 import "./Gigs.css";
 
 /**
  * TODOS:
- * FETCH GIGS FROM DB
+ *
  */
 
 function Gigs() {
-  const fetcher = useFetcher();
-
-  const axiosResponse = useLoaderData();
-
-  const data = axiosResponse?.data;
-
-  const handleSelect = () => {
-    // const { value } = event.target;
-    fetcher.submit(
-      { idle: true },
-      {
-        method: "post",
-        action: "/gigs"
-      }
-    );
-  };
-
-  const routeGigCards = data?.map((gig, idx) => {
-    const { _id: gigId, gigCoverImg, price, description } = gig;
-
-    return (
-      <RouteGigProjectCard
-        key={gigId}
-        gigId={idx + 1}
-        gigCoverImg={gigCoverImg}
-        price={price}
-        description={description}
-        stars="5"
-      />
-    );
-  });
+  const { gigs: gigsPromise } = useLoaderData();
 
   return (
     <section className="gigs-section section-container text-neutral-700">
@@ -51,46 +27,64 @@ function Gigs() {
         Explore the boundaries of art and technology with Fiverr&apos;s AI artists
       </h5>
 
-      <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-5 my-4">
-        <form className="flex flex-col py-5">
-          <div className="flex flex-col mb-5">
-            <CustomInput
-              classNames="mb-5"
-              lableClassNames="text-gray-600"
-              labelText="Min price"
-              inputName="min"
-              placeholderText="min"
-            />
+      <Form method="get" className="flex flex-col items-start py-5 gap-5 mt-6 mb-24">
+        <div className="flex flex-col items-start mb-5 gap-5">
+          <CustomInput
+            lableClassNames="text-gray-600"
+            labelText="Min price"
+            inputName="min"
+            placeholderText="min"
+            isRequired={false}
+          />
 
-            <CustomInput
-              lableClassNames="text-gray-600"
-              labelText="Max price"
-              inputName="max"
-              placeholderText="max"
-            />
-          </div>
-
-          <button type="button" className="btn btn-secondary btn-xs tracking-wider">
-            Apply
-          </button>
-        </form>
-
-        <div className="relative flex flex-col lg:flex-row lg:justify-end lg:items-center lg:gap-3 w-96">
-          <span className="font-medium -mb-2">Sort by</span>
-
-          <fetcher.Form className="my-4">
-            <select
-              className="bg-white border border-neutral-300 outline-0 radius-base p-3 w-52 cursor-pointer rounded-sm"
-              defaultValue="createdAt"
-              onChange={handleSelect}>
-              <option value="createdAt">Newest</option>
-              <option value="sales">Best Selling</option>
-            </select>
-          </fetcher.Form>
+          <CustomInput
+            lableClassNames="text-gray-600"
+            labelText="Max price"
+            inputName="max"
+            placeholderText="max"
+            isRequired={false}
+          />
         </div>
-      </div>
 
-      <div className="gigs grid gap-10">{routeGigCards}</div>
+        <div className="flex flex-col w-96">
+          <span className="font-medium -mb-2 text-gray-600">Sort by</span>
+          <select
+            name="sortBy"
+            defaultValue="createdAt"
+            className="bg-white border border-neutral-300 outline-0 radius-base p-3 my-4 w-52 cursor-pointer rounded-sm">
+            <option value="createdAt">Newest</option>
+            <option value="sales">Best Selling</option>
+          </select>
+        </div>
+
+        <button type="submit" className="btn btn-secondary btn-xs tracking-wider">
+          Apply
+        </button>
+      </Form>
+
+      <Suspense fallback={<Spinner />}>
+        <Await resolve={gigsPromise}>
+          {({ data: resolvedGigs }) => {
+            const gigCards = resolvedGigs.map((gig, idx) => {
+              const { _id: gigId, gigCoverImg, price, description, category } = gig;
+
+              return (
+                <RouteGigProjectCard
+                  key={gigId}
+                  gigId={idx + 1}
+                  gigCoverImg={gigCoverImg}
+                  price={price}
+                  description={description}
+                  category={category}
+                  stars="5"
+                />
+              );
+            });
+
+            return <div className="gigs grid gap-10">{gigCards}</div>;
+          }}
+        </Await>
+      </Suspense>
     </section>
   );
 }
