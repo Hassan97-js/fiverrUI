@@ -11,13 +11,13 @@ async function getGigsFromDB({ request }) {
       searchParams.append("sortBy", "createdAt");
     }
 
-    const gigs = makeApiRequest("get", "gigs", null, searchParams);
+    const response = makeApiRequest("get", "gigs", null, searchParams);
 
-    // if (response.status > 399 && response.status < 600) {
-    //   throw Error(`Something went wrong: ${response.status}`);
-    // }
+    if (response.status > 399 && response.status < 600) {
+      throw Error(`Something went wrong: ${response.status}`);
+    }
 
-    return defer({ gigs });
+    return defer({ gigs: response });
   } catch (error) {
     throw error.response.data;
   }

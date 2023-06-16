@@ -5,7 +5,8 @@ import {
   Spinner,
   RouteGigProjectCard,
   Breadcrumb,
-  CustomInput
+  CustomInput,
+  Alert
 } from "../../components";
 
 import "./Gigs.css";
@@ -17,6 +18,34 @@ import "./Gigs.css";
 
 function Gigs() {
   const { gigs: gigsPromise } = useLoaderData();
+
+  const resolvedGigsElements = ({ data: resolvedGigs }) => {
+    const gigCards = resolvedGigs.map((gig, idx) => {
+      const { _id: gigId, gigCoverImg, price, description, category } = gig;
+
+      return (
+        <RouteGigProjectCard
+          key={gigId}
+          gigId={idx + 1}
+          gigCoverImg={gigCoverImg}
+          price={price}
+          description={description}
+          category={category}
+          stars="5"
+        />
+      );
+    });
+
+    return (
+      <div className="gigs grid gap-10">
+        {!gigCards.length ? (
+          <Alert alertVariant="info">No gigs found with current filter</Alert>
+        ) : (
+          gigCards
+        )}
+      </div>
+    );
+  };
 
   return (
     <section className="gigs-section section-container text-neutral-700">
@@ -30,6 +59,7 @@ function Gigs() {
       <Form method="get" className="flex flex-col items-start py-5 gap-5 mt-6 mb-24">
         <div className="flex flex-col items-start mb-5 gap-5">
           <CustomInput
+            inputId="min"
             lableClassNames="text-gray-600"
             labelText="Min price"
             inputName="min"
@@ -38,6 +68,7 @@ function Gigs() {
           />
 
           <CustomInput
+            inputId="max"
             lableClassNames="text-gray-600"
             labelText="Max price"
             inputName="max"
@@ -63,26 +94,10 @@ function Gigs() {
       </Form>
 
       <Suspense fallback={<Spinner />}>
-        <Await resolve={gigsPromise}>
-          {({ data: resolvedGigs }) => {
-            const gigCards = resolvedGigs.map((gig, idx) => {
-              const { _id: gigId, gigCoverImg, price, description, category } = gig;
-
-              return (
-                <RouteGigProjectCard
-                  key={gigId}
-                  gigId={idx + 1}
-                  gigCoverImg={gigCoverImg}
-                  price={price}
-                  description={description}
-                  category={category}
-                  stars="5"
-                />
-              );
-            });
-
-            return <div className="gigs grid gap-10">{gigCards}</div>;
-          }}
+        <Await
+          resolve={gigsPromise}
+          errorElement={<Alert alertVariant="danger">Error loading gigs</Alert>}>
+          {resolvedGigsElements}
         </Await>
       </Suspense>
     </section>
