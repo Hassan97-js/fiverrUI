@@ -6,14 +6,7 @@ import Stars from "./Stars";
 
 import { formatCurrency } from "../utils";
 
-function RouteGigProjectCard({
-  gigId,
-  gigCoverImg,
-  category,
-  price,
-  description,
-  stars
-}) {
+function GigCard({ gigId, gigCoverImg, category, price, description, stars }) {
   const styles = {
     backgroundImage: `url(${gigCoverImg})`,
     backgroundRepeat: "no-repeat",
@@ -71,4 +64,4 @@ function RouteGigProjectCard({
   );
 }
 
-export default RouteGigProjectCard;
+export default GigCard;

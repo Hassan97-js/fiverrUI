@@ -2,7 +2,7 @@ import {
   Featured,
   TrustedBy,
   SliderGigCategoryCard,
-  SliderGigProjectCard,
+  SliderGigCard,
   Features,
   FiverrBusiness,
   Slider as GigCategorySlider,
@@ -19,7 +19,7 @@ function Home() {
   });
 
   const GigProjectsCards = gigProjects.map((project) => {
-    return <SliderGigProjectCard key={project.id} project={project} />;
+    return <SliderGigCard key={project.id} project={project} />;
   });
 
   return (

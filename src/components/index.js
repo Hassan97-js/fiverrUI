@@ -5,10 +5,10 @@ import Featured from "./Featured";
 import TrustedBy from "./TrustedBy";
 import Slider from "./Silder";
 import SliderGigCategoryCard from "./SliderGigCategoryCard";
-import SliderGigProjectCard from "./SliderGigProjectCard";
+import SliderGigCard from "./SliderGigCard";
 import Features from "./Features";
 import FiverrBusiness from "./FiverrBusiness";
-import RouteGigProjectCard from "./RouteGigProjectCard";
+import GigCard from "./GigCard";
 import AboutSeller from "./AboutSeller";
 import Reviews from "./reviews/Reviews";
 import GigCTA from "./GigCTA";
@@ -40,8 +40,8 @@ export {
   TrustedBy,
   Slider,
   SliderGigCategoryCard,
-  SliderGigProjectCard,
-  RouteGigProjectCard,
+  SliderGigCard,
+  GigCard,
   GigCTA,
   Features,
   FiverrBusiness,

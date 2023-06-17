@@ -5,7 +5,9 @@ function Alert({ children, alertVariant }) {
   };
 
   return (
-    <div className={`flex max-w-sm p-4 mb-4 ${variants[alertVariant]}`} role="alert">
+    <div
+      className={`flex items-center max-w-sm p-4 mb-4 ${variants[alertVariant]}`}
+      role="alert">
       <svg
         aria-hidden="true"
         className="flex-shrink-0 inline w-5 h-5 mr-3"

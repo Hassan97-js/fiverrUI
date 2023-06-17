@@ -11,15 +11,15 @@ async function getGigsFromDB({ request }) {
       searchParams.append("sortBy", "createdAt");
     }
 
-    const response = makeApiRequest("get", "gigs", null, searchParams);
+    const response = await makeApiRequest("get", "gigs", null, searchParams);
 
     if (response.status > 399 && response.status < 600) {
       throw Error(`Something went wrong: ${response.status}`);
     }
 
-    return defer({ gigs: response });
+    return { gigs: response.data };
   } catch (error) {
-    throw error.response.data;
+    return { error: error.response.data };
   }
 }
 

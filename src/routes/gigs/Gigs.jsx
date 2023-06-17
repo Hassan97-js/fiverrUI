@@ -1,51 +1,48 @@
-import { Suspense } from "react";
-import { Await, Form, useLoaderData } from "react-router-dom";
+import { Form, useLoaderData, useNavigation } from "react-router-dom";
 
-import {
-  Spinner,
-  RouteGigProjectCard,
-  Breadcrumb,
-  CustomInput,
-  Alert
-} from "../../components";
+import { Spinner, GigCard, Breadcrumb, CustomInput, Alert } from "../../components";
 
 import "./Gigs.css";
 
 /**
  * TODOS:
- *
+ * GET the userId (how?)
  */
 
 function Gigs() {
-  const { gigs: gigsPromise } = useLoaderData();
+  const { gigs: gigsData, error } = useLoaderData();
 
-  const resolvedGigsElements = ({ data: resolvedGigs }) => {
-    const gigCards = resolvedGigs.map((gig, idx) => {
-      const { _id: gigId, gigCoverImg, price, description, category } = gig;
+  const navigation = useNavigation();
 
-      return (
-        <RouteGigProjectCard
-          key={gigId}
-          gigId={idx + 1}
-          gigCoverImg={gigCoverImg}
-          price={price}
-          description={description}
-          category={category}
-          stars="5"
-        />
+  const isLoading = navigation.state === "loading";
+
+  const gigCards = gigsData?.length
+    ? gigsData.map((gig, idx) => {
+        const {
+          _id: gigId,
+          gigCoverImg,
+          price,
+          description,
+          category,
+          userId
+        } = gig;
+
+        return (
+          <GigCard
+            key={gigId}
+            userId={userId}
+            gigId={idx + 1}
+            gigCoverImg={gigCoverImg}
+            price={price}
+            description={description}
+            category={category}
+            stars="5"
+          />
+        );
+      })
+    : !error?.message && (
+        <Alert alertVariant="info">No gigs found with current filter</Alert>
       );
-    });
-
-    return (
-      <div className="gigs grid gap-10">
-        {!gigCards.length ? (
-          <Alert alertVariant="info">No gigs found with current filter</Alert>
-        ) : (
-          gigCards
-        )}
-      </div>
-    );
-  };
 
   return (
     <section className="gigs-section section-container text-neutral-700">
@@ -93,13 +90,10 @@ function Gigs() {
         </button>
       </Form>
 
-      <Suspense fallback={<Spinner />}>
-        <Await
-          resolve={gigsPromise}
-          errorElement={<Alert alertVariant="danger">Error loading gigs</Alert>}>
-          {resolvedGigsElements}
-        </Await>
-      </Suspense>
+      {isLoading && !error && <Spinner />}
+      {error?.message && <Alert alertVariant="danger">{error.message}</Alert>}
+
+      <div className="gigs grid gap-10">{gigCards}</div>
     </section>
   );
 }
