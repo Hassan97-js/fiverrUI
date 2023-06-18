@@ -1,4 +1,6 @@
-import { Form, useLoaderData, useNavigation } from "react-router-dom";
+import { Suspense } from "react";
+
+import { Await, Form, useLoaderData } from "react-router-dom";
 
 import { Spinner, GigCard, Breadcrumb, CustomInput, Alert } from "../../components";
 
@@ -6,18 +8,15 @@ import "./Gigs.css";
 
 /**
  * TODOS:
- * GET the userId (how?)
+ * GET user by userId, how?
  */
 
 function Gigs() {
-  const { gigs: gigsData, error } = useLoaderData();
+  const { gigsPromise } = useLoaderData();
 
-  const navigation = useNavigation();
-
-  const isLoading = navigation.state === "loading";
-
-  const gigCards = gigsData?.length
-    ? gigsData.map((gig, idx) => {
+  const GigsCardElements = ({ data: resolvedGigs }) => {
+    const gigCards = resolvedGigs?.length ? (
+      resolvedGigs.map((gig, idx) => {
         const {
           _id: gigId,
           gigCoverImg,
@@ -40,19 +39,20 @@ function Gigs() {
           />
         );
       })
-    : !error?.message && (
-        <Alert alertVariant="info">No gigs found with current filter</Alert>
-      );
+    ) : (
+      <Alert alertVariant="info">No gigs found with current filter</Alert>
+    );
+
+    return <div className="gigs grid gap-10">{gigCards}</div>;
+  };
 
   return (
     <section className="gigs-section section-container text-neutral-700">
       <Breadcrumb>FIVERR &gt; GRAPHICS & DESIGN &gt;</Breadcrumb>
-
       <h1 className="mb-4 text-neutral-800">AI Artists</h1>
       <h5 className="font-normal">
         Explore the boundaries of art and technology with Fiverr&apos;s AI artists
       </h5>
-
       <Form method="get" className="flex flex-col items-start py-5 gap-5 mt-6 mb-24">
         <div className="flex flex-col items-start mb-5 gap-5">
           <CustomInput
@@ -90,10 +90,13 @@ function Gigs() {
         </button>
       </Form>
 
-      {isLoading && !error && <Spinner />}
-      {error?.message && <Alert alertVariant="danger">{error.message}</Alert>}
-
-      <div className="gigs grid gap-10">{gigCards}</div>
+      <Suspense fallback={<Spinner />}>
+        <Await
+          resolve={gigsPromise}
+          errorElement={<Alert alertVariant="danger">Error loading the gigs</Alert>}>
+          {GigsCardElements}
+        </Await>
+      </Suspense>
     </section>
   );
 }

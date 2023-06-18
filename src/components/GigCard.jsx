@@ -31,7 +31,10 @@ function GigCard({ gigId, gigCoverImg, category, price, description, stars }) {
               alt="a freelancing client image"
             />
 
-            <strong className="font-semibold">John Doe ({category})</strong>
+            <strong className="font-semibold">
+              <span>John Doe</span>
+              <p>({category})</p>
+            </strong>
           </div>
 
           <span className="font-medium text-neutral-500 mb-2">Gig: {gigId}</span>
