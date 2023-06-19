@@ -11,7 +11,7 @@ import MyGigs from "./MyGigs";
 import Orders from "./Orders";
 import Register from "./Register";
 
-import { getGigsFromDB } from "./loaders";
+import { getGigsFromDB, getGigFromDB } from "./loaders";
 import { submitLogin, submitRegister } from "./actions";
 
 export {
@@ -28,6 +28,7 @@ export {
   Orders,
   Register,
   getGigsFromDB,
+  getGigFromDB,
   submitLogin,
   submitRegister
 };

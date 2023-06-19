@@ -29,7 +29,7 @@ function Breadcrumb() {
           <div className="flex items-center">
             <ArrowIcon />
             <Link
-              to="/gig/123"
+              to="."
               className="ml-1 text-sm font-medium text-gray-700 hover:text-gray-800 md:ml-2 transition">
               Gig
             </Link>

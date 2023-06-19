@@ -19,4 +19,14 @@ async function getGigsFromDB({ request }) {
   }
 }
 
-export { getGigsFromDB };
+async function getGigFromDB({ params }) {
+  try {
+    const gigPromise = makeApiRequest("get", `gigs/single/${params.id}`);
+
+    return defer({ gigPromise });
+  } catch (error) {
+    throw Error(error);
+  }
+}
+
+export { getGigFromDB, getGigsFromDB };

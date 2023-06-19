@@ -1,4 +1,3 @@
-// CURRENCY FORMATTER FUNCTIONS
 function formatCurrency(value) {
   return new Intl.NumberFormat("en-US", {
     style: "currency",
@@ -6,4 +5,16 @@ function formatCurrency(value) {
   }).format(value);
 }
 
-export { formatCurrency };
+function getRatingAverage(totalStars, starNumber) {
+  if (!totalStars) {
+    totalStars = 1;
+  }
+
+  if (!starNumber) {
+    starNumber = 1;
+  }
+
+  return Math.round(totalStars / starNumber);
+}
+
+export { getRatingAverage, formatCurrency };

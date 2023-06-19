@@ -12,6 +12,7 @@ import {
   Register,
   Root,
   getGigsFromDB,
+  getGigFromDB,
   submitLogin,
   submitRegister
 } from "../../routes";
@@ -79,7 +80,8 @@ const routerConfig = [
 
       {
         path: "gig/:id",
-        element: <Gig />
+        element: <Gig />,
+        loader: getGigFromDB
       }
     ]
   }

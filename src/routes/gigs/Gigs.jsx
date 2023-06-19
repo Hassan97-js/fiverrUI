@@ -8,7 +8,6 @@ import "./Gigs.css";
 
 /**
  * TODOS:
- * GET user by userId, how?
  */
 
 function Gigs() {
@@ -16,26 +15,29 @@ function Gigs() {
 
   const GigsCardElements = ({ data: resolvedGigs }) => {
     const gigCards = resolvedGigs?.length ? (
-      resolvedGigs.map((gig, idx) => {
+      resolvedGigs.map((gig) => {
         const {
           _id: gigId,
           gigCoverImg,
           price,
           description,
           category,
-          userId
+          totalStars,
+          starNumber,
+          userId: userInfo
         } = gig;
 
         return (
           <GigCard
             key={gigId}
-            userId={userId}
-            gigId={idx + 1}
+            userInfo={userInfo}
+            gigId={gigId}
+            totalStars={totalStars}
+            starNumber={starNumber}
             gigCoverImg={gigCoverImg}
             price={price}
             description={description}
             category={category}
-            stars="5"
           />
         );
       })

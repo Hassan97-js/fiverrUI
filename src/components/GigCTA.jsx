@@ -35,9 +35,9 @@ function GigCTA({
       <div className="flex flex-col gap-3">
         {services.map((service) => {
           return (
-            <div key={service.id} className="item flex items-center gap-3">
+            <div key={service} className="item flex items-center gap-3">
               <CustomIcon icon={FaCheck} color="#16a34a" aria-label="A check icon" />
-              <span>{service.text}</span>
+              <span>{service}</span>
             </div>
           );
         })}
