@@ -30,7 +30,6 @@ function Gig() {
               // console.log({ resolvedGig });
 
               const {
-                _id: gigId,
                 title,
                 description,
                 starNumber,
@@ -73,7 +72,7 @@ function Gig() {
                     sellerImg={imgURL || fallbackImg}
                   />
 
-                  <Reviews gigId={gigId} />
+                  <Reviews />
                 </>
               );
             }}

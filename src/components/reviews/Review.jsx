@@ -4,7 +4,6 @@ import CustomIcon from "../CustomIcon";
 import { RiThumbUpLine, RiThumbDownLine } from "react-icons/ri";
 
 function Review({
-  gigId,
   sellerName,
   sellerImgURL,
   countryName,
