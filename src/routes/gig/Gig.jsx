@@ -27,7 +27,7 @@ function Gig() {
         <Suspense fallback={<Spinner />}>
           <Await resolve={gigPromise}>
             {({ data: resolvedGig }) => {
-              console.log({ resolvedGig });
+              // console.log({ resolvedGig });
 
               const {
                 title,
@@ -38,7 +38,6 @@ function Gig() {
               } = resolvedGig;
               const { imgURL, username } = userInfo;
 
-              // JSX
               const fallbackImg = "https://picsum.photos/200";
 
               return (
@@ -63,7 +62,7 @@ function Gig() {
 
                   <AboutSeller
                     sellerName={username}
-                    aboutSeller="My name is Anna, I enjoy creating AI generated art in my spare time. I have a lot of experience using the AI program and that means I know what to prompt the AI with to get a great and incredibly detailed result."
+                    aboutSeller={`My name is ${username}, I enjoy creating AI generated art in my spare time. I have a lot of experience using the AI program and that means I know what to prompt the AI with to get a great and incredibly detailed result.`}
                     fromCountry="USA"
                     languages="English"
                     lastDelivery="1 day"

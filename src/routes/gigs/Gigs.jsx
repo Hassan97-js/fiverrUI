@@ -1,14 +1,9 @@
 import { Suspense } from "react";
-
 import { Await, Form, useLoaderData } from "react-router-dom";
 
 import { Spinner, GigCard, Breadcrumb, CustomInput, Alert } from "../../components";
 
 import "./Gigs.css";
-
-/**
- * TODOS:
- */
 
 function Gigs() {
   const { gigsPromise } = useLoaderData();

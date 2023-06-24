@@ -116,7 +116,9 @@ function Navbar() {
               {!!currentUser && (
                 <img
                   className="w-10 h-10 rounded-full object-cover object-center"
-                  src={currentUser?.img || "https://faces3.b-cdn.net/Colombia.png"}
+                  src={
+                    currentUser?.imgURL || "https://faces3.b-cdn.net/Colombia.png"
+                  }
                   alt="Profile picture"
                 />
               )}

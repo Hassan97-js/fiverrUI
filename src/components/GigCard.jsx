@@ -39,7 +39,7 @@ function GigCard({
 
       <div className="px-4 mt-5">
         <div className="flex flex-col gap-3">
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 mb-5">
             <img
               className="object-cover rounded-full w-8 h-8"
               src={imgURL || fallbackImg}
@@ -55,7 +55,7 @@ function GigCard({
           {/* <span className="font-medium text-neutral-500 mb-2">Gig: {counter}</span> */}
         </div>
 
-        <p className="mb-5">{description}</p>
+        <p className="mb-5 truncate">{description}</p>
 
         <Stars>{gigRating}</Stars>
 
