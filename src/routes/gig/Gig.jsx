@@ -30,6 +30,7 @@ function Gig() {
               // console.log({ resolvedGig });
 
               const {
+                _id: gigId,
                 title,
                 description,
                 starNumber,
@@ -71,13 +72,13 @@ function Gig() {
                     responseTime="4 hours"
                     sellerImg={imgURL || fallbackImg}
                   />
+
+                  <Reviews gigId={gigId} />
                 </>
               );
             }}
           </Await>
         </Suspense>
-
-        <Reviews />
       </div>
 
       <Suspense fallback={<Spinner />}>

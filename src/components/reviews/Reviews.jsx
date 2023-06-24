@@ -1,12 +1,13 @@
 import Review from "./Review";
 
-function Reviews() {
+function Reviews({ gigId }) {
   return (
     <section className="reviews">
       <h2 className="mb-6">Reviews</h2>
 
       <div className="items flex flex-wrap gap-10">
         <Review
+          gigId={gigId}
           sellerName="Garner David"
           sellerImgURL="https://images.pexels.com/photos/839586/pexels-photo-839586.jpeg?auto=compress&cs=tinysrgb&w=1600"
           countryImgURL="https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1fa-1f1f8.png"
@@ -17,6 +18,7 @@ function Reviews() {
         />
 
         <Review
+          gigId={gigId}
           sellerName="Sidney Owen"
           sellerImgURL="https://images.pexels.com/photos/4124367/pexels-photo-4124367.jpeg?auto=compress&cs=tinysrgb&w=1600"
           countryImgURL="https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1e9-1f1ea.png"
@@ -28,6 +30,7 @@ function Reviews() {
         />
 
         <Review
+          gigId={gigId}
           sellerName="Lyle Giles"
           sellerImgURL="https://images.pexels.com/photos/842980/pexels-photo-842980.jpeg?auto=compress&cs=tinysrgb&w=1600"
           countryImgURL="https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1e9-1f1ea.png"

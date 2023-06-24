@@ -77,7 +77,6 @@ const routerConfig = [
         path: "message/:id",
         element: <Message />
       },
-
       {
         path: "gig/:id",
         element: <Gig />,

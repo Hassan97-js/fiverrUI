@@ -4,6 +4,7 @@ import CustomIcon from "../CustomIcon";
 import { RiThumbUpLine, RiThumbDownLine } from "react-icons/ri";
 
 function Review({
+  gigId,
   sellerName,
   sellerImgURL,
   countryName,
@@ -45,10 +46,7 @@ function Review({
         </button>
 
         <button className="flex items-center gap-2">
-          <CustomIcon
-            icon={RiThumbDownLine}
-            aria-label="A thumb down icon"
-          />
+          <CustomIcon icon={RiThumbDownLine} aria-label="A thumb down icon" />
           <span>No</span>
         </button>
       </div>
