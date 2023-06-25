@@ -23,7 +23,7 @@ async function getGigFromDB({ params }) {
   try {
     const gigPromise = makeApiRequest("get", `gigs/single/${params.id}`);
 
-    // TODO: GET REVIEWS FROM DB
+    // TODO: GET GIG REVIEWS FROM DB
 
     return defer({ gigPromise });
   } catch (error) {
